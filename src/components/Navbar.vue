@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import logo from "../assets/vue.svg";
+import logo from "../assets/logo.jpg";
 
 
 const menuOpen = ref(false);
@@ -15,13 +15,14 @@ function toggleMenu() {
     <div>
         <nav class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-      <!-- Logo (left) -->
-      <a href="#" class="flex items-center space-x-3">
-        <img class="h-10 w-auto" :src="logo" alt="Open Sea Co. Ltd" />
-        <span class="text-2xl font-bold text-blue-700 select-none"
-          >Open Sea Co. Ltd</span
-        >
-      </a>
+     <!-- Logo (left) -->
+<a href="#" class="flex items-center space-x-3">
+  <img class="h-10 w-10 rounded-full object-cover" :src="logo" alt="Open Sea Co. Ltd" />
+  <span class="text-2xl font-bold text-blue-700 select-none">
+    Open Sea Co. Ltd
+  </span>
+</a>
+
 
       <!-- Hamburger (mobile only) -->
       <button

@@ -16,14 +16,14 @@
           class=" border-blue-200 rounded-xl p-6 shadow-sm transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-md cursor-pointer"
         >
           <h3 class="text-xl font-semibold text-blue-700 mb-4">{{ card.title }}</h3>
-          <ul class="list-disc list-outside pl-5 text-gray-700 space-y-1">
+          <ul class="list-disc list-outside pl-5 text-lg space-y-1">
             <li v-for="(item, i) in card.items" :key="i">{{ item }}</li>
           </ul>
         </div>
       </div>
     </div>
     <br>
-    <div><h3 class="text-1xl font-bold text-blue-600 text-center mb-5">Key Capabilities</h3>
+    <div><h3 class="text-1xl font-bold text-blue-500 text-center mb-5">Key Capabilities</h3>
 International sourcing (China, India, Turkey, UAE)
 <br>
 Certified by TMDA, OSHA, TRA
