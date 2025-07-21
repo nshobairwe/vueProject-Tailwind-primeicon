@@ -13,7 +13,7 @@ function toggleMenu() {
 <template>
 
     <div>
-        <nav class="bg-white   fixed top-0 left-0 w-full z-50">
+        <nav class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
       <!-- Logo (left) -->
       <a href="#" class="flex items-center space-x-3">
