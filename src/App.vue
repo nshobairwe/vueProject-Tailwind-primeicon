@@ -5,7 +5,8 @@ import AboutUs from "./components/AboutUs.vue";
 import Interacting from "./components/Interacting.vue";
 import OurServices from "./components/OurServices.vue";
 import ClientsAndBeneficiaries from "./components/ClientsAndBeneficiaries.vue";
-import footer from "./components/Footer.vue";
+import TheLastComponent from "./components/TheLastComponent.vue";
+
 
 </script>
 
@@ -17,7 +18,8 @@ import footer from "./components/Footer.vue";
   <Interacting/>
   <OurServices/>
   <ClientsAndBeneficiaries/>
-  <footer/>
+  <TheLastComponent/>
+ 
   </div>
 </template>
 
