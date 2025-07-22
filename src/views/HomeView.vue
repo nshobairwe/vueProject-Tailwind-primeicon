@@ -11,7 +11,7 @@ import TheLastComponent from "../components/TheLastComponent.vue";
   <div>
     <TwoMen />
     <AboutUs />
-    <Vision/>
+    <Vision />
     <OurServices />
     <ClientsAndBeneficiaries />
     <TheLastComponent /> 

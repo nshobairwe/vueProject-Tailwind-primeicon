@@ -1,28 +1,30 @@
 <script setup>
 import { ref } from "vue";
 import logo from "../assets/logo.jpg";
-
+import { RouterLink, useRoute } from 'vue-router';
 
 const menuOpen = ref(false);
+const route = useRoute();
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
 }
+
+const isActiveLink = (path) => route.path === path;
 </script>
 
 <template>
-
-    <div >
-        <nav class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50">
+  <nav class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-     <!-- Logo (left) -->
-<a href="#" class="flex items-center space-x-3">
-  <img class="h-13 w-10 px-0 mx-0 rounded-full object-cover" :src="logo" alt="Open Sea Co. Ltd" />
-  <span class="text-2xl font-bold text-black select-none">
-    Open Sea Co. Ltd
-  </span>
-</a>
-
+      <!-- Logo -->
+      <RouterLink to="/" class="flex items-center space-x-3">
+        <img
+          class="h-13 w-10 rounded-full object-cover"
+          :src="logo"
+          alt="Open Sea Co. Ltd"
+        />
+        <span class="text-2xl font-bold text-black select-none">Open Sea Co. Ltd</span>
+      </RouterLink>
 
       <!-- Hamburger (mobile only) -->
       <button
@@ -45,63 +47,71 @@ function toggleMenu() {
         </svg>
       </button>
 
-      <!-- Menu (right) -->
+      <!-- Menu -->
       <div
         :class="[
           'w-full md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-4 md:mt-0',
           menuOpen ? 'block' : 'hidden',
         ]"
       >
-        <ul
-          class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium"
-        >
+        <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium">
           <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Home</a
+            <RouterLink
+              to="/"
+              :class="isActiveLink('/') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
             >
+              Home
+            </RouterLink>
           </li>
           <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >About Us</a
+            <RouterLink
+              to="/aboutus"
+              :class="isActiveLink('/aboutus') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
             >
+              About Us
+            </RouterLink>
+          </li>
+          <!-- Use RouterLink if you have routes -->
+          <li>
+            <RouterLink
+              to="/vision"
+              :class="isActiveLink('/vision') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+            >
+              Vision
+            </RouterLink>
+          </li>
+          <!-- <li>
+            <RouterLink
+              to="/values"
+              :class="isActiveLink('/values') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+            >
+              Values
+            </RouterLink>
+          </li> -->
+          <li>
+            <RouterLink
+              to="/services"
+              :class="isActiveLink('/services') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+            >
+              Services
+            </RouterLink>
           </li>
           <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Vision</a
+            <RouterLink
+              to="/clients"
+              :class="isActiveLink('/clients') ? 'text-blue-900 font-semibold' : 'text-black'"
+              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Values</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Clients</a
-            >
+              Clients
+            </RouterLink>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
-    </div>
-  
 </template>
