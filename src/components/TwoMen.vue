@@ -12,7 +12,16 @@ import slide8 from '../assets/img8.png'
 import slide9 from '../assets/img9.png'
 
 const slides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9]
-const fullSlides = [...slides, slides[0]] // Loop back
+
+// Define groups explicitly with slide4 & slide6 together, slide5 & slide7 together
+const groupedSlides = [
+  [slide1, slide2],
+  [slide3, slide5],  // slide5 paired with slide3 (adjust as needed)
+  [slide4, slide6],  // slide4 with slide6
+  [slide8,slide9],
+]
+
+const fullSlides = [...groupedSlides, groupedSlides[0]] // loop back
 
 const currentIndex = ref(0)
 const isTransitioning = ref(true)
@@ -31,7 +40,7 @@ onMounted(() => {
         isTransitioning.value = true
       }, 550)
     }
-  }, 3000) // stay 3s
+  }, 3000)
 })
 </script>
 
@@ -43,17 +52,25 @@ onMounted(() => {
       :style="`transform: translateX(-${currentIndex * 100}%); will-change: transform;`"
     >
       <div
-        v-for="(slide, index) in fullSlides"
+        v-for="(slideGroup, index) in fullSlides"
         :key="index"
         class="w-full h-full flex-shrink-0 p-4"
       >
-        <div class="w-full h-full rounded-2xl shadow-xl overflow-hidden bg-black flex items-center justify-center">
-          <img
-            :src="slide"
-            class="max-w-full max-h-full object-contain"
-            :alt="`Slide ${index + 1}`"
-            loading="lazy"
-          />
+        <div class="w-full h-full bg-black rounded-2xl shadow-xl flex items-center justify-center p-6">
+          <div class="grid grid-cols-2 gap-8 justify-items-center">
+            <div
+              v-for="(slide, subIndex) in slideGroup"
+              :key="subIndex"
+              class="flex items-center justify-center"
+            >
+              <img
+                :src="slide"
+                class="w-[500px] h-[500px] object-cover rounded-xl"
+                :alt="`Slide ${index * 2 + subIndex + 1}`"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
