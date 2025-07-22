@@ -18,30 +18,31 @@
       </ul>
 
       <!-- Info Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
-        <!-- Ongoing Projects -->
-        <div class="bg-[#504f4f] text-white border border-blue-100  p-6 max-w-md w-full flex flex-col h-full">
-          <h3 class="text-xl font-semibold text-white">Ongoing Projects</h3>
-          <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
-            <li>Drive-through bus washing system with generator + water recycling</li>
-            <li>Orthopedic supply projects for district hospitals</li>
-            <li>Vehicle spare part distribution (Land Rover, Yutong, Toyota, Iveco)</li>
-            <li>Lab equipment supply to diagnostic centers</li>
-          </ul>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center max-w-4xl mx-auto">
+  <!-- Ongoing Projects -->
+  <div class="bg-[#504f4f] text-white border border-blue-100 p-6 w-full flex flex-col h-full rounded-xl">
+    <h3 class="text-xl font-semibold text-white">Ongoing Projects</h3>
+    <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
+      <li>Drive-through bus washing system with generator + water recycling</li>
+      <li>Orthopedic supply projects for district hospitals</li>
+      <li>Vehicle spare part distribution (Land Rover, Yutong, Toyota, Iveco)</li>
+      <li>Lab equipment supply to diagnostic centers</li>
+    </ul>
+  </div>
 
-        <!-- Certifications & Compliance -->
-        <div class="bg-[#504f4f] text-white border border-blue-100  p-6 max-w-md w-full flex flex-col h-full">
-          <h3 class="text-xl font-semibold text-white">Certifications & Compliance</h3>
-          <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
-            <li>Business Registration Certificate</li>
-            <li>TMDA Certification</li>
-            <li>OSHA Workplace Compliance</li>
-            <li>TIN & VAT Registered</li>
-            <li>Import & Export Licenses</li>
-          </ul>
-        </div>
-      </div>
+  <!-- Certifications & Compliance -->
+  <div class="bg-[#504f4f] text-white border border-blue-100 p-6 w-full flex flex-col h-full rounded-xl">
+    <h3 class="text-xl font-semibold text-white">Certifications & Compliance</h3>
+    <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
+      <li>Business Registration Certificate</li>
+      <li>TMDA Certification</li>
+      <li>OSHA Workplace Compliance</li>
+      <li>TIN & VAT Registered</li>
+      <li>Import & Export Licenses</li>
+    </ul>
+  </div>
+</div>
+
     </div>
   </section>
 </template>
