@@ -1,41 +1,54 @@
-<script setup>
-</script>
-
 <template>
-  <section class="bg-white py-16 px-4">
-    <div class="max-w-screen-xl mx-auto">
-      <h2 class="text-3xl font-bold text-blue-700 text-center mb-10">
-        🩺 Our Services
+  
+    <div class="max-w-screen-xl mx-auto py-16">
+      <h2 class="text-3xl font-bold text-black text-center mb-10">
+        Our Services
       </h2>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <!-- Card -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch">
         <div
-          v-for="(card, index) in cards"
+          v-for="(card, index) in (showAll ? cards : cards.slice(0, 2))"
           :key="index"
-          class=" border-blue-200 rounded-xl p-6 shadow-sm transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-md cursor-pointer"
+          class="w-full max-w-md min-h-[320px] bg-[#504f4f] text-white p-6 shadow-sm transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-md cursor-pointer flex h-full"
         >
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">{{ card.title }}</h3>
-          <ul class="list-disc list-outside pl-5 text-lg space-y-1">
-            <li v-for="(item, i) in card.items" :key="i">{{ item }}</li>
-          </ul>
+          <div class="flex flex-col justify-center h-full w-full">
+            <h3 class="text-xl font-semibold mb-4 text-center">{{ card.title }}</h3>
+            <ul class="list-disc list-outside pl-5 text-lg space-y-1">
+              <li v-for="(item, i) in card.items" :key="i">{{ item }}</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <div v-if="showAll" class="mt-10 text-center">
+        <h3 class="text-xl font-bold text-black mb-3">Key Capabilities</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          International sourcing (China, India, Turkey, UAE)<br>
+          Certified by TMDA, OSHA, TRA<br>
+          Warehouse + distribution support<br>
+          Fast tender response and delivery<br>
+          Spare parts identification and cross-matching
+        </p>
+      </div>
+
+      <!-- Toggle Button -->
+      <div class="text-center mt-10">
+        <button
+          @click="showAll = !showAll"
+          class="bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-200 focus:outline-none"
+        >
+          {{ showAll ? 'Show Less' : 'More Services' }}
+        </button>
+      </div>
     </div>
-    <br>
-    <div><h3 class="text-1xl font-bold text-blue-500 text-center mb-5">Key Capabilities</h3>
-International sourcing (China, India, Turkey, UAE)
-<br>
-Certified by TMDA, OSHA, TRA
-<br>
-Warehouse + distribution support<br>
-Fast tender response and delivery<br>
-Spare parts identification and cross-matching
-</div>
-  </section>
+  
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const showAll = ref(false)
+
 const cards = [
   {
     title: 'Healthcare Services',

@@ -12,13 +12,13 @@ function toggleMenu() {
 
 <template>
 
-    <div>
+    <div >
         <nav class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
      <!-- Logo (left) -->
 <a href="#" class="flex items-center space-x-3">
-  <img class="h-10 w-10 rounded-full object-cover" :src="logo" alt="Open Sea Co. Ltd" />
-  <span class="text-2xl font-bold text-blue-700 select-none">
+  <img class="h-13 w-10 px-0 mx-0 rounded-full object-cover" :src="logo" alt="Open Sea Co. Ltd" />
+  <span class="text-2xl font-bold text-black select-none">
     Open Sea Co. Ltd
   </span>
 </a>
@@ -28,7 +28,7 @@ function toggleMenu() {
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center p-2 ml-3 text-blue-700 rounded-md md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        class="inline-flex items-center p-2 ml-3 text-black rounded-md md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
         aria-label="Toggle menu"
       >
         <svg
@@ -58,43 +58,43 @@ function toggleMenu() {
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
               >About Us</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Mission and Vision</a
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
+              >Vision</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Core Values</a
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
+              >Values</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Our Services</a
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
+              >Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded"
-              >Clients & Beneficiaries</a
+              class="block py-2 px-3 text-black hover:text-blue-900 hover:bg-blue-100 rounded"
+              >Clients</a
             >
           </li>
         </ul>
