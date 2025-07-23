@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row w-full min-h-screen my-10">
+  <div class="flex flex-col md:flex-row  bg-blue-50 items-center justify-center gap-8 my-10 py-7 px-6 ">
     <div
       class="w-[590px] h-[530px] bg-white rounded-lg shadow-md overflow-hidden mt-10 relative"
     >
