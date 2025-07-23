@@ -18,7 +18,7 @@ const activeTab = ref('vision')
     </div>
 
    <!-- Right: Tabs and Content -->
-<div class="md:w-1/2 p-8 flex flex-col justify-center items-center text-center">
+<div class="md:w-1/2 p-8 flex flex-col justify-center items-center text-center ">
   <!-- Tabs -->
 <div class="flex gap-6 mb-6 font-semibold text-lg">
   <span

@@ -56,7 +56,7 @@ onMounted(() => {
         :key="index"
         class="w-full h-full flex-shrink-0 p-4"
       >
-        <div class="w-full h-full bg-black rounded-2xl shadow-xl flex items-center justify-center p-6">
+        <div class="w-full h-full rounded-2xl shadow-xl flex items-center justify-center p-6">
           <div class="grid grid-cols-2 gap-8 justify-items-center">
             <div
               v-for="(slide, subIndex) in slideGroup"

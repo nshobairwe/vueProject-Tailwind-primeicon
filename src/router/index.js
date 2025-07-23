@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs.vue';
 import Vision from '../components/Vision.vue';
 import OurServices from '../components/OurServices.vue';
 import ClientsAndBeneficiaries from '../components/ClientsAndBeneficiaries.vue';
+import MedicalTourism from '../components/MedicalTourism.vue';
 
 
 
@@ -39,6 +40,11 @@ const router = createRouter({
      path: '/clients',
      name: 'clients',
      component: ClientsAndBeneficiaries,
+    },
+    {
+     path: '/medicalTourism',
+     name: 'medicalTourism',
+     component: MedicalTourism
     }
   ],
 });
