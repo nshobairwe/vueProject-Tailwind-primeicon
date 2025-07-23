@@ -1,23 +1,32 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import logo from "../assets/logo.jpg";
 import { RouterLink, useRoute } from "vue-router";
 
 const menuOpen = ref(false);
 const route = useRoute();
+const animate = ref(false);
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
 }
 
 const isActiveLink = (path) => route.path === path;
+
+onMounted(() => {
+  animate.value = true;
+});
 </script>
 
 <template>
   <nav class="bg-blue-900 border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center space-x-3">
+      <RouterLink
+        to="/"
+        class="flex items-center space-x-3"
+        :class="{ 'animate-slide-left': animate }"
+      >
         <img
           class="h-13 w-10 rounded-full object-cover"
           :src="logo"
@@ -52,6 +61,7 @@ const isActiveLink = (path) => route.path === path;
         :class="[
           'w-full md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-4 md:mt-0',
           menuOpen ? 'block' : 'hidden',
+          animate ? 'animate-slide-right-fast' : ''
         ]"
       >
         <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium">
@@ -125,3 +135,35 @@ const isActiveLink = (path) => route.path === path;
     </div>
   </nav>
 </template>
+
+<style scoped>
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-fast {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
+.animate-slide-right-fast {
+  animation: slide-right-fast 0.5s ease-out forwards;
+}
+</style>

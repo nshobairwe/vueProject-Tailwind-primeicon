@@ -6,11 +6,8 @@
 
     <!-- Scroll container -->
     <div class="relative overflow-hidden">
-      <div
-        class="animate-scroll flex space-x-6 w-max"
-        :style="{ width: showAll ? 'unset' : '100%' }"
-      >
-        <!-- Duplicate cards array twice for seamless scroll -->
+      <div class="animate-scroll flex space-x-6 w-max">
+        <!-- Duplicate cards for seamless scroll -->
         <div
           v-for="(card, index) in [...cards, ...cards]"
           :key="index"
@@ -30,10 +27,10 @@
       <div class="pointer-events-none absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-white"></div>
     </div>
 
-    <!-- Show more content -->
-    <div v-if="showAll" class="mt-10 text-center">
+    <!-- Always visible content -->
+    <div class="mt-16 text-center">
       <h3 class="text-xl font-bold text-blue-900 mb-3">Key Capabilities</h3>
-      <p class="text-lg text-black leading-relaxed">
+      <p class="text-lg text-black leading-relaxed space-y-2">
         International sourcing (China, India, Turkey, UAE)<br />
         Certified by TMDA, OSHA, TRA<br />
         Warehouse + distribution support<br />
@@ -41,16 +38,10 @@
         Spare parts identification and cross-matching
       </p>
     </div>
-
-    
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const showAll = ref(false)
-
 const cards = [
   {
     title: 'Healthcare Services',
