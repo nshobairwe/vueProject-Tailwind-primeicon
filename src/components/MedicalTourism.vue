@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import SlideMedical from './SlideMedical.vue'
 
 const contact = {
   phone: "+255 747 100 444",
@@ -37,31 +38,8 @@ onMounted(() => {
       <p class="text-lg text-gray-700">Access world-class healthcare beyond borders.</p>
     </div>
 
-    <!-- Intro with image -->
-<div class="grid md:grid-cols-2 gap-0 items-center bg-blue-50">
-  <!-- Left Content -->
-  <div class="flex flex-col justify-center items-center rounded-md w-full h-full px-6 py-8 text-center">
-  <h2 class="text-2xl font-bold mb-4">What is Medical Tourism?</h2>
-  <p class="text-lg leading-relaxed">
-    We help patients access world-class treatment abroad—more advanced, faster, and often cheaper.
-  </p>
-  <p class="mt-2">
-    Example: A cancer patient can be referred to China, India, or Turkey for cryotherapy, heart surgery, etc.
-  </p>
-</div>
-
-
-  <!-- Right Image Card -->
-  <div class="p-6">
-    <div class="rounded-md shadow-lg overflow-hidden max-w-sm mx-auto">
-      <img
-        src="/src/assets/Medical.jpg"
-        alt="Global medical"
-        class="w-full h-auto"
-      />
-    </div>
-  </div>
-</div>
+ 
+<SlideMedical/>
 
 
     <!-- Services as horizontal scrollable cards -->
