@@ -6,5 +6,5 @@
 
 /* Your custom styles */
 body, button, input, select, textarea {
-  @apply font-inter text-lg;
+  @apply font-inter text-lg font-bold;
 }
