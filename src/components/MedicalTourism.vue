@@ -1,19 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import SlideMedical from './SlideMedical.vue'
+import SlideMedical from './MedicalSlide.vue'
+import MedicalOurservice from './MedicalOurservice.vue'
+import MedicalChooseUs from './MedicalChooseUs.vue'
 
 const contact = {
   phone: "+255 747 100 444",
   email: "info@opensea.co.tz",
   address: "88 Ghuba Road, Msasani Village, Dar es Salaam",
 }
-const services = [
-  { icon: '🩺', text: 'Coordination of treatments: Cancer, Cardiology, Neurology, Fertility, etc.' },
-  { icon: '🏥', text: 'Referrals to top hospitals in China, Turkey, India, etc.' },
-  { icon: '✈️', text: 'Visa support, flights, accommodation, and transport.' },
-  { icon: '🗣️', text: 'Medical interpreter / patient guide.' },
-  { icon: '🔄', text: 'Post-treatment follow-up care.' },
-]
+
 onMounted(() => {
   const elements = document.querySelectorAll('.fade-in')
   elements.forEach(el => {
@@ -40,20 +36,7 @@ onMounted(() => {
 
  
 <SlideMedical/>
-
-
-    <!-- Services as horizontal scrollable cards -->
-    <div class="fade-in">
-      <h2 class="text-2xl font-bold mb-6 text-center">Our Services</h2>
-      <div class="flex overflow-x-auto space-x-4 pb-2">
-        <div v-for="(service, index) in services" :key="index"
-             class="min-w-[250px] bg-white border rounded-lg p-4 shadow-md flex-shrink-0">
-          <div class="text-blue-700 text-2xl mb-2">{{ service.icon }}</div>
-          <p>{{ service.text }}</p>
-        </div>
-      </div>
-    </div>
-
+    <MedicalOurservice />
     <!-- Case study -->
     <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 fade-in">
       <h2 class="text-xl font-semibold mb-3">Case Study: Mama Asha</h2>
@@ -72,19 +55,7 @@ onMounted(() => {
       </p>
     </div>
 
-    <!-- Benefits -->
-    <div class="fade-in bg-blue-50 py-12 px-6">
-      <h2 class="text-2xl font-bold mb-4">Why Choose Us?</h2>
-      <ul class="list-disc pl-6 space-y-2 text-lg">
-        <li>Global access to advanced healthcare</li>
-        <li>Shorter wait times</li>
-        <li>Trusted, recognized hospitals</li>
-        <li>End-to-end support and guidance</li>
-        <li>More affordable options</li>
-        <li>Life-saving results</li>
-      </ul>
-    </div>
-
+    <MedicalChooseUs/>
     <!-- Contact -->
     <div class="text-center fade-in">
       <h2 class="text-xl font-semibold mb-2">Contact Open Sea</h2>

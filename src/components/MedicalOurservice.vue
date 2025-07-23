@@ -1,0 +1,46 @@
+<script setup>
+const services = [
+  { icon: '🩺', text: 'Coordination of treatments: Cancer, Cardiology, Neurology, Fertility, etc.' },
+  { icon: '🏥', text: 'Referrals to top hospitals in China, Turkey, India, etc.' },
+  { icon: '✈️', text: 'Visa support, flights, accommodation, and transport.' },
+  { icon: '🗣️', text: 'Medical interpreter / patient guide.' },
+  { icon: '🔄', text: 'Post-treatment follow-up care.' },
+]
+</script>
+
+<template>
+  <div class="relative overflow-hidden bg-white py-8">
+    <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Our Services</h2>
+    <div class="relative w-full">
+      <div class="animate-scroll flex w-max space-x-6 px-4">
+        <div
+          v-for="(service, index) in [...services, ...services]"
+          :key="index"
+          class="min-w-[280px] bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-lg flex-shrink-0"
+        >
+          <div class="text-blue-700 text-3xl mb-4">{{ service.icon }}</div>
+          <p class="text-gray-700 text-base leading-relaxed">{{ service.text }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional gradient fade edges -->
+    <div class="pointer-events-none absolute top-0 left-0 w-12 h-full bg-gradient-to-r from-white"></div>
+    <div class="pointer-events-none absolute top-0 right-0 w-12 h-full bg-gradient-to-l from-white"></div>
+  </div>
+</template>
+
+<style scoped>
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+</style>

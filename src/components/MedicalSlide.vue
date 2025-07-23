@@ -5,6 +5,7 @@ import img1 from "../assets/MedicalImages/img1.png";
 import img2 from "../assets/MedicalImages/img2.png";
 import img3 from "../assets/MedicalImages/imge3.png";
 
+
 const images = [img1, img2, img3];
 const currentImageIndex = ref(0);
 const activeTab = ref('vision');
