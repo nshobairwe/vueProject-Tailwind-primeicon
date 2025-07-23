@@ -58,8 +58,12 @@ const isActiveLink = (path) => route.path === path;
           <li>
             <RouterLink
               to="/"
-              :class="isActiveLink('/') ? 'text-white font-semibold' : 'text-white'"
-              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+              :class="[
+                isActiveLink('/') 
+                  ? 'text-white font-semibold underline underline-offset-4  ' 
+                  : 'text-white',
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+              ]"
             >
               Home
             </RouterLink>
@@ -67,8 +71,12 @@ const isActiveLink = (path) => route.path === path;
           <li>
             <RouterLink
               to="/aboutus"
-              :class="isActiveLink('/aboutus') ? ' font-semibold' : 'text-white'"
-              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+              :class="[
+                isActiveLink('/aboutus') 
+                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                  : 'text-white',
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+              ]"
             >
               About Us
             </RouterLink>
@@ -76,8 +84,12 @@ const isActiveLink = (path) => route.path === path;
           <li>
             <RouterLink
               to="/vision"
-              :class="isActiveLink('/vision') ? ' font-semibold' : 'text-white'"
-              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+              :class="[
+                isActiveLink('/vision') 
+                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                  : 'text-white',
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+              ]"
             >
               Vision
             </RouterLink>
@@ -85,8 +97,12 @@ const isActiveLink = (path) => route.path === path;
           <li>
             <RouterLink
               to="/services"
-              :class="isActiveLink('/services') ? ' font-semibold' : 'text-white'"
-              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+              :class="[
+                isActiveLink('/services') 
+                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                  : 'text-white',
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+              ]"
             >
               Services
             </RouterLink>
@@ -94,8 +110,12 @@ const isActiveLink = (path) => route.path === path;
           <li>
             <RouterLink
               to="/clients"
-              :class="isActiveLink('/clients') ? ' font-semibold' : 'text-white'"
-              class="block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100"
+              :class="[
+                isActiveLink('/clients') 
+                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                  : 'text-white',
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+              ]"
             >
               Clients
             </RouterLink>

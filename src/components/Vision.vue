@@ -61,7 +61,7 @@ onUnmounted(() => {
           :class="[
             'cursor-pointer',
             activeTab === 'mission'
-              ? 'text-blue-600 underline underline-offset-4'
+              ? 'text-blue-900 underline underline-offset-4'
               : 'hover:text-blue-600 hover:underline underline-offset-4',
           ]"
         >
@@ -72,7 +72,7 @@ onUnmounted(() => {
           :class="[
             'cursor-pointer',
             activeTab === 'values'
-              ? 'text-blue-600 underline underline-offset-4'
+              ? 'text-blue-900 underline underline-offset-4'
               : 'hover:text-blue-600 hover:underline underline-offset-4',
           ]"
         >
@@ -83,16 +83,16 @@ onUnmounted(() => {
       <!-- Tab Content -->
       <div class="max-w-md">
         <div v-if="activeTab === 'vision'">
-          <h3 class="text-xl font-bold text-black mb-2">Our Vision</h3>
-          <p class="text-lg text-gray-700">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Our Vision</h3>
+          <p class="text-lg text-black">
             To be the region's most trusted and dynamic provider of healthcare,
             logistics, and supply services.
           </p>
         </div>
 
         <div v-else-if="activeTab === 'mission'">
-          <h3 class="text-xl font-bold text-black mb-2">Our Mission</h3>
-          <p class="text-lg text-gray-700">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Our Mission</h3>
+          <p class="text-lg text-black">
             Deliver high-quality, affordable services<br />
             Strengthen access to critical healthcare and industrial products<br />
             Serve with professionalism, compassion, and reliability
@@ -100,8 +100,8 @@ onUnmounted(() => {
         </div>
 
         <div v-else-if="activeTab === 'values'">
-          <h3 class="text-xl font-bold text-black mb-2">Our Values</h3>
-          <p class="text-lg text-gray-700">
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Our Values</h3>
+          <p class="text-lg text-black">
             Compassion – Humanity first<br />
             Integrity – Ethical actions always<br />
             Reliability – Dependable delivery<br />

@@ -20,8 +20,8 @@
     </div>
 
     <div v-if="showAll" class="mt-10 text-center">
-      <h3 class="text-xl font-bold text-black mb-3">Key Capabilities</h3>
-      <p class="text-lg text-gray-700 leading-relaxed">
+      <h3 class="text-xl font-bold text-blue-900 mb-3">Key Capabilities</h3>
+      <p class="text-lg text-black leading-relaxed">
         International sourcing (China, India, Turkey, UAE)<br>
         Certified by TMDA, OSHA, TRA<br>
         Warehouse + distribution support<br>
