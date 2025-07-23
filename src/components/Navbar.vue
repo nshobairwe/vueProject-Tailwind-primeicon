@@ -1,11 +1,9 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import logo from "../assets/logo.jpg";
+import { ref } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 
 const menuOpen = ref(false);
 const route = useRoute();
-const animate = ref(false);
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
@@ -13,23 +11,20 @@ function toggleMenu() {
 
 const isActiveLink = (path) => route.path === path;
 
-onMounted(() => {
-  animate.value = true;
-});
+// Close menu on link click
+function closeMenu() {
+  menuOpen.value = false;
+}
 </script>
 
 <template>
   <nav class="bg-blue-900 border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
       <!-- Logo -->
-      <RouterLink
-        to="/"
-        class="flex items-center space-x-3"
-        :class="{ 'animate-slide-left': animate }"
-      >
+      <RouterLink to="/" class="flex items-center space-x-3" @click="closeMenu">
         <img
           class="h-13 w-10 rounded-full object-cover"
-          :src="logo"
+          src="/src/assets/logo.jpg"
           alt="Open Sea Co. Ltd"
         />
         <span class="text-2xl font-bold text-white select-none">Open Sea Co. Ltd</span>
@@ -56,23 +51,24 @@ onMounted(() => {
         </svg>
       </button>
 
-      <!-- Menu -->
+      <!-- Sliding Menu -->
       <div
         :class="[
-          'w-full md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-4 md:mt-0',
-          menuOpen ? 'block' : 'hidden',
-          animate ? 'animate-slide-right-fast' : ''
+          'fixed top-0 left-0 h-full w-64 bg-blue-900 md:static md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-0 md:mt-0 transition-transform duration-300 ease-in-out z-50',
+          menuOpen ? 'translate-x-0' : '-translate-x-full',
+          'md:translate-x-0'
         ]"
       >
-        <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium">
+        <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium p-6 md:p-0">
           <li>
             <RouterLink
               to="/"
+              @click="closeMenu"
               :class="[
-                isActiveLink('/') 
-                  ? 'text-white font-semibold underline underline-offset-4  ' 
+                isActiveLink('/')
+                  ? 'text-white font-semibold underline underline-offset-4'
                   : 'text-white',
-                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
               Home
@@ -81,11 +77,12 @@ onMounted(() => {
           <li>
             <RouterLink
               to="/aboutus"
+              @click="closeMenu"
               :class="[
-                isActiveLink('/aboutus') 
-                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                isActiveLink('/aboutus')
+                  ? 'text-white font-semibold underline underline-offset-4'
                   : 'text-white',
-                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
               About Us
@@ -94,11 +91,12 @@ onMounted(() => {
           <li>
             <RouterLink
               to="/vision"
+              @click="closeMenu"
               :class="[
-                isActiveLink('/vision') 
-                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                isActiveLink('/vision')
+                  ? 'text-white font-semibold underline underline-offset-4'
                   : 'text-white',
-                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
               Vision
@@ -107,11 +105,12 @@ onMounted(() => {
           <li>
             <RouterLink
               to="/services"
+              @click="closeMenu"
               :class="[
-                isActiveLink('/services') 
-                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                isActiveLink('/services')
+                  ? 'text-white font-semibold underline underline-offset-4'
                   : 'text-white',
-                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
               Services
@@ -120,11 +119,12 @@ onMounted(() => {
           <li>
             <RouterLink
               to="/clients"
+              @click="closeMenu"
               :class="[
-                isActiveLink('/clients') 
-                  ? 'text-white font-semibold underline underline-offset-4 ' 
+                isActiveLink('/clients')
+                  ? 'text-white font-semibold underline underline-offset-4'
                   : 'text-white',
-                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100'
+                'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
               Clients
@@ -135,35 +135,3 @@ onMounted(() => {
     </div>
   </nav>
 </template>
-
-<style scoped>
-@keyframes slide-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-right-fast {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-left {
-  animation: slide-left 1s ease-out forwards;
-}
-
-.animate-slide-right-fast {
-  animation: slide-right-fast 0.5s ease-out forwards;
-}
-</style>

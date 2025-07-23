@@ -1,15 +1,17 @@
 <script setup>
-// No need to import anything
+// No script needed
 </script>
 
 <template>
   <section class="bg-white py-8 px-4 mt-9">
     <div class="max-w-screen-xl mx-auto">
       <!-- Header -->
-      <h2 class="text-7xl font-bold text-blue-900 mb-4 text-center flex items-center justify-center gap-2">
+      <h2
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-900 mb-4 text-center flex items-center justify-center gap-2"
+      >
         Clients and Beneficiaries
       </h2>
-      <ul class="text-lg text-center mb-12 space-y-1">
+      <ul class="text-sm sm:text-base md:text-lg text-center mb-12 space-y-1">
         <li>Regional and district hospitals</li>
         <li>Public health institutions</li>
         <li>NGOs and aid agencies</li>

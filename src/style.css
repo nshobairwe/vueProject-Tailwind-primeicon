@@ -8,3 +8,19 @@
 body, button, input, select, textarea {
   @apply font-inter text-lg font-bold;
 }
+/* main.css */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
