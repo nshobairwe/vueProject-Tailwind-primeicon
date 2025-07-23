@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-white text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16">
+  <section class="bg-white text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16 mt-10">
 
     <!-- Title -->
     <div class="text-center fade-in">

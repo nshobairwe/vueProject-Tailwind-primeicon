@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-screen-xl mx-auto py-16 px-4">
-    <h2 class="text-3xl font-bold text-black text-center mb-10">
+    <h2 class="text-3xl font-bold text-blue-900 text-center my-10">
       Our Services
     </h2>
 
@@ -8,7 +8,7 @@
       <div
         v-for="(card, index) in (showAll ? cards : cards.slice(0, 2))"
         :key="index"
-        class="w-full max-w-sm bg-blue-50 text-black p-4 rounded-2xl shadow-sm transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-md cursor-pointer flex"
+        class="w-full max-w-sm bg-blue-50 text-black  p-4 rounded-2xl shadow-sm transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-md cursor-pointer flex"
       >
         <div class="flex flex-col justify-center h-full w-full">
           <h3 class="text-lg font-semibold mb-3 text-center">{{ card.title }}</h3>

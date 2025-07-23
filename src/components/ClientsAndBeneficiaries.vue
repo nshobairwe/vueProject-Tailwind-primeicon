@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <section class="bg-white py-8 px-4">
+  <section class="bg-white py-8 px-4 mt-9">
     <div class="max-w-screen-xl mx-auto">
       <!-- Header -->
-      <h2 class="text-7xl font-bold text-black mb-4 text-center flex items-center justify-center gap-2">
+      <h2 class="text-7xl font-bold text-blue-900 mb-4 text-center flex items-center justify-center gap-2">
         Clients and Beneficiaries
       </h2>
       <ul class="text-lg text-center mb-12 space-y-1">
@@ -21,7 +21,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center max-w-4xl mx-auto">
   <!-- Ongoing Projects -->
   <div class="bg-blue-50 text-black border border-blue-100 p-6 w-full flex flex-col h-full rounded-xl">
-    <h3 class="text-xl font-semibold text-black">Ongoing Projects</h3>
+    <h3 class="text-xl font-semibold text-blue-900">Ongoing Projects</h3>
     <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
       <li>Drive-through bus washing system with generator + water recycling</li>
       <li>Orthopedic supply projects for district hospitals</li>
@@ -32,7 +32,7 @@
 
   <!-- Certifications & Compliance -->
   <div class="bg-blue-50 text-black border border-blue-100 p-6 w-full flex flex-col h-full rounded-xl">
-    <h3 class="text-xl font-semibold text-black">Certifications & Compliance</h3>
+    <h3 class="text-xl font-semibold text-blue-900">Certifications & Compliance</h3>
     <ul class="list-disc list-outside text-lg space-y-1 pl-6 mt-4">
       <li>Business Registration Certificate</li>
       <li>TMDA Certification</li>
