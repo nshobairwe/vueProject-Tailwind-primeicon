@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-6"
+    class="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-6 mt-3"
   >
     <div class="max-w-screen-xl mx-auto">
       <!-- Header -->

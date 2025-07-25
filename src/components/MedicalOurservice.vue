@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 const services = [
   { icon: '🩺', text: 'Coordination of treatments: Cancer, Cardiology, Neurology, Fertility, etc.' },
   { icon: '🏥', text: 'Referrals to top hospitals in China, Turkey, India, etc.' },
@@ -6,13 +8,30 @@ const services = [
   { icon: '🗣️', text: 'Medical interpreter / patient guide.' },
   { icon: '🔄', text: 'Post-treatment follow-up care.' },
 ]
+
+const isPaused = ref(false)
+
+function pauseScroll() {
+  isPaused.value = true
+}
+
+function resumeScroll() {
+  isPaused.value = false
+}
 </script>
 
 <template>
   <div class="relative overflow-hidden bg-white py-8">
     <h2 class="text-3xl font-bold mb-6 text-center text-green-700">Our Services</h2>
-    <div class="relative w-full">
-      <div class="animate-scroll flex w-max space-x-6 px-4">
+    <div
+      class="relative w-full"
+      @mouseenter="pauseScroll"
+      @mouseleave="resumeScroll"
+    >
+      <div
+        class="flex w-max space-x-6 px-4"
+        :class="{ 'animate-scroll': !isPaused }"
+      >
         <div
           v-for="(service, index) in [...services, ...services]"
           :key="index"
