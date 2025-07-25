@@ -10,7 +10,7 @@ function toggleMedical() {
 </script>
 
 <template>
-  <section class="flex flex-col md:flex-row bg-blue-50 items-center justify-center gap-8 my-10 py-7 px-6">
+  <section class="flex flex-col md:flex-row bg-blue-50 items-center justify-center gap-8 my-10 px-6">
     <div class="w-full text-center bg-blue-50 py-10">
       <h2 class="text-3xl font-bold text-blue-900 mb-6">About Us</h2>
       <p class="text-lg leading-relaxed max-w-3xl mx-auto">

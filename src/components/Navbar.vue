@@ -17,6 +17,12 @@ function closeMenu() {
 }
 </script>
 
+<style>
+html {
+  scroll-padding-top: 64px; /* height of your fixed navbar */
+}
+</style>
+
 <template>
   <nav class="bg-blue-900 border-b shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
@@ -34,8 +40,9 @@ function closeMenu() {
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center p-2 ml-3 text-white rounded-md md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        class="inline-flex items-center p-2 ml-3 text-white rounded-full md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
         aria-label="Toggle menu"
+        style="border-radius: 12px;"
       >
         <svg
           class="w-6 h-6"
@@ -51,23 +58,21 @@ function closeMenu() {
         </svg>
       </button>
 
-      <!-- Sliding Menu -->
+      <!-- Sliding Menu from left -->
       <div
         :class="[
-          'fixed top-0 left-0 h-full w-64 bg-blue-900 md:static md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-0 md:mt-0 transition-transform duration-300 ease-in-out z-50',
-          menuOpen ? 'translate-x-0' : '-translate-x-full',
-          'md:translate-x-0'
+          'fixed top-0 left-0 h-full w-64 md:static md:flex md:w-auto md:space-x-8 md:items-center md:ml-auto mt-0 md:mt-0 transition-transform duration-300 ease-in-out z-50 rounded-r-lg',
+          menuOpen ? 'translate-x-0 bg-blue-50 text-black shadow-lg' : '-translate-x-full',
+          'md:translate-x-0 md:bg-transparent md:text-white md:shadow-none md:rounded-none'
         ]"
       >
-        <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium p-6 md:p-0">
+        <ul class="flex flex-col md:flex-row md:space-x-8 md:text-sm md:font-medium p-6 md:p-0 text-black md:text-white">
           <li>
             <RouterLink
               to="/"
               @click="closeMenu"
               :class="[
-                isActiveLink('/')
-                  ? 'text-white font-semibold underline underline-offset-4'
-                  : 'text-white',
+                isActiveLink('/') ? 'font-semibold underline underline-offset-4' : '',
                 'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
@@ -79,9 +84,7 @@ function closeMenu() {
               to="/aboutus"
               @click="closeMenu"
               :class="[
-                isActiveLink('/aboutus')
-                  ? 'text-white font-semibold underline underline-offset-4'
-                  : 'text-white',
+                isActiveLink('/aboutus') ? 'font-semibold underline underline-offset-4' : '',
                 'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
@@ -93,9 +96,7 @@ function closeMenu() {
               to="/vision"
               @click="closeMenu"
               :class="[
-                isActiveLink('/vision')
-                  ? 'text-white font-semibold underline underline-offset-4'
-                  : 'text-white',
+                isActiveLink('/vision') ? 'font-semibold underline underline-offset-4' : '',
                 'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
@@ -107,9 +108,7 @@ function closeMenu() {
               to="/services"
               @click="closeMenu"
               :class="[
-                isActiveLink('/services')
-                  ? 'text-white font-semibold underline underline-offset-4'
-                  : 'text-white',
+                isActiveLink('/services') ? 'font-semibold underline underline-offset-4' : '',
                 'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
@@ -121,9 +120,7 @@ function closeMenu() {
               to="/clients"
               @click="closeMenu"
               :class="[
-                isActiveLink('/clients')
-                  ? 'text-white font-semibold underline underline-offset-4'
-                  : 'text-white',
+                isActiveLink('/clients') ? 'font-semibold underline underline-offset-4' : '',
                 'block py-2 px-3 rounded hover:text-blue-900 hover:bg-blue-100',
               ]"
             >
