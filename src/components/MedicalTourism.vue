@@ -28,13 +28,16 @@ onMounted(() => {
 <template>
   <section class=" text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16 mt-10">
 
-    <!-- Title -->
-    <div class="text-center fade-in">
-      <h1 class="text-5xl font-extrabold text-green-700 mb-4">Medical Tourism Services</h1>
-      <p class="text-lg text-gray-700">Access world-class healthcare beyond borders.</p>
-    </div>
+<!-- Hero Title Section with fade-in animation -->
+<section class="bg-gradient-to-r from-green-100 via-white to-green-100 py-20 text-center fade-in">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-green-800">
+    Medical Tourism Services
+  </h1>
+  <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+    Access world-class healthcare beyond borders with trusted global partnerships.
+  </p>
+</section>
 
- 
 <SlideMedical/>
 <MedicalOurservice />
     <!-- Case study -->

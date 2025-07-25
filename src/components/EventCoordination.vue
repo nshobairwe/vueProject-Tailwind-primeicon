@@ -36,11 +36,15 @@ onMounted(() => {
 <template>
   <section class="bg-white text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16 mt-10">
 
-    <!-- Title -->
-    <div class="text-center fade-in">
-      <h1 class="text-5xl font-extrabold text-blue-900 mb-4">Open Sea Event Coordination</h1>
-      <p class="text-lg text-gray-700 italic">“Every Event, Perfectly Orchestrated.”</p>
-    </div>
+ <!-- Hero Title Section with fade-in animation -->
+<section class="bg-gradient-to-r from-blue-100 via-white to-blue-100 py-20 text-center fade-in">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-blue-900 mb-4">
+    Open Sea Event Coordination
+  </h1>
+  <p class="text-lg md:text-xl text-gray-700 italic">
+    “Every Event, Perfectly Orchestrated.”
+  </p>
+</section>
 
     <EventAboutUs/>
     <EventOurServices/>
