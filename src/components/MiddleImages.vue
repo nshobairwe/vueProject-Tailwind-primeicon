@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 import slide1 from '../assets/img1.png'
 import slide2 from '../assets/img2.png'
@@ -13,19 +14,17 @@ import slide9 from '../assets/img9.png'
 import slide10 from '../assets/img10.png'
 import slide11 from '../assets/img11.png'
 
-const groupedSlides = [
-  [slide1, slide2],
-  [slide3, slide5],
-  [slide4, slide6],
-  [slide8, slide9],
-  [slide10],
-  [slide11]
+const slides = [
+  slide1, slide2, slide3, slide4, slide5, slide6,
+  slide7, slide8, slide9, slide10, slide11
 ]
 
-const fullSlides = [...groupedSlides, groupedSlides[0]]
+// Add the first slide again for seamless looping
+const fullSlides = [...slides, slides[0]]
 
 const currentIndex = ref(0)
 const isTransitioning = ref(true)
+const router = useRouter()
 
 onMounted(() => {
   setInterval(() => {
@@ -43,40 +42,43 @@ onMounted(() => {
     }
   }, 3000)
 })
-</script>
 
+function goToAbout() {
+  router.push('/aboutus')
+}
+</script>
 <template>
-  <div class="overflow-hidden relative mt-20 mx-10 h-screen">
+  <div class="relative w-full h-screen overflow-hidden">
+    <!-- Background Images -->
     <div
       class="flex w-full h-full"
       :class="{ 'transition-transform duration-500 ease-in-out': isTransitioning }"
       :style="`transform: translateX(-${currentIndex * 100}%); will-change: transform;`"
     >
       <div
-        v-for="(slideGroup, index) in fullSlides"
+        v-for="(slide, index) in fullSlides"
         :key="index"
-        class="w-full h-full flex-shrink-0"
+        class="w-full h-full flex-shrink-0 flex items-center justify-center"
       >
-        <div
-          class="w-full h-[600px]"
-          :class="slideGroup.length === 1
-            ? 'flex items-center justify-center'
-            : 'grid grid-cols-2 gap-0 items-center justify-center'"
-        >
-          <div
-            v-for="(slide, subIndex) in slideGroup"
-            :key="subIndex"
-            class="w-full h-full flex items-center justify-center"
-          >
-            <img
-              :src="slide"
-              class="object-cover w-full h-[600px]"
-              :alt="`Slide ${index * 2 + subIndex + 1}`"
-              loading="lazy"
-            />
-          </div>
-        </div>
+        <img
+          :src="slide"
+          class="object-cover w-full h-full"
+          :alt="`Slide ${index + 1}`"
+          loading="lazy"
+        />
       </div>
+    </div>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+    <!-- Hero content -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center text-white px-4">
+      <h1 class="text-5xl md:text-6xl font-bold drop-shadow-lg">Your Event, Perfectly Orchestrated</h1>
+      <p class="mt-4 text-xl md:text-2xl font-medium drop-shadow-md">Discover seamless planning with us</p>
+      <button  @click="goToAbout" class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg rounded-xl shadow-md transition">
+        Get Started
+      </button>
     </div>
   </div>
 </template>
