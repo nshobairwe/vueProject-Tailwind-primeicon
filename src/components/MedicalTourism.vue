@@ -26,39 +26,39 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-white text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16 mt-10">
+  <section class=" text-gray-900 min-h-screen py-12 px-6 md:px-20 space-y-16 mt-10">
 
     <!-- Title -->
     <div class="text-center fade-in">
-      <h1 class="text-5xl font-extrabold text-blue-900 mb-4">Medical Tourism Services</h1>
+      <h1 class="text-5xl font-extrabold text-green-700 mb-4">Medical Tourism Services</h1>
       <p class="text-lg text-gray-700">Access world-class healthcare beyond borders.</p>
     </div>
 
  
 <SlideMedical/>
-    <MedicalOurservice />
+<MedicalOurservice />
     <!-- Case study -->
-    <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 fade-in">
-      <h2 class="text-xl font-semibold mb-3">Case Study: Mama Asha</h2>
-      <p>
-        Diagnosed with early breast cancer, Mama Asha was treated in China using cryotherapy.
-        She returned after 2 weeks and continued follow-up via Zoom and email.
-      </p>
-    </div>
+<div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 fade-in text-center max-w-3xl mx-auto">
+  <h2 class="text-xl text-green-700 font-semibold mb-3">Case Study: Mama Asha</h2>
+  <p>
+    Diagnosed with early breast cancer, Mama Asha was treated in China using cryotherapy.
+    She returned after 2 weeks and continued follow-up via Zoom and email.
+  </p>
+</div>
 
-    <!-- Affordability -->
-    <div class="fade-in">
-      <h2 class="text-2xl font-bold mb-4">Is It Affordable?</h2>
-      <p>
-        Yes! Due to our hospital partnerships, we offer reduced prices. Example:
-        A child's heart surgery may cost Tsh 20M in China vs. 50M elsewhere.
-      </p>
-    </div>
+<!-- Affordability -->
+<div class="fade-in text-center max-w-3xl mx-auto mt-8">
+  <h2 class="text-2xl  text-green-700 font-bold mb-4">Is It Affordable?</h2>
+  <p>
+    Yes! Due to our hospital partnerships, we offer reduced prices. Example:
+    A child's heart surgery may cost Tsh 20M in China vs. 50M elsewhere.
+  </p>
+</div>
 
     <MedicalChooseUs/>
     <!-- Contact -->
     <div class="text-center fade-in">
-      <h2 class="text-xl font-semibold mb-2">Contact Open Sea</h2>
+      <h2 class="text-xl  text-green-700 font-semibold mb-2">Contact Open Sea</h2>
       <p class="mb-4">We support you every step of the journey.</p>
       <ul class="text-lg space-y-1">
         <li><strong>📞</strong> <a href="tel:+255747100444" class="text-blue-700 hover:underline">{{ contact.phone }}</a></li>

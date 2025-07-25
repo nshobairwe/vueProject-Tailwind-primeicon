@@ -20,13 +20,22 @@ function toggleMedical() {
         institutions, NGOs, and private clients nationwide.
       </p>
 
-      <!-- Navigate to Medical Tourism page -->
-      <div class="mt-8">
+      <!-- Animated Buttons -->
+      <div class="mt-10 space-y-4 max-w-md mx-auto">
+        <!-- Medical Tourism Button -->
         <router-link
           to="/medicalTourism"
-          class="inline-block bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-200 animate-pulse-pop"
+          class="pop-motion block w-full text-center bg-green-700 text-white px-6 py-4 rounded-lg hover:bg-green-600 transition duration-200 shadow-lg text-lg font-semibold"
         >
-          Medical Tourism Services →
+          🏥 Medical Tourism Services →
+        </router-link>
+
+        <!-- Events Coordinating Button -->
+        <router-link
+          to="/EventService"
+          class="pop-motion block w-full text-center bg-blue-900 text-white px-6 py-4 rounded-lg hover:bg-blue-800 transition duration-200 shadow-lg text-lg font-semibold"
+        >
+          🎉 Events Coordinating Services →
         </router-link>
       </div>
     </div>
@@ -34,18 +43,17 @@ function toggleMedical() {
 </template>
 
 <style scoped>
-@keyframes pulse-pop {
+@keyframes pop-motion {
   0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.6);
+    transform: translateZ(0) scale(1);
   }
   50% {
-    transform: scale(1.08);
-    box-shadow: 0 0 0 10px rgba(30, 64, 175, 0);
+    transform: translateZ(10px) scale(1.08);
   }
 }
 
-.animate-pulse-pop {
-  animation: pulse-pop 1.5s ease-in-out infinite;
+.pop-motion {
+  animation: pop-motion 2s ease-in-out infinite;
+  will-change: transform;
 }
 </style>

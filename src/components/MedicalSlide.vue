@@ -5,30 +5,30 @@ import img1 from "../assets/MedicalImages/img1.png";
 import img2 from "../assets/MedicalImages/img2.png";
 import img3 from "../assets/MedicalImages/imge3.png";
 
-
 const images = [img1, img2, img3];
 const currentImageIndex = ref(0);
-const activeTab = ref('vision');
+const activeTab = ref("vision");
 
 let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
     currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
-  }, 3000); // one image every 3s
+  }, 3000);
 });
 
 onUnmounted(() => {
   clearInterval(intervalId);
 });
 </script>
+
 <template>
-  <div class="flex flex-col md:flex-row w-full min-h-screen bg-blue-50 items-center justify-center gap-8 my-10 px-6">
+  <div class="flex flex-col md:flex-row bg-blue-50 items-center justify-center gap-8 my-10 py-7 px-6">
     
-    <!-- Text Block (Now Left) -->
+    <!-- Text Block (Left) -->
     <div class="w-full md:w-1/2 h-[530px] flex items-center justify-center text-center px-6">
       <div>
-        <h2 class="text-2xl font-bold mb-4">What is Medical Tourism?</h2>
+        <h2 class="text-2xl text-green-700 font-bold mb-4">What is Medical Tourism?</h2>
         <p class="text-lg leading-relaxed">
           We help patients access world-class treatment abroad—more advanced, faster, and often cheaper.
         </p>
@@ -38,7 +38,7 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <!-- Image Block (Now Right) -->
+    <!-- Image Block (Right) -->
     <div class="w-full md:w-1/2 h-[530px] bg-blue-50 rounded-lg shadow-md overflow-hidden relative flex items-center justify-center">
       <div class="w-full h-full relative">
         <transition-group name="slide-fade" tag="div">

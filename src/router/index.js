@@ -5,6 +5,8 @@ import Vision from '../components/Vision.vue';
 import OurServices from '../components/OurServices.vue';
 import ClientsAndBeneficiaries from '../components/ClientsAndBeneficiaries.vue';
 import MedicalTourism from '../components/MedicalTourism.vue';
+import EventService from '../components/EventCoordination.vue';
+import EventOurServices from '../components/EventOurServices.vue';
 
 
 
@@ -45,6 +47,16 @@ const router = createRouter({
      path: '/medicalTourism',
      name: 'medicalTourism',
      component: MedicalTourism
+    },
+    {
+      path: '/eventService',
+      name: 'eventService',
+      component: EventService
+    },
+    {
+      path: '/eventOurService',
+      name: 'eventOurService',
+      component: EventOurServices
     }
   ],
 });

@@ -13,7 +13,7 @@ import img4 from '../assets/MedicalImages/img4.png'
 
       <!-- Text -->
       <div class="w-full md:w-1/2 mx-3">
-        <h2 class="text-2xl font-bold mb-4">Why Choose Us?</h2>
+        <h2 class="text-2xl text-green-700 font-bold mb-4">Why Choose Us?</h2>
         <ul class="list-disc pl-6 space-y-2 text-lg text-gray-800">
           <li>Global access to advanced healthcare</li>
           <li>Shorter wait times</li>
