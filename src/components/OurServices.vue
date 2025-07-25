@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-xl mx-auto py-20 px-6">
+  <section class="max-w-screen-xl mx-auto py-20 px-6 mt-27 md:mt-32">
     <h2
       class="text-4xl font-extrabold text-blue-900 text-center mb-12 tracking-wide"
     >
@@ -107,9 +107,9 @@ const cards = [
       "Equipment installation and after-sales support",
     ],
   },
-]
+];
 
-const icons = ["🏥", "🔬", "⚙️", "📦"]
+const icons = ["🏥", "🔬", "⚙️", "📦"];
 </script>
 
 <style scoped>
