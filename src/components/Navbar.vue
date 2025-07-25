@@ -37,7 +37,7 @@ html {
   scroll-padding-top: 64px; /* navbar height */
 }
 
-/* Left sliding fullscreen menu */
+/* Left sliding mobile menu */
 .menu-mobile {
   position: fixed;
   top: 0;
@@ -59,7 +59,14 @@ html {
   transform: translateX(0);
 }
 
-/* Overlay */
+/* Hide mobile menu on md and larger */
+@media (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+/* Overlay for mobile menu */
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -67,7 +74,7 @@ html {
   z-index: 50;
 }
 
-/* Menu list */
+/* Mobile menu list */
 .menu-mobile ul {
   margin-top: 2rem;
   list-style: none;
@@ -77,7 +84,7 @@ html {
   gap: 1.5rem;
 }
 
-/* Links style */
+/* Mobile links */
 .menu-mobile ul li a {
   color: #e0e7ff; /* light blue */
   font-weight: 600;
@@ -96,11 +103,50 @@ html {
   outline: none;
 }
 
-/* Active link */
+/* Active link on mobile */
 .menu-mobile ul li a.active {
   background-color: #2563eb;
   color: white;
-  box-shadow: inset 4px 0 0 0 #15803d; /* bright yellow left border */
+  box-shadow: inset 4px 0 0 0 #15803d; /* green-700 left border */
+}
+
+/* Desktop horizontal menu */
+.desktop-menu {
+  display: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Show desktop menu on md+ */
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+  }
+}
+
+.desktop-menu a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+}
+
+.desktop-menu a:hover,
+.desktop-menu a:focus {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+  outline: none;
+}
+
+/* Active link on desktop */
+.desktop-menu a.active {
+  box-shadow: inset 4px 0 0 0 #15803d; /* green-700 left border */
+  background-color: #2563eb;
+  color: white;
 }
 
 /* Navbar */
@@ -124,7 +170,7 @@ nav {
         <span class="text-2xl font-bold text-white select-none">Open Sea Co. Ltd</span>
       </RouterLink>
 
-      <!-- Hamburger button -->
+      <!-- Hamburger button for mobile -->
       <button
         @click="toggleMenu"
         type="button"
@@ -145,12 +191,51 @@ nav {
           <path v-else d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
+
+      <!-- Desktop horizontal menu -->
+      <div class="desktop-menu hidden md:flex">
+        <RouterLink
+          to="/"
+          :class="[isActiveLink('/') ? 'active' : '']"
+          class="block"
+        >
+          Home
+        </RouterLink>
+        <RouterLink
+          to="/aboutus"
+          :class="[isActiveLink('/aboutus') ? 'active' : '']"
+          class="block"
+        >
+          About Us
+        </RouterLink>
+        <RouterLink
+          to="/vision"
+          :class="[isActiveLink('/vision') ? 'active' : '']"
+          class="block"
+        >
+          Vision
+        </RouterLink>
+        <RouterLink
+          to="/services"
+          :class="[isActiveLink('/services') ? 'active' : '']"
+          class="block"
+        >
+          Services
+        </RouterLink>
+        <RouterLink
+          to="/clients"
+          :class="[isActiveLink('/clients') ? 'active' : '']"
+          class="block"
+        >
+          Clients
+        </RouterLink>
+      </div>
     </div>
 
     <!-- Overlay -->
     <div v-if="menuOpen" class="menu-overlay md:hidden" @click="closeMenu"></div>
 
-    <!-- Left sliding menu -->
+    <!-- Mobile sliding menu -->
     <div
       :class="['menu-mobile', menuOpen ? 'open' : '']"
       @click.stop
