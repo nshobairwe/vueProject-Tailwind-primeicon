@@ -34,7 +34,7 @@ const isActiveLink = (path) => route.path === path;
 
 <style>
 html {
-  scroll-padding-top: 64px; /* navbar height */
+  scroll-padding-top: 64px;
 }
 
 /* Left sliding mobile menu */
@@ -44,7 +44,7 @@ html {
   left: 0;
   width: 280px;
   height: 100vh;
-  background: #1e40af; /* Tailwind blue-900 */
+  background: white; /* changed to white */
   padding: 3rem 1.5rem;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
   transform: translateX(-100%);
@@ -54,19 +54,16 @@ html {
   flex-direction: column;
 }
 
-/* Show menu when open */
 .menu-mobile.open {
   transform: translateX(0);
 }
 
-/* Hide mobile menu on md and larger */
 @media (min-width: 768px) {
   .menu-mobile {
     display: none;
   }
 }
 
-/* Overlay for mobile menu */
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -74,50 +71,42 @@ html {
   z-index: 50;
 }
 
-/* Mobile menu list */
 .menu-mobile ul {
   margin-top: 2rem;
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-/* Mobile links */
 .menu-mobile ul li a {
-  color: #e0e7ff; /* light blue */
+  color: #1e40af; /* dark blue text */
   font-weight: 600;
   font-size: 1.2rem;
   text-decoration: none;
-  border-radius: 0.375rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px; /* fully rounded */
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
+  display: block;
 }
 
 .menu-mobile ul li a:hover,
-.menu-mobile ul li a:focus {
-  background-color: #2563eb; /* Tailwind blue-600 */
+.menu-mobile ul li a:focus,
+.menu-mobile ul li a.active {
+  background-color: #1e3a8a; /* blue-900 */
   color: white;
   outline: none;
 }
 
-/* Active link on mobile */
-.menu-mobile ul li a.active {
-  background-color: #2563eb;
-  color: white;
-  box-shadow: inset 4px 0 0 0 #15803d; /* green-700 left border */
-}
-
-/* Desktop horizontal menu */
+/* Desktop menu */
 .desktop-menu {
   display: none;
   gap: 1.5rem;
   align-items: center;
 }
 
-/* Show desktop menu on md+ */
 @media (min-width: 768px) {
   .desktop-menu {
     display: flex;
@@ -125,31 +114,29 @@ html {
 }
 
 .desktop-menu a {
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px; /* fully rounded */
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
+  display: block;
 }
 
 .desktop-menu a:hover,
 .desktop-menu a:focus {
-  background-color: #2563eb; /* Tailwind blue-600 */
+  background-color: #1e3a8a; /* blue-900 */
   color: white;
   outline: none;
 }
 
-/* Active link on desktop */
 .desktop-menu a.active {
-  box-shadow: inset 4px 0 0 0 #15803d; /* green-700 left border */
-  background-color: #2563eb;
+  background-color: #1e3a8a;
   color: white;
 }
 
-/* Navbar */
 nav {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -157,7 +144,7 @@ nav {
 
 <template>
   <nav
-    class="bg-blue-900 border-b shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300"
+    class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300"
     :class="{ '-translate-y-full': !isNavbarVisible, 'translate-y-0': isNavbarVisible }"
   >
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
@@ -167,14 +154,14 @@ nav {
           src="/src/assets/logo.jpg"
           alt="Open Sea Co. Ltd"
         />
-        <span class="text-2xl font-bold text-white select-none">Open Sea Co. Ltd</span>
+        <span class="text-2xl font-bold text-black select-none">Open Sea Co. Ltd</span>
       </RouterLink>
 
-      <!-- Hamburger button for mobile -->
+      <!-- Hamburger for mobile -->
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center p-2 ml-3 text-white rounded-full md:hidden hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        class="inline-flex items-center p-2 ml-3 text-black rounded-full md:hidden hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         aria-label="Toggle menu"
         :aria-expanded="menuOpen.toString()"
       >
@@ -192,99 +179,36 @@ nav {
         </svg>
       </button>
 
-      <!-- Desktop horizontal menu -->
+      <!-- Desktop menu -->
       <div class="desktop-menu hidden md:flex">
-        <RouterLink
-          to="/"
-          :class="[isActiveLink('/') ? 'active' : '']"
-          class="block"
-        >
-          Home
-        </RouterLink>
-        <RouterLink
-          to="/aboutus"
-          :class="[isActiveLink('/aboutus') ? 'active' : '']"
-          class="block"
-        >
-          About Us
-        </RouterLink>
-        <RouterLink
-          to="/vision"
-          :class="[isActiveLink('/vision') ? 'active' : '']"
-          class="block"
-        >
-          Vision
-        </RouterLink>
-        <RouterLink
-          to="/services"
-          :class="[isActiveLink('/services') ? 'active' : '']"
-          class="block"
-        >
-          Services
-        </RouterLink>
-        <RouterLink
-          to="/clients"
-          :class="[isActiveLink('/clients') ? 'active' : '']"
-          class="block"
-        >
-          Clients
-        </RouterLink>
+        <RouterLink to="/" :class="[isActiveLink('/') ? 'active' : '']" class="block">Home</RouterLink>
+        <RouterLink to="/aboutus" :class="[isActiveLink('/aboutus') ? 'active' : '']" class="block">About Us</RouterLink>
+        <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']" class="block">Vision</RouterLink>
+        <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']" class="block">Services</RouterLink>
+        <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']" class="block">Clients</RouterLink>
       </div>
     </div>
 
-    <!-- Overlay -->
+    <!-- Mobile menu overlay -->
     <div v-if="menuOpen" class="menu-overlay md:hidden" @click="closeMenu"></div>
 
     <!-- Mobile sliding menu -->
-    <div
-      :class="['menu-mobile', menuOpen ? 'open' : '']"
-      @click.stop
-    >
+    <div :class="['menu-mobile', menuOpen ? 'open' : '']" @click.stop>
       <ul>
         <li>
-          <RouterLink
-            to="/"
-            @click="closeMenu"
-            :class="[isActiveLink('/') ? 'active' : '']"
-          >
-            Home
-          </RouterLink>
+          <RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">Home</RouterLink>
         </li>
         <li>
-          <RouterLink
-            to="/aboutus"
-            @click="closeMenu"
-            :class="[isActiveLink('/aboutus') ? 'active' : '']"
-          >
-            About Us
-          </RouterLink>
+          <RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">About Us</RouterLink>
         </li>
         <li>
-          <RouterLink
-            to="/vision"
-            @click="closeMenu"
-            :class="[isActiveLink('/vision') ? 'active' : '']"
-          >
-            Vision
-          </RouterLink>
+          <RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">Vision</RouterLink>
         </li>
         <li>
-          <RouterLink
-            to="/services"
-            @click="closeMenu"
-            :class="[isActiveLink('/services') ? 'active' : '']"
-          >
-            Services
-          </RouterLink>
+          <RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">Services</RouterLink>
         </li>
         <li>
-          <RouterLink
-            to="/clients"
-            @click="closeMenu"
-            :class="[isActiveLink('/clients') ? 'active' : '']"
-          >
-            Clients
-          </RouterLink>
+          <RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">Clients</RouterLink>
         </li>
       </ul>
     </div>

@@ -47,8 +47,9 @@ function goToAbout() {
   router.push('/aboutus')
 }
 </script>
+
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden mt-8">
     <!-- Background Images -->
     <div
       class="flex w-full h-full"
@@ -69,16 +70,7 @@ function goToAbout() {
       </div>
     </div>
 
-    <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-
-    <!-- Hero content -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center text-white px-4">
-      <h1 class="text-5xl md:text-6xl font-bold drop-shadow-lg">Your Event, Perfectly Orchestrated</h1>
-      <p class="mt-4 text-xl md:text-2xl font-medium drop-shadow-md">Discover seamless planning with us</p>
-      <button  @click="goToAbout" class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg rounded-xl shadow-md transition">
-        Get Started
-      </button>
-    </div>
+    <!-- Overlay removed -->
+    <!-- Hero content removed -->
   </div>
 </template>

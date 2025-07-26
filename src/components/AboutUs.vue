@@ -30,7 +30,7 @@ function toggleMedical() {
         <!-- Medical Tourism Button -->
         <router-link
           to="/medicalTourism"
-          class="group flex items-center justify-center gap-3 w-full bg-green-700 text-white px-6 py-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-600"
+          class="group flex items-center justify-center gap-3 w-full bg-green-700 text-white px-6 py-4 rounded-full shadow-lg transform transition duration-300 hover:scale-105 hover:bg-green-600"
         >
           <span class="text-2xl animate-bounce">🏥</span>
           <span class="font-semibold text-lg tracking-wide">Medical Tourism Services →</span>
@@ -39,7 +39,7 @@ function toggleMedical() {
         <!-- Events Coordinating Button -->
         <router-link
           to="/EventService"
-          class="group flex items-center justify-center gap-3 w-full bg-blue-900 text-white px-6 py-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-blue-800"
+          class="group flex items-center justify-center gap-3 w-full bg-blue-900 text-white px-6 py-4 rounded-full shadow-lg transform transition duration-300 hover:scale-105 hover:bg-blue-800"
         >
           <span class="text-2xl animate-bounce">🎉</span>
           <span class="font-semibold text-lg tracking-wide">Events Coordinating Services →</span>
@@ -50,8 +50,6 @@ function toggleMedical() {
 </template>
 
 <style scoped>
-/* No keyframe animation needed here, replaced with Tailwind’s animate-bounce */
-
 h2::after {
   content: "";
   position: absolute;
