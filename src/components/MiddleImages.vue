@@ -49,7 +49,7 @@ function goToAbout() {
 </script>
 
 <template>
-  <div class="relative w-full h-screen overflow-hidden mt-8">
+  <div class="relative w-full h-screen overflow-hidden">
     <!-- Background Images -->
     <div
       class="flex w-full h-full"

@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { RouterLink, useRoute } from "vue-router";
+import TheLastComponent from "./TheLastComponent.vue";
 
 const menuOpen = ref(false);
 const route = useRoute();
@@ -34,17 +35,16 @@ const isActiveLink = (path) => route.path === path;
 
 <style>
 html {
-  scroll-padding-top: 64px;
+  scroll-padding-top: 104px; /* navbar 64px + contact bar 40px */
 }
 
-/* Left sliding mobile menu */
 .menu-mobile {
   position: fixed;
   top: 0;
   left: 0;
   width: 280px;
   height: 100vh;
-  background: white; /* changed to white */
+  background: white;
   padding: 3rem 1.5rem;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
   transform: translateX(-100%);
@@ -81,12 +81,12 @@ html {
 }
 
 .menu-mobile ul li a {
-  color: #1e40af; /* dark blue text */
+  color: #1e40af;
   font-weight: 600;
   font-size: 1.2rem;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
-  border-radius: 9999px; /* fully rounded */
+  border-radius: 9999px;
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
   display: block;
@@ -95,12 +95,11 @@ html {
 .menu-mobile ul li a:hover,
 .menu-mobile ul li a:focus,
 .menu-mobile ul li a.active {
-  background-color: #1e3a8a; /* blue-900 */
+  background-color: #1e3a8a;
   color: white;
   outline: none;
 }
 
-/* Desktop menu */
 .desktop-menu {
   display: none;
   gap: 1.5rem;
@@ -119,7 +118,7 @@ html {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
-  border-radius: 9999px; /* fully rounded */
+  border-radius: 9999px;
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
   display: block;
@@ -127,7 +126,7 @@ html {
 
 .desktop-menu a:hover,
 .desktop-menu a:focus {
-  background-color: #1e3a8a; /* blue-900 */
+  background-color: #1e3a8a;
   color: white;
   outline: none;
 }
@@ -143,9 +142,19 @@ nav {
 </style>
 
 <template>
+  <!-- Contact Header -->
+  <div class="bg-blue-900 text-white text-sm py-2 px-4 w-full fixed top-0 left-0 z-50">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+      <span>Email: info@opensea.co.tz</span>
+      <span>Phone: +255 712 345 678</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
   <nav
-    class="bg-white border-b shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300"
+    class="bg-white border-b shadow-md fixed left-0 w-full z-40 transition-transform duration-300"
     :class="{ '-translate-y-full': !isNavbarVisible, 'translate-y-0': isNavbarVisible }"
+    style="top: 40px"
   >
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
       <RouterLink to="/" class="flex items-center space-x-3" @click="closeMenu">
@@ -195,21 +204,11 @@ nav {
     <!-- Mobile sliding menu -->
     <div :class="['menu-mobile', menuOpen ? 'open' : '']" @click.stop>
       <ul>
-        <li>
-          <RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">Home</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">About Us</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">Vision</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">Services</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">Clients</RouterLink>
-        </li>
+        <li><RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">Home</RouterLink></li>
+        <li><RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">About Us</RouterLink></li>
+        <li><RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">Vision</RouterLink></li>
+        <li><RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">Services</RouterLink></li>
+        <li><RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">Clients</RouterLink></li>
       </ul>
     </div>
   </nav>
