@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar.vue";
 </script>
 
 <template>
-  <div>
+  <div >
     <Navbar />
     <div class="pt-[104px]">
       <TwoMen />

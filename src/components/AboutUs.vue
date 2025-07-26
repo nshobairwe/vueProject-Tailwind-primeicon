@@ -9,7 +9,7 @@ function toggleMedical() {
 
 <template>
   <section
-    class="flex flex-col md:flex-row bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 items-center justify-center gap-8 mt-28 md:mt-32 px-6 py-12 rounded-xl shadow-lg max-w-5xl mx-auto"
+    class="flex flex-col md:flex-row bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 items-center justify-center gap-8 px-6 py-12 rounded-xl shadow-lg max-w-5xl mx-auto mt-28 md:mt-32"
   >
     <div class="w-full text-center md:text-left">
       <h2

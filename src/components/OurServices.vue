@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-xl mx-auto py-20 px-6 mt-27 md:mt-32">
+  <section class="max-w-screen-xl mx-auto py-20 px-6 mt-24 md:mt-32">
     <h2
       class="text-4xl font-extrabold text-blue-900 text-center mb-12 tracking-wide"
     >
@@ -128,7 +128,6 @@ const icons = ["🏥", "🔬", "⚙️", "📦"];
 
 .service-card {
   will-change: transform, box-shadow;
-  /* subtle 3D tilt effect */
   perspective: 1000px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -141,7 +140,7 @@ const icons = ["🏥", "🔬", "⚙️", "📦"];
 }
 
 .service-card:focus-visible {
-  box-shadow: 0 0 0 3px #fb923c; /* orange focus ring */
+  box-shadow: 0 0 0 3px #fb923c;
   border-radius: 1.5rem;
 }
 </style>
