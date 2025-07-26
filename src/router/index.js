@@ -7,6 +7,7 @@ import ClientsAndBeneficiaries from '../components/ClientsAndBeneficiaries.vue';
 import MedicalTourism from '../components/MedicalTourism.vue';
 import EventService from '../components/EventCoordination.vue';
 import EventOurServices from '../components/EventOurServices.vue';
+import TheLastComponent from '../components/TheLastComponent.vue';
 
 
 
@@ -57,6 +58,11 @@ const router = createRouter({
       path: '/eventOurService',
       name: 'eventOurService',
       component: EventOurServices
+    },
+    {
+      path: '/contactUs',
+      name: 'contactUs',
+      component: TheLastComponent
     }
   ],
 });

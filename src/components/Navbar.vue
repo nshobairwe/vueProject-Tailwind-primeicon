@@ -146,7 +146,7 @@ nav {
   <div class="bg-blue-900 text-white text-sm py-2 px-4 w-full fixed top-0 left-0 z-50">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center">
       <span>Email: info@opensea.co.tz</span>
-      <span>Phone: +255 712 345 678</span>
+      <span>Phone: +255 747 100 444</span>
     </div>
   </div>
 
@@ -195,6 +195,7 @@ nav {
         <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']" class="block">Vision</RouterLink>
         <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']" class="block">Services</RouterLink>
         <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']" class="block">Clients</RouterLink>
+        <RouterLink to="/contactUs" :class="[isActiveLink('/contactUs') ? 'active' : '']" class="block">Contact Us</RouterLink>
       </div>
     </div>
 
@@ -209,6 +210,7 @@ nav {
         <li><RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">Vision</RouterLink></li>
         <li><RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">Services</RouterLink></li>
         <li><RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">Clients</RouterLink></li>
+        <li><RouterLink to="/contactUs" @click="closeMenu" :class="[isActiveLink('/contactUs') ? 'active' : '']">ContactUs</RouterLink></li>
       </ul>
     </div>
   </nav>
