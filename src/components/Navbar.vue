@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { RouterLink, useRoute } from "vue-router";
-import TheLastComponent from "./TheLastComponent.vue";
 
 const menuOpen = ref(false);
 const route = useRoute();
@@ -89,7 +88,9 @@ html {
   border-radius: 9999px;
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .menu-mobile ul li a:hover,
@@ -121,7 +122,9 @@ html {
   border-radius: 9999px;
   transition: background-color 0.25s ease, color 0.25s ease;
   user-select: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .desktop-menu a:hover,
@@ -190,12 +193,24 @@ nav {
 
       <!-- Desktop menu -->
       <div class="desktop-menu hidden md:flex">
-        <RouterLink to="/" :class="[isActiveLink('/') ? 'active' : '']" class="block">Home</RouterLink>
-        <RouterLink to="/aboutus" :class="[isActiveLink('/aboutus') ? 'active' : '']" class="block">About Us</RouterLink>
-        <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']" class="block">Vision</RouterLink>
-        <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']" class="block">Services</RouterLink>
-        <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']" class="block">Clients</RouterLink>
-        <RouterLink to="/contactUs" :class="[isActiveLink('/contactUs') ? 'active' : '']" class="block">Contact Us</RouterLink>
+        <RouterLink to="/" :class="[isActiveLink('/') ? 'active' : '']" class="block">
+          <i class="pi pi-home"></i> Home
+        </RouterLink>
+        <RouterLink to="/aboutus" :class="[isActiveLink('/aboutus') ? 'active' : '']" class="block">
+          <i class="pi pi-user"></i> About Us
+        </RouterLink>
+        <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']" class="block">
+          <i class="pi pi-eye"></i> Vision
+        </RouterLink>
+        <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']" class="block">
+          <i class="pi pi-cog"></i> Services
+        </RouterLink>
+        <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']" class="block">
+          <i class="pi pi-users"></i> Clients
+        </RouterLink>
+        <RouterLink to="/contactUs" :class="[isActiveLink('/contactUs') ? 'active' : '']" class="block">
+          <i class="pi pi-envelope"></i> Contact Us
+        </RouterLink>
       </div>
     </div>
 
@@ -205,12 +220,36 @@ nav {
     <!-- Mobile sliding menu -->
     <div :class="['menu-mobile', menuOpen ? 'open' : '']" @click.stop>
       <ul>
-        <li><RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">Home</RouterLink></li>
-        <li><RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">About Us</RouterLink></li>
-        <li><RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">Vision</RouterLink></li>
-        <li><RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">Services</RouterLink></li>
-        <li><RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">Clients</RouterLink></li>
-        <li><RouterLink to="/contactUs" @click="closeMenu" :class="[isActiveLink('/contactUs') ? 'active' : '']">ContactUs</RouterLink></li>
+        <li>
+          <RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">
+            <i class="pi pi-home"></i> Home
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">
+            <i class="pi pi-user"></i> About Us
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">
+            <i class="pi pi-eye"></i> Vision
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">
+            <i class="pi pi-cog"></i> Services
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">
+            <i class="pi pi-users"></i> Clients
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contactUs" @click="closeMenu" :class="[isActiveLink('/contactUs') ? 'active' : '']">
+            <i class="pi pi-envelope"></i> Contact Us
+          </RouterLink>
+        </li>
       </ul>
     </div>
   </nav>
