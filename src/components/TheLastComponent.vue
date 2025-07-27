@@ -54,8 +54,8 @@ import Logo from "../assets/logo.jpg";
       </div>
 
       <!-- Contact Form -->
-      <div class="w-full md:max-w-md bg-white text-blue-900 rounded-xl shadow-lg p-6 space-y-4">
-        <h3 class="text-2xl font-bold mb-4">Send us a message</h3>
+      <div class="w-full md:max-w-sm bg-white text-blue-900 rounded-xl shadow-lg p-4 md:p-6 space-y-4">
+        <h3 class="text-2xl font-bold mb-3">Send us a message</h3>
         <form
           action="mailto:openseacompany@example.com"
           method="POST"
@@ -68,7 +68,7 @@ import Logo from "../assets/logo.jpg";
               type="text"
               name="name"
               required
-              class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+              class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
           </div>
           <div>
@@ -77,7 +77,7 @@ import Logo from "../assets/logo.jpg";
               type="email"
               name="email"
               required
-              class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+              class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
           </div>
           <div>
@@ -86,12 +86,12 @@ import Logo from "../assets/logo.jpg";
               name="message"
               rows="4"
               required
-              class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+              class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
             ></textarea>
           </div>
           <button
             type="submit"
-            class="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition"
+            class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
           >
             Send Message
           </button>
