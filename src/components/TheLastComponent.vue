@@ -7,7 +7,7 @@ import Logo from "../assets/logo.jpg";
     class="bg-gradient-to-tr from-blue-900 via-blue-800 to-green-700 text-white py-12 px-6 w-full shadow-lg mt-28 md:mt-32 rounded-xl"
   >
     <div
-      class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start justify-between gap-10"
+      class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start justify-between gap-6 md:gap-10"
     >
       <!-- Contact Info -->
       <div class="space-y-6 max-w-md w-full">
@@ -53,44 +53,50 @@ import Logo from "../assets/logo.jpg";
         </ul>
       </div>
 
+
       <!-- Contact Form -->
       <div class="w-full md:max-w-sm bg-white text-blue-900 rounded-xl shadow-lg p-4 md:p-6 space-y-4">
         <h3 class="text-2xl font-bold mb-3">Send us a message</h3>
         <form
-          action="mailto:openseacompany@example.com"
+          action=" action= https://formsubmit.co/youremail@example.com"
           method="POST"
           enctype="text/plain"
           class="space-y-4"
         >
           <div>
-            <label class="block mb-1 font-medium">Your Name</label>
+            <label class="block mb-1 font-medium text-sm">Your Name</label>
             <input
               type="text"
               name="name"
               required
+
               class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+
             />
           </div>
           <div>
-            <label class="block mb-1 font-medium">Email Address</label>
+            <label class="block mb-1 font-medium text-sm">Email Address</label>
             <input
               type="email"
               name="email"
               required
               class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+              
             />
           </div>
           <div>
-            <label class="block mb-1 font-medium">Message</label>
+            <label class="block mb-1 font-medium text-sm">Message</label>
             <textarea
               name="message"
               rows="4"
               required
               class="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
+              
             ></textarea>
           </div>
           <button
             type="submit"
+
             class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
           >
             Send Message
