@@ -19,13 +19,12 @@ const slides = [
   slide7, slide8, slide9, slide10, slide11
 ]
 
-const fullSlides = [...slides, slides[0]] // for seamless looping
+const fullSlides = [...slides, slides[0]]
 const currentIndex = ref(0)
 const isTransitioning = ref(true)
 const router = useRouter()
 let intervalId = null
 
-// Auto slide function
 const startAutoSlide = () => {
   intervalId = setInterval(() => {
     nextSlide()
@@ -33,10 +32,9 @@ const startAutoSlide = () => {
 }
 
 const stopAutoSlide = () => {
-  if(intervalId) clearInterval(intervalId)
+  if (intervalId) clearInterval(intervalId)
 }
 
-// Go to next slide with looping logic
 function nextSlide() {
   currentIndex.value++
   if (currentIndex.value === fullSlides.length - 1) {
@@ -50,7 +48,6 @@ function nextSlide() {
   }
 }
 
-// Go to previous slide with looping logic
 function prevSlide() {
   if (currentIndex.value === 0) {
     isTransitioning.value = false
@@ -72,7 +69,6 @@ onMounted(() => {
   startAutoSlide()
 })
 
-// Restart auto sliding when currentIndex changes manually
 watch(currentIndex, () => {
   stopAutoSlide()
   startAutoSlide()
@@ -90,11 +86,19 @@ watch(currentIndex, () => {
       <div
         v-for="(slide, index) in fullSlides"
         :key="index"
-        class="w-full h-full flex-shrink-0 flex items-center justify-center"
+        class="w-full h-full flex-shrink-0 relative"
       >
+        <!-- Blurred background -->
         <img
           :src="slide"
-          class="object-cover w-full h-full"
+          class="absolute inset-0 w-full h-full object-cover filter blur-xl scale-110"
+          alt=""
+          aria-hidden="true"
+        />
+        <!-- Foreground image -->
+        <img
+          :src="slide"
+          class="relative z-10 object-contain w-full h-full"
           :alt="`Slide ${index + 1}`"
           loading="lazy"
         />
@@ -118,12 +122,12 @@ watch(currentIndex, () => {
     </button>
 
     <!-- Dots -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
       <button
         v-for="(slide, idx) in slides"
         :key="idx"
         @click="goToSlide(idx)"
-        :class="[
+        :class="[ 
           'w-3 h-3 rounded-full',
           currentIndex === idx ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-500'
         ]"
