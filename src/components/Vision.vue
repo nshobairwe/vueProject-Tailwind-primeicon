@@ -1,9 +1,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
 
 import img1 from "../assets/visionImage/img1.png";
 import img2 from "../assets/visionImage/img2.png";
 import img3 from "../assets/visionImage/img3.png";
+
+const { t } = useI18n();
 
 const images = [img1, img2, img3];
 const currentImageIndex = ref(0);
@@ -55,7 +58,7 @@ onUnmounted(() => {
               : 'text-blue-600 hover:text-blue-900 after:scale-x-0',
           ]"
         >
-          Vision
+          {{ t('vision') }}
         </span>
 
         <span
@@ -67,7 +70,7 @@ onUnmounted(() => {
               : 'text-blue-600 hover:text-blue-900 after:scale-x-0',
           ]"
         >
-          Mission
+          {{ t('mission') }}
         </span>
 
         <span
@@ -79,43 +82,30 @@ onUnmounted(() => {
               : 'text-blue-600 hover:text-blue-900 after:scale-x-0',
           ]"
         >
-          Values
+          {{ t('values') }}
         </span>
       </div>
 
       <!-- Tab Content -->
       <div class="max-w-md">
         <div v-if="activeTab === 'vision'">
-          <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Vision</h3>
+          <h3 class="text-3xl font-bold text-blue-900 mb-4">{{ t('vision') }}</h3>
           <p class="text-lg text-blue-800 leading-relaxed tracking-wide">
-            To be the region's most trusted and dynamic provider of healthcare,
-            logistics, and supply services.
+            {{ t('vision_description') }}
           </p>
         </div>
 
         <div v-else-if="activeTab === 'mission'">
-          <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Mission</h3>
+          <h3 class="text-3xl font-bold text-blue-900 mb-4">{{ t('mission') }}</h3>
           <p class="text-lg text-blue-800 leading-relaxed tracking-wide whitespace-pre-line">
-            Deliver high-quality, affordable services
-            <br />
-            Strengthen access to critical healthcare and industrial products
-            <br />
-            Serve with professionalism, compassion, and reliability
+            {{ t('mission_description') }}
           </p>
         </div>
 
         <div v-else-if="activeTab === 'values'">
-          <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Values</h3>
+          <h3 class="text-3xl font-bold text-blue-900 mb-4">{{ t('values') }}</h3>
           <p class="text-lg text-blue-800 leading-relaxed tracking-wide whitespace-pre-line">
-            Compassion – Humanity first
-            <br />
-            Integrity – Ethical actions always
-            <br />
-            Reliability – Dependable delivery
-            <br />
-            Innovation – Smart and modern
-            <br />
-            Versatility – One provider, many solutions
+            {{ t('values_description') }}
           </p>
         </div>
       </div>

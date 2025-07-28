@@ -1,0 +1,87 @@
+{
+  "home": "Nyumbani",
+  "about_us": "Kuhusu",
+  "vision": "Dira",
+  "contact": "Mawasiliano",
+
+  "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
+  "medical_tourism": "Huduma za Utalii wa Kimatibabu",
+  "event_services": "Huduma za Kuratibu Matukio",
+
+  "vision_description": "Kuwa mtoa huduma anayethaminiwa na kuendelea kuwa hai katika huduma za afya, usafirishaji, na usambazaji.",
+  "mission": "Dhamira Yetu",
+  "mission_description": "Kutoa huduma bora, nafuu\nKuimarisha upatikanaji wa bidhaa muhimu za afya na viwanda\nKuhudumia kwa taaluma, huruma, na uaminifu",
+  "values": "Maadili Yetu",
+  "values_description": "Huruma – Binadamu kwanza\nUadilifu – Matendo ya maadili kila wakati\nUaminifu – Uwasilishaji unaotegemewa\nUbunifu – Hekima na kisasa\nUwezo wa kubadilika – Mtoa huduma mmoja, suluhisho nyingi",
+
+    "services": {
+    "title": "Huduma",
+    "healthcare": {
+      "title": "Huduma za Afya",
+      "items": [
+        "Huduma za uuguzi nyumbani na huduma kwa wazee",
+        "Madaktari wa mtaa na msaada wa wagonjwa wa nje",
+        "Programu za magonjwa sugu na urejeshaji",
+        "Utalii wa Matibabu: India, Uturuki, UAE (visa, malazi na ufuatiliaji)"
+      ]
+    },
+    "medical_lab": {
+      "title": "Vifaa vya Matibabu na Maabara",
+      "items": [
+        "Dawa (za kawaida na za chapa)",
+        "Vifaa vya maabara na kemikali za maabara",
+        "Vifaa vya ICU, mifupa na upasuaji",
+        "Vifaa vya meno na uchunguzi"
+      ]
+    },
+    "general_goods": {
+      "title": "Bidhaa Za Jumla na Vifaa vya Viwanda",
+      "items": [
+        "Matairi na mabomba (kwa magari nyepesi na mazito)",
+        "Betri zisizo na matengenezo na betri za kawaida",
+        "Vifaa vya usafi, huduma za afya na taasisi",
+        "Samani za hospitali",
+        "Vifaa vya sehemu za magari (Toyota, Land Rover, Iveco, n.k.)"
+      ]
+    },
+    "tender_fulfillment": {
+      "title": "Utekelezaji wa Zabuni na Maagizo Maalum",
+      "items": [
+        "Vifaa kwa wizara, NGOs, na halmashauri",
+        "Huduma za magari na utoaji wa sehemu za ziada",
+        "Maagizo maalum ya uagizaji",
+        "Ufungaji wa vifaa na huduma baada ya mauzo"
+      ]
+    },
+    "key_capabilities_title": "Uwezo Muhimu",
+    "key_capabilities_description": "Chanzo cha kimataifa (China, India, Uturuki, UAE)\nImethibitishwa na TMDA, OSHA, TRA\nGhala na msaada wa usambazaji\nMajibu ya zabuni haraka na utoaji\nUtambuzi wa sehemu na ulinganishaji"
+  },
+  
+  "clients": {
+    "title": "Wateja",
+    "item1": "Hospitali za mikoa na wilaya",
+    "item2": "Taasisi za afya za umma",
+    "item3": "Asasi zisizo za kiserikali na mashirika ya misaada",
+    "item4": "Kampuni binafsi za usafirishaji na vifaa",
+    "item5": "Shule na vituo vya mafunzo",
+
+    "projectsTitle": "Miradi Inayoendelea",
+    "project1": "Mfumo wa kuosha mabasi wenye jenereta + kuchakata maji",
+    "project2": "Miradi ya vifaa vya mifupa kwa hospitali za wilaya",
+    "project3": "Usambazaji wa vipuri vya magari (Land Rover, Yutong, Toyota, Iveco)",
+    "project4": "Usambazaji wa vifaa vya maabara kwa vituo vya uchunguzi",
+
+    "certificationsTitle": "Vyeti na Uzingatiaji wa Sheria",
+    "cert1": "Cheti cha Usajili wa Biashara",
+    "cert2": "Cheti cha TMDA",
+    "cert3": "Uzingatiaji wa OSHA Kazini",
+    "cert4": "Imesajiliwa kwa TIN & VAT",
+    "cert5": "Leseni za Uingizaji na Usafirishaji"
+  }
+
+
+}
+
+
+
+

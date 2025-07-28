@@ -1,0 +1,82 @@
+{
+  "home": "Home",
+  "vision": "Vision",
+  "contact": "Contact",
+
+  "about_us_description": "Open Sea Company Ltd is a fast-growing Tanzanian company specializing in healthcare services, medical and laboratory supplies, vehicle spare parts, and general goods distribution. Committed to quality and compassion, we serve public institutions, NGOs, and private clients nationwide.",
+  "medical_tourism": "Medical Tourism Services",
+  "event_services": "Event Coordination Services",
+
+  "vision_description": "To be the most trusted and dynamic provider of healthcare, logistics, and supply services in the region.",
+  "mission": "Mission",
+  "mission_description": "Deliver high-quality, affordable services\nStrengthen access to essential healthcare and industrial products\nServe with professionalism, compassion, and reliability",
+  "values": "Values",
+  "values_description": "Compassion – Humanity first\nIntegrity – Ethical actions always\nReliability – Dependable delivery\nInnovation – Smart and modern\nVersatility – One provider, many solutions",
+
+  "services": {
+    "title": "Services",
+  "healthcare": {
+    "title": "Healthcare Services",
+    "items": [
+      "Home-based nursing and elderly care",
+      "Community doctors and outpatient support",
+      "Chronic illness and rehabilitation programs",
+      "Medical Tourism: India, Turkey, UAE (visa, accommodation, and follow-up)"
+    ]
+  },
+  "medical_lab": {
+    "title": "Medical and Laboratory Equipment",
+    "items": [
+      "Pharmaceuticals (generic and branded)",
+      "Laboratory equipment and reagents",
+      "ICU, orthopedic, and surgical tools",
+      "Dental and diagnostic supplies"
+    ]
+  },
+  "general_goods": {
+    "title": "General Goods and Industrial Supplies",
+    "items": [
+      "Tyres and tubes (for light and heavy vehicles)",
+      "Maintenance-free and regular batteries",
+      "Cleaning, sanitary, and institutional supplies",
+      "Hospital furniture",
+      "Vehicle spare parts (Toyota, Land Rover, Iveco, etc.)"
+    ]
+  },
+  "tender_fulfillment": {
+    "title": "Tender Fulfillment and Custom Orders",
+    "items": [
+      "Supplies for ministries, NGOs, and councils",
+      "Vehicle servicing and spare parts delivery",
+      "Custom import orders",
+      "Equipment installation and after-sales service"
+    ]
+  },
+  "key_capabilities_title": "Key Capabilities",
+  "key_capabilities_description": "International sourcing (China, India, Turkey, UAE)\nCertified by TMDA, OSHA, TRA\nWarehouse and distribution support\nFast tender response and delivery\nSpare parts identification and cross-matching"
+},
+
+  "clients": {
+    "title": "Clients",
+    "item1": "Regional and district hospitals",
+    "item2": "Public health institutions",
+    "item3": "NGOs and aid agencies",
+    "item4": "Private logistics and transport companies",
+    "item5": "Schools and training centers",
+
+    "projectsTitle": "Ongoing Projects",
+    "project1": "Drive-through bus washing system with generator + water recycling",
+    "project2": "Orthopedic supply projects for district hospitals",
+    "project3": "Vehicle spare part distribution (Land Rover, Yutong, Toyota, Iveco)",
+    "project4": "Lab equipment supply to diagnostic centers",
+
+    "certificationsTitle": "Certifications & Compliance",
+    "cert1": "Business Registration Certificate",
+    "cert2": "TMDA Certification",
+    "cert3": "OSHA Workplace Compliance",
+    "cert4": "TIN & VAT Registered",
+    "cert5": "Import & Export Licenses"
+  }
+
+
+}

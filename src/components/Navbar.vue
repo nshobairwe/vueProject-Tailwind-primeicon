@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { RouterLink, useRoute } from "vue-router";
+import { useRoute, RouterLink } from "vue-router";
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n();
 
 const menuOpen = ref(false);
 const route = useRoute();
@@ -13,13 +16,8 @@ const handleScroll = () => {
   lastScrollY = currentScroll;
 };
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+onMounted(() => window.addEventListener("scroll", handleScroll));
+onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
@@ -31,6 +29,7 @@ function closeMenu() {
 
 const isActiveLink = (path) => route.path === path;
 </script>
+
 
 <style>
 html {
@@ -145,112 +144,98 @@ nav {
 </style>
 
 <template>
-  <!-- Contact Header -->
-  <div class="bg-blue-900 text-white text-sm py-2 px-4 w-full fixed top-0 left-0 z-50">
-    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-      <span>Email: info@opensea.co.tz</span>
-      <span>Phone: +255 747 100 444</span>
-    </div>
-  </div>
-
-  <!-- Main Navigation Bar -->
-  <nav
-    class="bg-white border-b shadow-md fixed left-0 w-full z-40 transition-transform duration-300"
-    :class="{ '-translate-y-full': !isNavbarVisible, 'translate-y-0': isNavbarVisible }"
-    style="top: 40px"
-  >
-    <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-      <RouterLink to="/" class="flex items-center space-x-3" @click="closeMenu">
-        <img
-          class="h-13 w-10 rounded-full object-cover"
-          src="/src/assets/logo.jpg"
-          alt="Open Sea Co. Ltd"
-        />
-        <span class="text-2xl font-bold text-black select-none">Open Sea Co. Ltd</span>
-      </RouterLink>
-
-      <!-- Hamburger for mobile -->
-      <button
-        @click="toggleMenu"
-        type="button"
-        class="inline-flex items-center p-2 ml-3 text-black rounded-full md:hidden hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        aria-label="Toggle menu"
-        :aria-expanded="menuOpen.toString()"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          viewBox="0 0 24 24"
-        >
-          <path v-if="!menuOpen" d="M4 6h16M4 12h16M4 18h16" />
-          <path v-else d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <!-- Desktop menu -->
-      <div class="desktop-menu hidden md:flex">
-        <RouterLink to="/" :class="[isActiveLink('/') ? 'active' : '']" class="block">
-          <i class="pi pi-home"></i> Home
-        </RouterLink>
-        <RouterLink to="/aboutus" :class="[isActiveLink('/aboutus') ? 'active' : '']" class="block">
-          <i class="pi pi-user"></i> About Us
-        </RouterLink>
-        <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']" class="block">
-          <i class="pi pi-eye"></i> Vision
-        </RouterLink>
-        <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']" class="block">
-          <i class="pi pi-cog"></i> Services
-        </RouterLink>
-        <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']" class="block">
-          <i class="pi pi-users"></i> Clients
-        </RouterLink>
-        <RouterLink to="/contactUs" :class="[isActiveLink('/contactUs') ? 'active' : '']" class="block">
-          <i class="pi pi-envelope"></i> Contact Us
-        </RouterLink>
+  <div>
+    <!-- Contact Header -->
+    <div class="bg-blue-900 text-white text-sm py-2 px-4 w-full fixed top-0 left-0 z-50">
+      <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <span>Email: info@opensea.co.tz</span>
+        <span>Phone: +255 747 100 444</span>
       </div>
     </div>
 
-    <!-- Mobile menu overlay -->
-    <div v-if="menuOpen" class="menu-overlay md:hidden" @click="closeMenu"></div>
+    <!-- Main Navigation Bar -->
+    <nav
+      class="bg-white border-b shadow-md fixed left-0 w-full z-40 transition-transform duration-300"
+      :class="{ '-translate-y-full': !isNavbarVisible, 'translate-y-0': isNavbarVisible }"
+      style="top: 40px"
+    >
+      <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+        <RouterLink to="/" class="flex items-center space-x-3" @click="closeMenu">
+          <img
+            class="h-13 w-10 rounded-full object-cover"
+            src="/src/assets/logo.jpg"
+            alt="Open Sea Co. Ltd"
+          />
+          <span class="text-2xl font-bold text-black select-none">Open Sea Co. Ltd</span>
+        </RouterLink>
 
-    <!-- Mobile sliding menu -->
-    <div :class="['menu-mobile', menuOpen ? 'open' : '']" @click.stop>
-      <ul>
-        <li>
-          <RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']">
-            <i class="pi pi-home"></i> Home
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']">
-            <i class="pi pi-user"></i> About Us
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']">
-            <i class="pi pi-eye"></i> Vision
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']">
-            <i class="pi pi-cog"></i> Services
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']">
-            <i class="pi pi-users"></i> Clients
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/contactUs" @click="closeMenu" :class="[isActiveLink('/contactUs') ? 'active' : '']">
-            <i class="pi pi-envelope"></i> Contact Us
-          </RouterLink>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Hamburger for mobile -->
+        <button
+          @click="toggleMenu"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-black rounded-full md:hidden hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          aria-label="Toggle menu"
+          :aria-expanded="menuOpen.toString()"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <path v-if="!menuOpen" d="M4 6h16M4 12h16M4 18h16" />
+            <path v-else d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+<!-- Desktop menu -->
+<div class="desktop-menu">
+  <RouterLink to="/" :class="[isActiveLink('/') ? 'active' : '']">
+    <i class="pi pi-home"></i> {{ t('home') }}
+  </RouterLink>
+  <RouterLink to="/aboutus" :class="[isActiveLink('/aboutus') ? 'active' : '']">
+    <i class="pi pi-user"></i> {{ t('about_us') }}
+  </RouterLink>
+  <RouterLink to="/vision" :class="[isActiveLink('/vision') ? 'active' : '']">
+    <i class="pi pi-eye"></i> {{ t('vision') }}
+  </RouterLink>
+  <RouterLink to="/services" :class="[isActiveLink('/services') ? 'active' : '']">
+    <i class="pi pi-cog"></i> {{ t('services.title') }}
+  </RouterLink>
+  <RouterLink to="/clients" :class="[isActiveLink('/clients') ? 'active' : '']">
+    <i class="pi pi-users"></i> {{ t('clients.title') }}
+  </RouterLink>
+  <RouterLink to="/contactUs" :class="[isActiveLink('/contactUs') ? 'active' : '']">
+    <i class="pi pi-envelope"></i> {{ t('contact') }}
+  </RouterLink>
+  <select v-model="locale" class="border rounded p-1 text-sm">
+    <option value="en">English</option>
+    <option value="sw">Swahili</option>
+  </select>
+</div>
+
+<!-- Mobile menu -->
+<div v-if="menuOpen" class="menu-overlay" @click="closeMenu"></div>
+<div class="menu-mobile" :class="{ open: menuOpen }">
+  <ul>
+    <li><RouterLink to="/" @click="closeMenu" :class="[isActiveLink('/') ? 'active' : '']"><i class="pi pi-home"></i> {{ t('home') }}</RouterLink></li>
+    <li><RouterLink to="/aboutus" @click="closeMenu" :class="[isActiveLink('/aboutus') ? 'active' : '']"><i class="pi pi-user"></i> {{ t('about_us') }}</RouterLink></li>
+    <li><RouterLink to="/vision" @click="closeMenu" :class="[isActiveLink('/vision') ? 'active' : '']"><i class="pi pi-eye"></i> {{ t('vision') }}</RouterLink></li>
+    <li><RouterLink to="/services" @click="closeMenu" :class="[isActiveLink('/services') ? 'active' : '']"><i class="pi pi-cog"></i> {{ t('services.title') }}</RouterLink></li>
+    <li><RouterLink to="/clients" @click="closeMenu" :class="[isActiveLink('/clients') ? 'active' : '']"><i class="pi pi-users"></i> {{ t('clients.title') }}</RouterLink></li>
+    <li><RouterLink to="/contactUs" @click="closeMenu" :class="[isActiveLink('/contactUs') ? 'active' : '']"><i class="pi pi-envelope"></i> {{ t('contact') }}</RouterLink></li>
+    <li class="mt-4">
+      <select v-model="locale" class="border rounded p-1 text-sm w-full">
+        <option value="en">English</option>
+        <option value="sw">Swahili</option>
+      </select>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </nav>
+  </div>
 </template>

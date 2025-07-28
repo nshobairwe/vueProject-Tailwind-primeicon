@@ -7,7 +7,7 @@
       <h2
         class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-green-700 to-green-800 select-none"
       >
-        Clients and Beneficiaries
+        {{ $t('clients.title') }}
       </h2>
 
       <ul
@@ -26,23 +26,23 @@
           >
             <path d="M5 13l4 4L19 7" />
           </svg>
-          Regional and district hospitals
+           {{ $t('clients.item1') }}
         </li>
         <li class="flex items-center justify-center gap-3">
           <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
-          Public health institutions
+           {{ $t('clients.item2') }}
         </li>
         <li class="flex items-center justify-center gap-3">
           <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
-          NGOs and aid agencies
+           {{ $t('clients.item3') }}
         </li>
         <li class="flex items-center justify-center gap-3">
           <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
-          Private logistics and transport companies
+          {{ $t('clients.item4') }}
         </li>
         <li class="flex items-center justify-center gap-3">
           <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
-          Schools and training centers
+          {{ $t('clients.item5') }}
         </li>
       </ul>
 
@@ -56,18 +56,17 @@
           tabindex="0"
         >
           <h3 class="text-2xl font-bold text-green-700 mb-6">
-            Ongoing Projects
+            {{ $t('clients.projectsTitle') }}
           </h3>
           <ul class="list-disc list-inside text-lg space-y-3 text-gray-800">
             <li>
-              Drive-through bus washing system with generator + water recycling
+              {{ $t('clients.project1') }}
             </li>
-            <li>Orthopedic supply projects for district hospitals</li>
+            <li>{{ $t('clients.project2') }}</li>
             <li>
-              Vehicle spare part distribution (Land Rover, Yutong, Toyota,
-              Iveco)
+              {{ $t('clients.project3') }}
             </li>
-            <li>Lab equipment supply to diagnostic centers</li>
+            <li>{{ $t('clients.project4') }}</li>
           </ul>
         </div>
 
@@ -77,14 +76,14 @@
           tabindex="0"
         >
           <h3 class="text-2xl font-bold text-green-700 mb-6">
-            Certifications & Compliance
+            {{ $t('clients.certificationsTitle') }}
           </h3>
           <ul class="list-disc list-inside text-lg space-y-3 text-gray-800">
-            <li>Business Registration Certificate</li>
-            <li>TMDA Certification</li>
-            <li>OSHA Workplace Compliance</li>
-            <li>TIN & VAT Registered</li>
-            <li>Import & Export Licenses</li>
+            <li>{{ $t('clients.cert1') }}</li>
+            <li>{{ $t('clients.cert2') }}</li>
+            <li>{{ $t('clients.cert3') }}</li>
+            <li>{{ $t('clients.cert4') }}</li>
+            <li>{{ $t('clients.cert5') }}</li>
           </ul>
         </div>
       </div>

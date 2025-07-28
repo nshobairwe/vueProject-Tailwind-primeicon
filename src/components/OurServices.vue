@@ -3,24 +3,22 @@
     <h2
       class="text-4xl font-extrabold text-blue-900 text-center mb-12 tracking-wide"
     >
-      Our Services
+      {{ t("services.title") }}
     </h2>
 
-    <!-- Scroll container -->
     <div class="relative overflow-hidden">
       <div
         class="animate-scroll flex space-x-8 w-max"
         role="list"
         aria-label="Services scrolling list"
       >
-        <!-- Duplicate cards for seamless scroll -->
         <div
           v-for="(card, index) in [...cards, ...cards]"
           :key="index"
           class="service-card w-72 bg-white p-6 rounded-3xl shadow-lg transform transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.05] cursor-pointer flex flex-col"
           tabindex="0"
           role="listitem"
-          :aria-label="card.title"
+          :aria-label="t(card.titleKey)"
         >
           <div
             class="text-5xl mb-4 text-orange-500 flex justify-center select-none"
@@ -31,15 +29,18 @@
           <h3
             class="text-xl font-bold mb-4 text-center text-blue-900 tracking-wide"
           >
-            {{ card.title }}
+            {{ t(card.titleKey) }}
           </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm leading-relaxed flex-grow">
-            <li v-for="(item, i) in card.items" :key="i">{{ item }}</li>
+          <ul
+            class="list-disc list-inside text-gray-700 space-y-1 text-sm leading-relaxed flex-grow"
+          >
+            <li v-for="(itemKey, i) in card.itemsKey" :key="i">
+              {{ t(itemKey) }}
+            </li>
           </ul>
         </div>
       </div>
 
-      <!-- Gradient fade left/right -->
       <div
         class="pointer-events-none absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white"
       ></div>
@@ -48,63 +49,58 @@
       ></div>
     </div>
 
-    <!-- Always visible content -->
     <div class="mt-20 text-center max-w-3xl mx-auto">
       <h3 class="text-2xl font-semibold text-blue-900 mb-4 tracking-wide">
-        Key Capabilities
+        {{ t("services.key_capabilities_title") }}
       </h3>
       <p class="text-lg text-gray-800 leading-relaxed whitespace-pre-line">
-        International sourcing (China, India, Turkey, UAE)
-        <br />
-        Certified by TMDA, OSHA, TRA
-        <br />
-        Warehouse + distribution support
-        <br />
-        Fast tender response and delivery
-        <br />
-        Spare parts identification and cross-matching
+        {{ t("services.key_capabilities_description") }}
       </p>
     </div>
   </section>
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
 const cards = [
   {
-    title: "Healthcare Services",
-    items: [
-      "Home-based nursing and elderly care",
-      "On-call doctors and outpatient support",
-      "Chronic illness & rehabilitation programs",
-      "Medical Tourism: India, Turkey, UAE (visa, accommodation & follow-up)",
+    titleKey: "services.healthcare.title",
+    itemsKey: [
+      "services.healthcare.items.0",
+      "services.healthcare.items.1",
+      "services.healthcare.items.2",
+      "services.healthcare.items.3",
     ],
   },
   {
-    title: "Medical & Laboratory Supply",
-    items: [
-      "Pharmaceuticals (generic & branded)",
-      "Lab equipment & reagents",
-      "ICU, orthopedic & surgical tools",
-      "Dental and diagnostic supplies",
+    titleKey: "services.medical_lab.title",
+    itemsKey: [
+      "services.medical_lab.items.0",
+      "services.medical_lab.items.1",
+      "services.medical_lab.items.2",
+      "services.medical_lab.items.3",
     ],
   },
   {
-    title: "General Goods & Industrial Supplies",
-    items: [
-      "Tyres & tubes (light and heavy-duty)",
-      "Dry-cell & maintenance-free batteries",
-      "Cleaning, sanitary, & institutional supplies",
-      "Hospital furniture",
-      "Motor vehicle spare parts (Toyota, Land Rover, Iveco, etc.)",
+    titleKey: "services.general_goods.title",
+    itemsKey: [
+      "services.general_goods.items.0",
+      "services.general_goods.items.1",
+      "services.general_goods.items.2",
+      "services.general_goods.items.3",
+      "services.general_goods.items.4",
     ],
   },
   {
-    title: "Tender Fulfillment & Custom Orders",
-    items: [
-      "Supplies for ministries, NGOs, councils",
-      "Fleet servicing and spare part delivery",
-      "Custom import orders",
-      "Equipment installation and after-sales support",
+    titleKey: "services.tender_fulfillment.title",
+    itemsKey: [
+      "services.tender_fulfillment.items.0",
+      "services.tender_fulfillment.items.1",
+      "services.tender_fulfillment.items.2",
+      "services.tender_fulfillment.items.3",
     ],
   },
 ];

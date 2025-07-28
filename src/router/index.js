@@ -29,11 +29,6 @@ const router = createRouter({
      name: 'vision',
      component: Vision,
     },
-    // {
-    //  path: '/values',
-    //  name: 'values',
-    //  component: Vision,
-    // },
     {
      path: '/services',
      name: 'services',

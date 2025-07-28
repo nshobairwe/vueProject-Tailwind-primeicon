@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
-import MedicalTourism from "./MedicalTourism.vue"
 const showMedical = ref(false)
-function toggleMedical() {
-  showMedical.value = !showMedical.value
-}
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
+
 </script>
 <template>
   <section
@@ -17,14 +17,11 @@ function toggleMedical() {
         <h2
           class="text-4xl font-extrabold text-blue-900 mb-8 relative inline-block cursor-default"
         >
-          About Us
+          {{ t('about_us') }}
         </h2>
 
         <p class="text-lg leading-relaxed text-blue-800 max-w-xl mx-auto md:mx-0 tracking-wide">
-          Open Sea Company Ltd is a fast-growing Tanzanian company specializing in healthcare
-          services, medical and laboratory supplies, vehicle spare parts, and general goods
-          distribution. Committed to quality and compassion, we serve public
-          institutions, NGOs, and private clients nationwide.
+          {{ t('about_us_description') }}
         </p>
 
         <div class="mt-12 space-y-6 max-w-sm mx-auto md:mx-0">
@@ -33,7 +30,7 @@ function toggleMedical() {
             class="group flex items-center justify-center gap-4 w-full bg-green-700 text-white px-6 py-4 rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-400"
           >
             <span class="text-3xl animate-bounce">🏥</span>
-            <span class="font-semibold text-lg tracking-wide">Medical Tourism Services →</span>
+            <span class="font-semibold text-lg tracking-wide">{{ t('medical_tourism') }} →</span>
           </router-link>
 
           <router-link
@@ -41,7 +38,7 @@ function toggleMedical() {
             class="group flex items-center justify-center gap-4 w-full bg-blue-900 text-white px-6 py-4 rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-500"
           >
             <span class="text-3xl animate-bounce">🎉</span>
-            <span class="font-semibold text-lg tracking-wide">Events Coordinating Services →</span>
+            <span class="font-semibold text-lg tracking-wide">{{ t('event_services') }}→</span>
           </router-link>
         </div>
       </div>
