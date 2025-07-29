@@ -2,7 +2,7 @@
   "home": "Nyumbani",
   "about_us": "Kuhusu",
   "vision": "Dira",
-  "contact": "Mawasiliano",
+  "contact_label": "Mawasiliano",
 
   "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
   "medical_tourism": "Huduma za Utalii wa Kimatibabu",
@@ -77,6 +77,17 @@
     "cert3": "Uzingatiaji wa OSHA Kazini",
     "cert4": "Imesajiliwa kwa TIN & VAT",
     "cert5": "Leseni za Uingizaji na Usafirishaji"
+  },
+  "contact": {
+    "title": "Wasiliana Nasi",
+    "company": "Kampuni ya Open Sea Ltd",
+    "address": "88 Barabara ya Ghuba, Nyumba Na. 120, Kiwanja Na. 227, Kijiji cha Msasani",
+    "city": "Dar es Salaam",
+    "formTitle": "Tuma ujumbe kwetu",
+    "name": "Jina lako",
+    "email": "Anuani ya Barua Pepe",
+    "message": "Ujumbe",
+    "submit": "Tuma Ujumbe"
   }
 
 

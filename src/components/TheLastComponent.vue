@@ -14,7 +14,7 @@ import Logo from "../assets/logo.jpg";
         <h3
           class="text-3xl font-extrabold tracking-wide border-l-4 border-green-500 pl-4"
         >
-          Contact Us
+          {{ $t('contact.title') }}
         </h3>
 
         <ul class="space-y-4 text-lg font-medium leading-relaxed">
@@ -31,7 +31,7 @@ import Logo from "../assets/logo.jpg";
               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 21V3h18v18M9 8h6M9 12h6M9 16h6" />
             </svg>
-            <span>Open Sea Company Ltd</span>
+            <span>{{ $t('contact.company') }}</span>
           </li>
           <li class="flex items-center gap-4">
             <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -40,7 +40,7 @@ import Logo from "../assets/logo.jpg";
                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
               <circle cx="12" cy="9" r="2.5" />
             </svg>
-            <span>88 Ghuba Road, House No 120, Plot No 227, Msasani Village</span>
+            <span>{{ $t('contact.address') }}</span>
           </li>
           <li class="flex items-center gap-4">
             <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -48,7 +48,7 @@ import Logo from "../assets/logo.jpg";
               <path d="M17.657 16.657L13 21.314 8.343 16.657a8 8 0 1111.314 0z" />
               <circle cx="12" cy="9" r="3" />
             </svg>
-            <span>Dar es Salaam</span>
+            <span>{{ $t('contact.city') }}</span>
           </li>
         </ul>
       </div>
@@ -56,7 +56,7 @@ import Logo from "../assets/logo.jpg";
 
       <!-- Contact Form -->
       <div class="w-full md:max-w-sm bg-white text-blue-900 rounded-xl shadow-lg p-4 md:p-6 space-y-4">
-        <h3 class="text-2xl font-bold mb-3">Send us a message</h3>
+        <h3 class="text-2xl font-bold mb-3">{{ $t('contact.formTitle') }}</h3>
         <form
           action=" action= https://formsubmit.co/youremail@example.com"
           method="POST"
@@ -64,7 +64,7 @@ import Logo from "../assets/logo.jpg";
           class="space-y-4"
         >
           <div>
-            <label class="block mb-1 font-medium text-sm">Your Name</label>
+            <label class="block mb-1 font-medium text-sm">{{ $t('contact.name') }}</label>
             <input
               type="text"
               name="name"
@@ -75,7 +75,7 @@ import Logo from "../assets/logo.jpg";
             />
           </div>
           <div>
-            <label class="block mb-1 font-medium text-sm">Email Address</label>
+            <label class="block mb-1 font-medium text-sm">{{ $t('contact.email') }}</label>
             <input
               type="email"
               name="email"
@@ -85,7 +85,7 @@ import Logo from "../assets/logo.jpg";
             />
           </div>
           <div>
-            <label class="block mb-1 font-medium text-sm">Message</label>
+            <label class="block mb-1 font-medium text-sm">{{ $t('contact.message') }}</label>
             <textarea
               name="message"
               rows="4"
@@ -99,7 +99,7 @@ import Logo from "../assets/logo.jpg";
 
             class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
           >
-            Send Message
+            {{ $t('contact.submit') }}
           </button>
         </form>
       </div>

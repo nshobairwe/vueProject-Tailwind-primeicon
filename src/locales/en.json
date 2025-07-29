@@ -1,7 +1,7 @@
 {
   "home": "Home",
   "vision": "Vision",
-  "contact": "Contact",
+  "contact_label": "Contact",
 
   "about_us_description": "Open Sea Company Ltd is a fast-growing Tanzanian company specializing in healthcare services, medical and laboratory supplies, vehicle spare parts, and general goods distribution. Committed to quality and compassion, we serve public institutions, NGOs, and private clients nationwide.",
   "medical_tourism": "Medical Tourism Services",
@@ -76,7 +76,18 @@
     "cert3": "OSHA Workplace Compliance",
     "cert4": "TIN & VAT Registered",
     "cert5": "Import & Export Licenses"
-  }
+  },
 
+  "contact": {
+    "title": "Contact Us",
+    "company": "Open Sea Company Ltd",
+    "address": "88 Ghuba Road, House No 120, Plot No 227, Msasani Village",
+    "city": "Dar es Salaam",
+    "formTitle": "Send us a message",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Message",
+    "submit": "Send Message"
+  }
 
 }
