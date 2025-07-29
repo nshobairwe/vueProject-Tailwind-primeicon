@@ -76,7 +76,7 @@ watch(currentIndex, () => {
 </script>
 
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-[600px] overflow-hidden">
     <!-- Slides -->
     <div
       class="flex w-full h-full"

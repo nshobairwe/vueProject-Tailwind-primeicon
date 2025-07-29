@@ -21,10 +21,10 @@
           :aria-label="t(card.titleKey)"
         >
           <div
-            class="text-5xl mb-4 text-orange-500 flex justify-center select-none"
+            class="text-5xl mb-4 text-blue-500 flex justify-center select-none"
             aria-hidden="true"
           >
-            {{ icons[index % icons.length] }}
+            <i :class="icons[index % icons.length]"></i>
           </div>
           <h3
             class="text-xl font-bold mb-4 text-center text-blue-900 tracking-wide"
@@ -105,7 +105,7 @@ const cards = [
   },
 ];
 
-const icons = ["🏥", "🔬", "⚙️", "📦"];
+const icons = ["pi pi-heart", "pi pi-search", "pi pi-cog", "pi pi-box"];
 </script>
 
 <style scoped>
@@ -136,7 +136,7 @@ const icons = ["🏥", "🔬", "⚙️", "📦"];
 }
 
 .service-card:focus-visible {
-  box-shadow: 0 0 0 3px #fb923c;
+  box-shadow: 0 0 0 3px #190561;
   border-radius: 1.5rem;
 }
 </style>

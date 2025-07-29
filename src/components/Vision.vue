@@ -27,7 +27,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="flex flex-col md:flex-row bg-gradient-to-br from-blue-50 to-blue-100 items-center justify-center gap-12 my-12 py-10 px-6 rounded-2xl shadow-lg max-w-6xl mx-auto mt-28 md:mt-32"
+    class="flex flex-col md:flex-row  items-center justify-center gap-12 my-12 py-10 px-6  shadow-lg max-w-6xl mx-auto mt-28 md:mt-32"
   >
     <!-- Image Container -->
     <div

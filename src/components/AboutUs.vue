@@ -8,7 +8,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="w-full bg-white py-20 px-6 mt-28 md:mt-36">
+  <section class="w-full bg-white py-20 px-6 mt-20 md:mt-36">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Text Column -->
       <div class="space-y-8 text-center md:text-left">
@@ -42,7 +42,7 @@ const { t } = useI18n()
       </div>
 
       <!-- Optional image or graphic column -->
-      <div class="w-full h-85 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl shadow-inner flex items-center justify-center text-blue-800 text-6xl">
+      <div class="w-full h-83 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl shadow-inner flex items-center justify-center text-blue-800 text-6xl">
          <img src="/src/assets/logo.jpg" class="w-full h-full" alt="Logo" />
       </div>
     </div>

@@ -52,7 +52,7 @@ const isActiveLink = (path) => route.path === path;
           <!-- Logo -->
           <RouterLink to="/" class="flex items-center gap-2" @click="closeMenu">
             <img src="/src/assets/logo.jpg" class="w-10 h-10 rounded-full" alt="Logo" />
-            <span class="text-xl font-bold text-gray-800">Open Sea</span>
+            <span class="text-xl font-bold text-gray-800 italic">OpenSea</span>
           </RouterLink>
 
           <!-- Left nav links -->
