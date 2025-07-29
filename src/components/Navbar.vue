@@ -90,12 +90,15 @@ const isActiveLink = (path) => route.path === path;
                   <li>
                     <RouterLink to="/services" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('services.tender_fulfillment.title') }}</RouterLink>
                   </li>
+                  <li>
+                    <RouterLink to="/medicalTourism" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('medical_tourism') }}</RouterLink>
+                  </li>
+                  <li>
+                    <RouterLink to="/EventService" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('tenders') }}</RouterLink>
+                  </li>
                 </ul>
               </div>
             </div>
-
-            <RouterLink to="/medicalTourism" :class="{ 'text-blue-700 font-semibold': isActiveLink('/medicalTourism') }" class="hover:text-blue-700">{{ t('medical_tourism') }}</RouterLink>
-            <RouterLink to="/EventService" :class="{ 'text-blue-700 font-semibold': isActiveLink('/EventService') }" class="hover:text-blue-700">{{ t('tenders') }}</RouterLink>
           </div>
         </div>
 
@@ -187,14 +190,23 @@ const isActiveLink = (path) => route.path === path;
                   >{{ t('services.tender_fulfillment.title') }}</RouterLink
                 >
               </li>
+               <li>
+                <RouterLink
+                  to="/medicalTourism"
+                  @click="closeMenu"
+                  class="block px-4 py-2 rounded hover:bg-blue-50"
+                  >{{ t('medical_tourism') }}</RouterLink
+                >
+              </li>
+               <li>
+                <RouterLink
+                  to="/EventService"
+                  @click="closeMenu"
+                  class="block px-4 py-2 rounded hover:bg-blue-50"
+                  >{{ t('tenders') }}</RouterLink
+                >
+              </li>
             </ul>
-          </li>
-
-          <li>
-            <RouterLink to="/medicalTourism" @click="closeMenu" :class="isActiveLink('/medicalTourism') ? 'text-blue-700 font-semibold' : ''">{{ t('medical_tourism') }}</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/EventService" @click="closeMenu" :class="isActiveLink('/EventService') ? 'text-blue-700 font-semibold' : ''">{{ t('tenders') }}</RouterLink>
           </li>
         </ul>
 
