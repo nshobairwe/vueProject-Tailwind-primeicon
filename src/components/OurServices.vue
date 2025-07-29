@@ -1,56 +1,34 @@
 <template>
-  <section class="max-w-screen-xl mx-auto py-20 px-6 mt-24 md:mt-32">
-    <h2
-      class="text-4xl font-extrabold text-blue-900 text-center mb-12 tracking-wide"
-    >
+  <section class="max-w-screen-md mx-auto py-20 px-6 mt-24 md:mt-32">
+    <h2 class="text-5xl font-extrabold text-blue-900 text-center mb-16 tracking-wide">
       {{ t("services.title") }}
     </h2>
 
-    <div class="relative overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
       <div
-        class="animate-scroll flex space-x-8 w-max"
-        role="list"
-        aria-label="Services scrolling list"
+        v-for="(card, index) in cards"
+        :key="index"
+        class="service-card bg-white p-10 rounded-3xl shadow-lg transform transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.07] cursor-pointer flex flex-col"
+        tabindex="0"
+        role="region"
+        :aria-label="t(card.titleKey)"
       >
-        <div
-          v-for="(card, index) in [...cards, ...cards]"
-          :key="index"
-          class="service-card w-72 bg-white p-6 rounded-3xl shadow-lg transform transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.05] cursor-pointer flex flex-col"
-          tabindex="0"
-          role="listitem"
-          :aria-label="t(card.titleKey)"
-        >
-          <div
-            class="text-5xl mb-4 text-blue-500 flex justify-center select-none"
-            aria-hidden="true"
-          >
-            <i :class="icons[index % icons.length]"></i>
-          </div>
-          <h3
-            class="text-xl font-bold mb-4 text-center text-blue-900 tracking-wide"
-          >
-            {{ t(card.titleKey) }}
-          </h3>
-          <ul
-            class="list-disc list-inside text-gray-700 space-y-1 text-sm leading-relaxed flex-grow"
-          >
-            <li v-for="(itemKey, i) in card.itemsKey" :key="i">
-              {{ t(itemKey) }}
-            </li>
-          </ul>
+        <div class="text-6xl mb-6 text-blue-500 flex justify-center select-none" aria-hidden="true">
+          <i :class="icons[index % icons.length]"></i>
         </div>
+        <h3 class="text-2xl font-bold mb-6 text-center text-blue-900 tracking-wide">
+          {{ t(card.titleKey) }}
+        </h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 text-base leading-relaxed flex-grow">
+          <li v-for="(itemKey, i) in card.itemsKey" :key="i">
+            {{ t(itemKey) }}
+          </li>
+        </ul>
       </div>
-
-      <div
-        class="pointer-events-none absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white"
-      ></div>
-      <div
-        class="pointer-events-none absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-white"
-      ></div>
     </div>
 
-    <div class="mt-20 text-center max-w-3xl mx-auto">
-      <h3 class="text-2xl font-semibold text-blue-900 mb-4 tracking-wide">
+    <div class="mt-24 text-center max-w-3xl mx-auto">
+      <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide">
         {{ t("services.key_capabilities_title") }}
       </h3>
       <p class="text-lg text-gray-800 leading-relaxed whitespace-pre-line">
@@ -109,19 +87,6 @@ const icons = ["pi pi-heart", "pi pi-search", "pi pi-cog", "pi pi-box"];
 </script>
 
 <style scoped>
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll 60s linear infinite;
-}
-
 .service-card {
   will-change: transform, box-shadow;
   perspective: 1000px;
@@ -131,7 +96,7 @@ const icons = ["pi pi-heart", "pi pi-search", "pi pi-cog", "pi pi-box"];
 .service-card:hover,
 .service-card:focus-visible {
   outline: none;
-  transform: translateY(-12px) scale(1.05) rotateX(3deg);
+  transform: translateY(-12px) scale(1.07) rotateX(3deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 

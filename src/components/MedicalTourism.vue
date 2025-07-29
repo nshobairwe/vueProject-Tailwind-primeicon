@@ -73,23 +73,24 @@ onMounted(() => {
       <h2 class="text-2xl text-green-700 font-bold mb-4">Contact Open Sea</h2>
       <p class="mb-6 text-gray-700 font-medium">We support you every step of the journey.</p>
       <ul class="text-lg space-y-3 text-gray-900">
-        <li class="flex items-center justify-center gap-3">
-          <span class="text-green-600 text-2xl">📞</span>
-          <a href="tel:+255747100444" class="hover:text-green-700 transition">
-            {{ contact.phone }}
-          </a>
-        </li>
-        <li class="flex items-center justify-center gap-3">
-          <span class="text-green-600 text-2xl">📧</span>
-          <a href="mailto:info@opensea.co.tz" class="hover:text-green-700 transition">
-            {{ contact.email }}
-          </a>
-        </li>
-        <li class="flex items-center justify-center gap-3">
-          <span class="text-green-600 text-2xl">📍</span>
-          <span>{{ contact.address }}</span>
-        </li>
-      </ul>
+  <li class="flex items-center justify-center gap-3">
+    <i class="pi pi-phone text-blue-500 text-2xl"></i>
+    <a href="tel:+255747100444" class="hover:text-green-700 transition">
+      {{ contact.phone }}
+    </a>
+  </li>
+  <li class="flex items-center justify-center gap-3">
+    <i class="pi pi-envelope text-blue-500 text-2xl"></i>
+    <a href="mailto:info@opensea.co.tz" class="hover:text-green-700 transition">
+      {{ contact.email }}
+    </a>
+  </li>
+  <li class="flex items-center justify-center gap-3">
+    <i class="pi pi-map-marker text-blue-500 text-2xl"></i>
+    <span>{{ contact.address }}</span>
+  </li>
+</ul>
+
     </div>
 
   </section>

@@ -1,7 +1,6 @@
 <script setup>
 import img4 from '../assets/MedicalImages/img4.png'
 </script>
-
 <template>
   <div
     class="fade-in bg-gradient-to-r from-green-100 to-blue-50 p-8 rounded-2xl shadow-xl max-w-5xl mx-auto"
@@ -24,27 +23,27 @@ import img4 from '../assets/MedicalImages/img4.png'
         </h2>
         <ul class="space-y-4 text-lg text-gray-900 leading-relaxed">
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">✔️</span>
+            <i class="pi pi-globe text-green-600 text-xl"></i>
             <span>Global access to advanced healthcare</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">⏱️</span>
+            <i class="pi pi-clock text-green-600 text-xl"></i>
             <span>Shorter wait times</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">🏥</span>
+            <i class="pi pi-verified text-green-600 text-xl"></i>
             <span>Trusted, recognized hospitals</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">🤝</span>
+            <i class="pi pi-users text-green-600 text-xl"></i>
             <span>End-to-end support and guidance</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">💰</span>
+            <i class="pi pi-wallet text-green-600 text-xl"></i>
             <span>More affordable options</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-green-600 text-2xl">❤️</span>
+            <i class="pi pi-heart-fill text-green-600 text-xl"></i>
             <span>Life-saving results</span>
           </li>
         </ul>
