@@ -107,7 +107,7 @@ const isActiveLink = (path) => route.path === path;
   </ul>
 
   <!-- Bottom section -->
-  <ul class="flex flex-col px-4 py-4 gap-3 text-lg text-gray-800 font-medium mb-36 border-t">
+  <ul class="flex flex-col px-4 py-4 gap-3 text-lg text-gray-800 font-medium mb-40 border-t">
     <li><RouterLink to="/clients" @click="closeMenu" :class="isActiveLink('/clients') ? 'text-blue-700 font-semibold' : ''">{{ t('clients.title') }}</RouterLink></li>
     <li><RouterLink to="/contactUs" @click="closeMenu" :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''">{{ t('Contact') }}</RouterLink></li>
     <li class="flex items-center gap-2">
