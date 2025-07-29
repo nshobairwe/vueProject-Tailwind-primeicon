@@ -12,11 +12,11 @@ import slide7 from '../assets/img7.png'
 import slide8 from '../assets/img8.png'
 import slide9 from '../assets/img9.png'
 import slide10 from '../assets/img10.png'
-import slide11 from '../assets/img11.png'
+
 
 const slides = [
   slide1, slide2, slide3, slide4, slide5, slide6,
-  slide7, slide8, slide9, slide10, slide11
+  slide7, slide8, slide9, slide10
 ]
 
 const fullSlides = [...slides, slides[0]]

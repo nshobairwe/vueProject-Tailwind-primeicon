@@ -57,9 +57,9 @@ const isActiveLink = (path) => route.path === path;
 
           <!-- Left nav links -->
           <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
-            <RouterLink to="/" :class="{ 'text-blue-700 font-semibold': isActiveLink('/') }" class="hover:text-blue-700">{{ t('home') }}</RouterLink>
-            <RouterLink to="/aboutus" :class="{ 'text-blue-700 font-semibold': isActiveLink('/aboutus') }" class="hover:text-blue-700">{{ t('about_us') }}</RouterLink>
-            <RouterLink to="/vision" :class="{ 'text-blue-700 font-semibold': isActiveLink('/vision') }" class="hover:text-blue-700">{{ t('vision') }}</RouterLink>
+            <RouterLink to="/" :class="{ 'text-blue-700 font-semibold': isActiveLink('/') }" class="hover:text-blue-700">{{ t('Home') }}</RouterLink>
+            <RouterLink to="/aboutus" :class="{ 'text-blue-700 font-semibold': isActiveLink('/aboutus') }" class="hover:text-blue-700">{{ t('About Us') }}</RouterLink>
+            <RouterLink to="/vision" :class="{ 'text-blue-700 font-semibold': isActiveLink('/vision') }" class="hover:text-blue-700">{{ t('Vision') }}</RouterLink>
             <RouterLink to="/services" :class="{ 'text-blue-700 font-semibold': isActiveLink('/services') }" class="hover:text-blue-700">{{ t('services.title') }}</RouterLink>
             <RouterLink to="/medicalTourism" :class="{ 'text-blue-700 font-semibold': isActiveLink('/medicalTourism') }" class="hover:text-blue-700">{{ t('medical_tourism') }}</RouterLink>
             <RouterLink to="/EventService" :class="{ 'text-blue-700 font-semibold': isActiveLink('/EventService') }" class="hover:text-blue-700">{{ t('tenders') }}</RouterLink>
@@ -69,7 +69,7 @@ const isActiveLink = (path) => route.path === path;
         <!-- Right nav links -->
         <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
           <RouterLink to="/clients" :class="{ 'text-blue-700 font-semibold': isActiveLink('/clients') }" class="hover:text-blue-700">{{ t('clients.title') }}</RouterLink>
-          <RouterLink to="/contactUs" :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }" class="hover:text-blue-700">{{ t('contact') }}</RouterLink>
+          <RouterLink to="/contactUs" :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }" class="hover:text-blue-700">{{ t('Contact') }}</RouterLink>
           <select v-model="locale" class="border rounded p-1 text-sm">
             <option value="en">English</option>
             <option value="sw">Swahili</option>
@@ -98,9 +98,9 @@ const isActiveLink = (path) => route.path === path;
 <div v-if="menuOpen" class="md:hidden bg-white border-t w-full min-h-screen flex flex-col justify-between">
   <!-- Top primary links -->
   <ul class="flex flex-col px-4 py-2 gap-3 text-lg text-gray-800 font-medium">
-    <li><RouterLink to="/" @click="closeMenu" :class="isActiveLink('/') ? 'text-blue-700 font-semibold' : ''">{{ t('home') }}</RouterLink></li>
-    <li><RouterLink to="/aboutus" @click="closeMenu" :class="isActiveLink('/aboutus') ? 'text-blue-700 font-semibold' : ''">{{ t('about_us') }}</RouterLink></li>
-    <li><RouterLink to="/vision" @click="closeMenu" :class="isActiveLink('/vision') ? 'text-blue-700 font-semibold' : ''">{{ t('vision') }}</RouterLink></li>
+    <li><RouterLink to="/" @click="closeMenu" :class="isActiveLink('/') ? 'text-blue-700 font-semibold' : ''">{{ t('Home') }}</RouterLink></li>
+    <li><RouterLink to="/aboutus" @click="closeMenu" :class="isActiveLink('/aboutus') ? 'text-blue-700 font-semibold' : ''">{{ t('About Us') }}</RouterLink></li>
+    <li><RouterLink to="/vision" @click="closeMenu" :class="isActiveLink('/vision') ? 'text-blue-700 font-semibold' : ''">{{ t('Vision') }}</RouterLink></li>
     <li><RouterLink to="/services" @click="closeMenu" :class="isActiveLink('/services') ? 'text-blue-700 font-semibold' : ''">{{ t('services.title') }}</RouterLink></li>
     <li><RouterLink to="/medicalTourism" @click="closeMenu" :class="isActiveLink('/medicalTourism') ? 'text-blue-700 font-semibold' : ''">{{ t('medical_tourism') }}</RouterLink></li>
     <li><RouterLink to="/EventService" @click="closeMenu" :class="isActiveLink('/EventService') ? 'text-blue-700 font-semibold' : ''">{{ t('tenders') }}</RouterLink></li>
@@ -109,7 +109,7 @@ const isActiveLink = (path) => route.path === path;
   <!-- Bottom section -->
   <ul class="flex flex-col px-4 py-4 gap-3 text-lg text-gray-800 font-medium mb-32 border-t">
     <li><RouterLink to="/clients" @click="closeMenu" :class="isActiveLink('/clients') ? 'text-blue-700 font-semibold' : ''">{{ t('clients.title') }}</RouterLink></li>
-    <li><RouterLink to="/contactUs" @click="closeMenu" :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''">{{ t('contact') }}</RouterLink></li>
+    <li><RouterLink to="/contactUs" @click="closeMenu" :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''">{{ t('Contact') }}</RouterLink></li>
     <li class="flex items-center gap-2">
       <i class="pi pi-globe text-blue-600"></i>
       <select
