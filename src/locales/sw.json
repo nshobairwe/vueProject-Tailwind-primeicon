@@ -1,8 +1,10 @@
 {
   "home": "Nyumbani",
-  "about_us": "Kuhusu",
-  "vision": "Dira",
-  "contact_label": "Mawasiliano",
+  "About_us": "Kuhusu",
+  "Vision": "Dira",
+  "Contact_label": "Mawasiliano",
+  "Email": "Barua pepe",
+  "Phone": "Simu",
 
   "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
   "medical_tourism": "Huduma za Utalii wa Kimatibabu",
