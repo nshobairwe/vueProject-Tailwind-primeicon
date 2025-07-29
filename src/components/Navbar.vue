@@ -105,7 +105,7 @@ const isActiveLink = (path) => route.path === path;
         <!-- Right nav links -->
         <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
           <RouterLink to="/clients" :class="{ 'text-blue-700 font-semibold': isActiveLink('/clients') }" class="hover:text-blue-700">{{ t('clients.title') }}</RouterLink>
-          <RouterLink to="/contactUs" :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }" class="hover:text-blue-700">{{ t('Contact') }}</RouterLink>
+          <RouterLink to="/contactUs" :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }" class="hover:text-blue-700">{{ t('Contact_label') }}</RouterLink>
           <select v-model="locale" class="border rounded p-1 text-sm">
             <option value="en">English</option>
             <option value="sw">Swahili</option>

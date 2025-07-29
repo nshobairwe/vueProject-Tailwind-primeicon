@@ -58,7 +58,7 @@ onUnmounted(() => {
               : 'text-blue-600 hover:text-blue-900 after:scale-x-0',
           ]"
         >
-          {{ t('vision') }}
+          {{ t('Vision') }}
         </span>
 
         <span
@@ -89,7 +89,7 @@ onUnmounted(() => {
       <!-- Tab Content -->
       <div class="max-w-md">
         <div v-if="activeTab === 'vision'">
-          <h3 class="text-3xl font-bold text-blue-900 mb-4">{{ t('vision') }}</h3>
+          <h3 class="text-3xl font-bold text-blue-900 mb-4">{{ t('Vision') }}</h3>
           <p class="text-lg text-blue-800 leading-relaxed tracking-wide">
             {{ t('vision_description') }}
           </p>

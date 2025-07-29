@@ -91,7 +91,55 @@
     "email": "Anuani ya Barua Pepe",
     "message": "Ujumbe",
     "submit": "Tuma Ujumbe"
-  }
+  },
+
+  "medical_hero_title": "Huduma za Utalii wa Matibabu",
+  "medical_hero_desc": "Pata huduma bora za afya duniani kupitia ushirikiano wa kimataifa unaoaminika.",
+  "case_title": "Tukio Halisi: Mama Asha",
+  "case_desc": "Baada ya kugunduliwa na saratani ya mapema ya matiti, Mama Asha alitibiwa nchini China kwa kutumia cryotherapy. Alirudi baada ya wiki mbili na aliendelea kufuatiliwa kwa njia ya Zoom na barua pepe.",
+  "affordable_title": "Je, ni Nafuu?",
+  "affordable_desc": "Ndiyo! Kupitia ushirikiano wetu na hospitali bora, tunatoa matibabu kwa bei nafuu. Mfano, upasuaji wa moyo kwa mtoto unaweza kugharimu Tsh milioni 20 nchini China ukilinganishwa na milioni 50 sehemu nyingine.",
+  "contact_title": "Wasiliana na Open Sea",
+  "contact_desc": "Tuko pamoja nawe katika kila hatua ya safari yako ya matibabu.",
+
+  "our_services_title": "Huduma Zetu",
+  "service_1": "Uratibu wa matibabu: Saratani, Moyo, Mishipa, Uzazi, n.k.",
+  "service_2": "Marejeleo kwa hospitali bora nchini China, Uturuki, India, n.k.",
+  "service_3": "Msaada wa viza, usafiri wa ndege, malazi, na usafiri wa ndani.",
+  "service_4": "Mkalimani wa matibabu / mwongozo wa mgonjwa.",
+  "service_5": "Ufuatiliaji wa baada ya matibabu.",
+
+  "why_choose_us_title": "Kwa Nini Utuchague?",
+  "reason_1": "Upatikanaji wa huduma bora za afya duniani",
+  "reason_2": "Muda mfupi wa kusubiri",
+  "reason_3": "Hospitali zinazotambulika na kuaminika",
+  "reason_4": "Msaada kamili kutoka mwanzo hadi mwisho",
+  "reason_5": "Chaguzi nafuu zaidi",
+  "reason_6": "Matokeo ya kuokoa maisha",
+
+  "tender_title": "HUDUMA ZA UGAVI WA TENDA",
+  "tender_intro": "Open Sea Company Ltd inatoa suluhisho kamili za usambazaji na ununuzi kwa zabuni za sekta ya umma na binafsi...",
+  "categories_title": "Aina Kuu za Ugavi Wetu",
+  "cat1_title": "1. Betri za Magari",
+  "cat1_text": "Tunatoa betri zenye utendaji wa hali ya juu na maisha marefu zinazofaa magari ya biashara na binafsi...",
+  "cat2_title": "2. Vifaa vya Hospitali",
+  "cat2_text": "Vifaa vyetu vya hospitali vinajumuisha monitor za wagonjwa, vitanda vya hospitali, vifaa vya upasuaji...",
+  "cat3_title": "3. Vifaa na Reagents za Maabara",
+  "cat3_text": "Tunatoa suluhisho kamili za maabara kwa kliniki, vituo vya utafiti, na taasisi za elimu...",
+  "cat4_title": "4. Vipuri vya Magari",
+  "cat4_text": "Tunatoa vipuri halisi na vya OEM kwa magari kama Toyota, Ford, Iveco...",
+  "cat5_title": "5. Matairi na Mirija",
+  "cat5_text": "Tunatoa matairi na mirija ya hali ya juu kwa magari mbalimbali...",
+  "why_title": "Kwa Nini Utuchague Kwa Ugavi wa Zabuni?",
+  "why_1": "Wasambazaji waliosajiliwa wa bidhaa za matibabu na magari",
+  "why_2": "Wataalamu wenye uzoefu wa kushughulikia zabuni za serikali na mashirika",
+  "why_3": "Usaidizi kamili wa vifaa, nyaraka, na ushuru",
+  "why_4": "Bei shindani kutoka kiwandani",
+  "why_5": "Mchakato wa wazi na msaada maalum",
+  "delivery_title": "Ugavi na Huduma",
+  "delivery_text": "Tunahudumia wateja kote Tanzania na tunatoa msaada wa ununuzi wa mipakani...",
+  "cta_title": "Tushirikiane",
+  "cta_text": "Kama shirika lako linatafuta mshirika wa kuaminika kwa kutimiza zabuni, wasiliana nasi leo..."
 
 
 }
