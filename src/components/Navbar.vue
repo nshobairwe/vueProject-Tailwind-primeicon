@@ -33,7 +33,7 @@ const isActiveLink = (path) => route.path === path;
 <template>
   <header class="fixed top-0 left-0 w-full z-50">
     <!-- Top contact bar -->
-    <div class="bg-blue-900 text-white text-sm py-2 px-4">
+    <div class="bg-blue-900 text-white text-sm py-2">
       <div class="max-w-screen-xl mx-auto flex justify-between">
         <span>{{ t('Email') }}: info@opensea.co.tz</span>
         <span>{{ t('Phone') }}: +255 747 100 444</span>
@@ -46,7 +46,7 @@ const isActiveLink = (path) => route.path === path;
       :class="{ '-translate-y-full': !isNavbarVisible, 'translate-y-0': isNavbarVisible }"
       style="top: 40px"
     >
-      <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4 py-3">
+      <div class="max-w-screen-xl mx-auto flex justify-between items-center  py-4">
         <!-- Left section: Logo and main links -->
         <div class="flex items-center gap-8">
           <!-- Logo -->
@@ -61,6 +61,8 @@ const isActiveLink = (path) => route.path === path;
             <RouterLink to="/aboutus" :class="{ 'text-blue-700 font-semibold': isActiveLink('/aboutus') }" class="hover:text-blue-700">{{ t('about_us') }}</RouterLink>
             <RouterLink to="/vision" :class="{ 'text-blue-700 font-semibold': isActiveLink('/vision') }" class="hover:text-blue-700">{{ t('vision') }}</RouterLink>
             <RouterLink to="/services" :class="{ 'text-blue-700 font-semibold': isActiveLink('/services') }" class="hover:text-blue-700">{{ t('services.title') }}</RouterLink>
+            <RouterLink to="/medicalTourism" :class="{ 'text-blue-700 font-semibold': isActiveLink('/medicalTourism') }" class="hover:text-blue-700">{{ t('medical_tourism') }}</RouterLink>
+            <RouterLink to="/EventService" :class="{ 'text-blue-700 font-semibold': isActiveLink('/EventService') }" class="hover:text-blue-700">{{ t('tenders') }}</RouterLink>
           </div>
         </div>
 
@@ -93,74 +95,34 @@ const isActiveLink = (path) => route.path === path;
         </button>
       </div>
 <!-- Mobile menu overlay -->
-<div v-if="menuOpen" class="md:hidden bg-white border-t">
+<div v-if="menuOpen" class="md:hidden bg-white border-t w-full min-h-screen flex flex-col justify-between">
+  <!-- Top primary links -->
   <ul class="flex flex-col px-4 py-2 gap-3 text-lg text-gray-800 font-medium">
-    <li>
-      <RouterLink
-        to="/"
-        @click="closeMenu"
-        :class="isActiveLink('/') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('home') }}
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink
-        to="/aboutus"
-        @click="closeMenu"
-        :class="isActiveLink('/aboutus') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('about_us') }}
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink
-        to="/vision"
-        @click="closeMenu"
-        :class="isActiveLink('/vision') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('vision') }}
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink
-        to="/services"
-        @click="closeMenu"
-        :class="isActiveLink('/services') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('services.title') }}
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink
-        to="/clients"
-        @click="closeMenu"
-        :class="isActiveLink('/clients') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('clients.title') }}
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink
-        to="/contactUs"
-        @click="closeMenu"
-        :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''"
-      >
-        {{ t('contact') }}
-      </RouterLink>
-    </li>
-    <li>
-  <select
-    v-model="locale"
-    class="w-full mt-2 rounded border border-gray-300 bg-white px-3 py-2 text-gray-800 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
-  >
-    <option value="en">English</option>
-    <option value="sw">Swahili</option>
-  </select>
-</li>
+    <li><RouterLink to="/" @click="closeMenu" :class="isActiveLink('/') ? 'text-blue-700 font-semibold' : ''">{{ t('home') }}</RouterLink></li>
+    <li><RouterLink to="/aboutus" @click="closeMenu" :class="isActiveLink('/aboutus') ? 'text-blue-700 font-semibold' : ''">{{ t('about_us') }}</RouterLink></li>
+    <li><RouterLink to="/vision" @click="closeMenu" :class="isActiveLink('/vision') ? 'text-blue-700 font-semibold' : ''">{{ t('vision') }}</RouterLink></li>
+    <li><RouterLink to="/services" @click="closeMenu" :class="isActiveLink('/services') ? 'text-blue-700 font-semibold' : ''">{{ t('services.title') }}</RouterLink></li>
+    <li><RouterLink to="/medicalTourism" @click="closeMenu" :class="isActiveLink('/medicalTourism') ? 'text-blue-700 font-semibold' : ''">{{ t('medical_tourism') }}</RouterLink></li>
+    <li><RouterLink to="/EventService" @click="closeMenu" :class="isActiveLink('/EventService') ? 'text-blue-700 font-semibold' : ''">{{ t('tenders') }}</RouterLink></li>
+  </ul>
 
+  <!-- Bottom section -->
+  <ul class="flex flex-col px-4 py-4 gap-3 text-lg text-gray-800 font-medium mb-32 border-t">
+    <li><RouterLink to="/clients" @click="closeMenu" :class="isActiveLink('/clients') ? 'text-blue-700 font-semibold' : ''">{{ t('clients.title') }}</RouterLink></li>
+    <li><RouterLink to="/contactUs" @click="closeMenu" :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''">{{ t('contact') }}</RouterLink></li>
+    <li class="flex items-center gap-2">
+      <i class="pi pi-globe text-blue-600"></i>
+      <select
+        v-model="locale"
+        class="flex-1 rounded border border-gray-300 bg-white px-3 py-2 text-gray-800 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+      >
+        <option value="en">English</option>
+        <option value="sw">Swahili</option>
+      </select>
+    </li>
   </ul>
 </div>
+
     </nav>
   </header>
 </template>
