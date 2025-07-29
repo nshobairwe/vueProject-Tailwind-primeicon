@@ -94,7 +94,7 @@ const isActiveLink = (path) => route.path === path;
                     <RouterLink to="/medicalTourism" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('medical_tourism') }}</RouterLink>
                   </li>
                   <li>
-                    <RouterLink to="/EventService" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('tenders') }}</RouterLink>
+                    <RouterLink to="/tenders" class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition">{{ t('tenders') }}</RouterLink>
                   </li>
                 </ul>
               </div>
@@ -200,7 +200,7 @@ const isActiveLink = (path) => route.path === path;
               </li>
                <li>
                 <RouterLink
-                  to="/EventService"
+                  to="/tenders"
                   @click="closeMenu"
                   class="block px-4 py-2 rounded hover:bg-blue-50"
                   >{{ t('tenders') }}</RouterLink

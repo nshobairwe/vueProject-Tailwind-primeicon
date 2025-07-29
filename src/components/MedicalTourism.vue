@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="min-h-screen py-16 px-6 md:px-20 space-y-20 bg-gradient-to-b from-green-50 mt-6 to-white text-gray-900">
+  <section class="min-h-screen py-16 px-6 md:px-20 space-y-20 bg-gradient-to-b from-green-50 mt-32 to-white text-gray-900">
 
     <!-- Hero Title Section -->
     <section class="fade-in max-w-4xl mx-auto text-center py-20 bg-white rounded-3xl shadow-lg border border-green-200">

@@ -8,6 +8,7 @@ import MedicalTourism from '../components/MedicalTourism.vue';
 import EventService from '../components/EventCoordination.vue';
 import EventOurServices from '../components/EventOurServices.vue';
 import TheLastComponent from '../components/TheLastComponent.vue';
+import Tenders from '../components/Tenders.vue';
 
 
 
@@ -50,9 +51,9 @@ const router = createRouter({
       component: EventService
     },
     {
-      path: '/eventOurService',
-      name: 'eventOurService',
-      component: EventOurServices
+      path: '/tenders',
+      name: 'Tenders',
+      component: Tenders
     },
     {
       path: '/contactUs',
