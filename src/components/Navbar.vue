@@ -145,7 +145,7 @@ const isActiveLink = (path) => route.path === path;
         <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
           <a
         href="#"
-        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
       >
         Get Started
       </a>
@@ -335,7 +335,7 @@ const isActiveLink = (path) => route.path === path;
           </li>
           <a
         href="#"
-        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+        class="bg-yellow-400 text-gray-900 text-center hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
       >
         Get Started
       </a>
