@@ -143,6 +143,12 @@ const isActiveLink = (path) => route.path === path;
 
         <!-- Right nav links -->
         <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
+          <a
+        href="#"
+        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+      >
+        Get Started
+      </a>
           <RouterLink
             to="/contactUs"
             :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }"
@@ -308,6 +314,7 @@ const isActiveLink = (path) => route.path === path;
         <ul
           class="flex flex-col px-4 py-4 gap-3 text-lg text-gray-800 font-medium mb-40 border-t"
         >
+        
           <li>
             <RouterLink
               to="/contactUs"
@@ -326,6 +333,12 @@ const isActiveLink = (path) => route.path === path;
               <option value="sw">Swahili</option>
             </select>
           </li>
+          <a
+        href="#"
+        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+      >
+        Get Started
+      </a>
         </ul>
       </div>
     </nav>

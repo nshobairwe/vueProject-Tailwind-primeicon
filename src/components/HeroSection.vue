@@ -31,7 +31,7 @@
         href="#"
         class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
       >
-        Get Started
+        Learn More
       </a>
     </div>
   </div>
