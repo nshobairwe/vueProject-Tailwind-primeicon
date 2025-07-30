@@ -29,18 +29,18 @@ import Logo from "../assets/logo.jpg";
         <!-- Contact -->
         <div>
           <h6 class="text-lg font-bold mb-5">{{ $t('contact.title') }}</h6>
-          <ul class="flex flex-col gap-4 text-gray-400 text-sm">
+          <ul class="flex flex-col gap-4 text-gray-400  text-sm">
             <li class="flex items-center gap-2">
-              <i class="pi pi-phone text-blue-500"></i> +255 747 100 444
+              <i class="pi pi-phone text-gray-400 "></i> +255 747 100 444
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-building text-blue-500"></i> {{ $t('contact.company') }}
+              <i class="pi pi-building text-gray-400 "></i> {{ $t('contact.company') }}
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-map-marker text-blue-500"></i> {{ $t('contact.address') }}
+              <i class="pi pi-map-marker text-gray-400 "></i> {{ $t('contact.address') }}
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-globe text-blue-500"></i> {{ $t('contact.city') }}
+              <i class="pi pi-globe text-gray-400 "></i> {{ $t('contact.city') }}
             </li>
           </ul>
         </div>
