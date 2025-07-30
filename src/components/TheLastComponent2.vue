@@ -2,7 +2,7 @@
 import Logo from "../assets/logo.jpg";
 </script>
 <template>
-  <section class="pt-16 pb-7 bg-gray-900 mt-10">
+  <section class="pt-16 pb-7 bg-gray-900 mt-20">
     <div class="mx-6 max-w-7xl px-0 sm:px-6 lg:px-8">
 
       <!-- Signup Section -->

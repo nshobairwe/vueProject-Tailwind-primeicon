@@ -8,8 +8,8 @@ const { t } = useI18n()
 </script>
 
 <template>
-    <section class="pt-10 overflow-hidden  dark:bg-gray-800 md:pt-0 sm:pt-16 2xl:pt-16 mt-10 mx-10">
-    <div class="px-4  sm:px-6 lg:px-8">
+   
+    <div class="px-5  mt-20">
         <div class="grid items-center grid-cols-1 md:grid-cols-2">
 
             <div>
@@ -38,5 +38,4 @@ const { t } = useI18n()
 
         </div>
     </div>
-</section>
 </template>

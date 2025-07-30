@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="relative h-screen text-white overflow-hidden">
+  <div class="relative h-[500px] text-white overflow-hidden">
     <!-- Background image -->
     <div class="absolute inset-0">
       <img

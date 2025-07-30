@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-xl mx-auto px-6 mt-10">
+  <section class="max-w-screen-xl mx-auto px-5 mt-36">
     <h2 class="text-5xl font-extrabold text-blue-900 text-center mb-16 tracking-wide">
       {{ t("services.title") }}
     </h2>

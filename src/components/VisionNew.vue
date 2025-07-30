@@ -2,8 +2,8 @@
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 </script><template>
-  <section class="w-full py-16 mt-10 bg-white">
-    <div class="px-4 sm:px-6 lg:px-12">
+ 
+    <div class="px-5 mt-36">
       <h2 class="text-3xl font-extrabold text-gray-900 max-w-7xl mx-auto">
         {{ t('Vision') }}
       </h2>
@@ -92,5 +92,5 @@ const { t } = useI18n();
         </div>
       </div>
     </div>
-  </section>
+
 </template>
