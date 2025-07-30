@@ -6,10 +6,11 @@ import OurServices from '../components/OurServices.vue';
 import ClientsAndBeneficiaries from '../components/ClientsAndBeneficiaries.vue';
 import MedicalTourism from '../components/MedicalTourism.vue';
 import EventService from '../components/EventCoordination.vue';
-import EventOurServices from '../components/EventOurServices.vue';
 import TheLastComponent from '../components/TheLastComponent.vue';
 import Tenders from '../components/Tenders.vue';
-
+import AboutUs2 from '../components/AboutUs2.vue';
+import VisionNew from '../components/VisionNew.vue';
+import TheLastComponent2 from '../components/TheLastComponent2.vue';
 
 
 const router = createRouter({
@@ -23,23 +24,23 @@ const router = createRouter({
     {
      path: '/aboutus',
      name: 'aboutus',
-     component: AboutUs,
+     component: AboutUs2,
     },
     {
      path: '/vision',
      name: 'vision',
-     component: Vision,
+     component: VisionNew,
     },
     {
      path: '/services',
      name: 'services',
      component: OurServices,
     },
-    {
-     path: '/clients',
-     name: 'clients',
-     component: ClientsAndBeneficiaries,
-    },
+    // {
+    //  path: '/clients',
+    //  name: 'clients',
+    //  component: ClientsAndBeneficiaries,
+    // },
     {
      path: '/medicalTourism',
      name: 'medicalTourism',
@@ -58,7 +59,7 @@ const router = createRouter({
     {
       path: '/contactUs',
       name: 'contactUs',
-      component: TheLastComponent
+      component: TheLastComponent2
     }
   ],
 });

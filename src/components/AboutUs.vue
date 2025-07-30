@@ -8,7 +8,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="w-full bg-white py-20 px-6 mt-20 md:mt-36">
+  <section class="w-full bg-white py-20 px-6 ">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Text Column -->
       <div class="space-y-8 text-center md:text-left">

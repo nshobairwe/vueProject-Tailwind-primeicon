@@ -1,10 +1,10 @@
 <template>
-  <section class="max-w-screen-md mx-auto py-20 px-6 mt-24 md:mt-32">
+  <section class="max-w-screen-xl mx-auto px-6 mt-10">
     <h2 class="text-5xl font-extrabold text-blue-900 text-center mb-16 tracking-wide">
       {{ t("services.title") }}
     </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+    <!-- Cards in responsive grid, no scroll -->
+    <div class="grid gap-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       <div
         v-for="(card, index) in cards"
         :key="index"
@@ -13,13 +13,16 @@
         role="region"
         :aria-label="t(card.titleKey)"
       >
-        <div class="text-6xl mb-6 text-blue-500 flex justify-center select-none" aria-hidden="true">
+        <div
+          class="text-6xl mb-6 text-blue-500 flex justify-center select-none"
+          aria-hidden="true"
+        >
           <i :class="icons[index % icons.length]"></i>
         </div>
         <h3 class="text-2xl font-bold mb-6 text-center text-blue-900 tracking-wide">
           {{ t(card.titleKey) }}
         </h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-2 text-base leading-relaxed flex-grow">
+        <ul class="list-disc pl-5 text-gray-700 space-y-2 text-base leading-relaxed flex-grow text-left">
           <li v-for="(itemKey, i) in card.itemsKey" :key="i">
             {{ t(itemKey) }}
           </li>
@@ -27,7 +30,8 @@
       </div>
     </div>
 
-    <div class="mt-24 text-center max-w-3xl mx-auto">
+    <!-- Key Capabilities Section -->
+    <div class="mt-24 max-w-3xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide">
         {{ t("services.key_capabilities_title") }}
       </h3>
