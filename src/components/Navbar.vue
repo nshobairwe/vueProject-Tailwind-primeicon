@@ -25,15 +25,21 @@ const isActiveLink = (path) => route.path === path;
   <header class="fixed top-0 left-0 w-full z-50">
     <!-- Top contact bar -->
     <div class="bg-blue-900 text-white text-sm py-2">
-      <div class="mx-10 flex justify-between gap-x-8 px-0">
-        <span>{{ t("Email") }}: info@opensea.co.tz</span>
-        <span>{{ t("Phone") }}: +255 747 100 444</span>
-      </div>
-    </div>
+  <div class="flex justify-between items-center gap-x-5 px-3">
+    <span class="flex items-center gap-1">
+      <i class="pi pi-envelope text-white"></i>
+      info@opensea.co.tz
+    </span>
+    <span class="flex items-center gap-1">
+      <i class="pi pi-phone text-white"></i>
+      +255 747 100 444
+    </span>
+  </div>
+</div>
 
     <!-- Main nav -->
     <nav class="bg-white shadow-md border-b" style="top: 40px;">
-      <div class="mx-10 px-0 flex justify-between items-center py-3">
+      <div class="px-3 flex justify-between items-center py-3">
         <!-- Left section: Logo and main links -->
         <div class="flex items-center gap-16">
           <RouterLink to="/" class="flex items-center gap-2" @click="closeMenu">
