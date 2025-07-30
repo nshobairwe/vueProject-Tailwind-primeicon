@@ -26,19 +26,30 @@
           <li v-for="(itemKey, i) in card.itemsKey" :key="i">
             {{ t(itemKey) }}
           </li>
+         
         </ul>
+          <a
+        href="#"
+        class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-3 text-center"
+      >
+        Learn more
+      </a>
       </div>
     </div>
 
-    <!-- Key Capabilities Section -->
-    <div class="mt-24 max-w-3xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide">
-        {{ t("services.key_capabilities_title") }}
-      </h3>
-      <p class="text-lg text-gray-800 leading-relaxed whitespace-pre-line">
-        {{ t("services.key_capabilities_description") }}
-      </p>
-    </div>
+ <!-- Key Capabilities Section -->
+<div class="mt-24 max-w-3xl mx-auto px-4">
+  <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left">
+    {{ t("services.key_capabilities_title") }}
+  </h3>
+  <ul class="list-disc list-outside pl-5 text-lg text-gray-800 leading-relaxed">
+    <li v-for="(item, index) in t('services.key_capabilities_description').split('\n')" :key="index">
+      {{ item }}
+    </li>
+  </ul>
+</div>
+
+
   </section>
 </template>
 
