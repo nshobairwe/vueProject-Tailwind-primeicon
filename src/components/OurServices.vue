@@ -4,33 +4,39 @@
       {{ t("services.title") }}
     </h2>
 
-    <!-- Cards in responsive grid -->
+    <!-- Cards Grid -->
     <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="service-card bg-white p-8 rounded-3xl shadow-lg flex flex-col justify-between"
+        class="rounded-lg bg-gradient-to-tr from-white to-gray-50 p-0.5 shadow-lg overflow-hidden"
         tabindex="0"
         role="region"
         :aria-label="t(card.titleKey)"
       >
-        <div>
-          <div class="text-5xl mb-6 text-blue-500 flex justify-center select-none" aria-hidden="true">
-            <i :class="icons[index % icons.length]"></i>
+        <img
+          :src="imageUrls[index % imageUrls.length]"
+          alt="Service Image"
+          class="w-full h-64 object-cover rounded-t-lg"
+        />
+        <div
+          class="p-6 bg-white text-center rounded-b-lg flex flex-col justify-between h-[350px]"
+        >
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              {{ t(card.titleKey) }}
+            </h3>
+            <ul
+              class="list-disc list-inside text-gray-700 text-left mb-4 text-base space-y-1"
+            >
+              <li v-for="(itemKey, i) in card.itemsKey" :key="i">
+                {{ t(itemKey) }}
+              </li>
+            </ul>
           </div>
-          <h3 class="text-2xl font-bold mb-6 text-center text-blue-900 tracking-wide">
-            {{ t(card.titleKey) }}
-          </h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-2 text-base leading-relaxed text-left">
-            <li v-for="(itemKey, i) in card.itemsKey" :key="i">
-              {{ t(itemKey) }}
-            </li>
-          </ul>
-        </div>
-        <div class="mt-6 flex justify-center">
           <a
             href="#"
-            class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
+            class="mt-4 inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
           >
             Learn more
           </a>
@@ -40,11 +46,16 @@
 
     <!-- Key Capabilities Section -->
     <div class="mt-24 max-w-3xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left">
+      <h3
+        class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left"
+      >
         {{ t("services.key_capabilities_title") }}
       </h3>
       <ul class="list-disc list-outside pl-5 text-lg text-gray-800 leading-relaxed">
-        <li v-for="(item, index) in t('services.key_capabilities_description').split('\n')" :key="index">
+        <li
+          v-for="(item, index) in t('services.key_capabilities_description').split('\n')"
+          :key="index"
+        >
           {{ item }}
         </li>
       </ul>
@@ -52,14 +63,12 @@
   </section>
 </template>
 
-
 <script setup>
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
 const cards = [
- 
   {
     titleKey: "services.medical_lab.title",
     itemsKey: [
@@ -82,25 +91,12 @@ const cards = [
   },
 ];
 
-const icons = ["pi pi-heart", "pi pi-search", "pi pi-cog", "pi pi-box"];
+const imageUrls = [
+  "https://plus.unsplash.com/premium_photo-1664303503818-a6fab2dcfd91?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://plus.unsplash.com/premium_photo-1682129758532-1aea957dd0ad?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
 </script>
 
 <style scoped>
-.service-card {
-  will-change: transform, box-shadow;
-  perspective: 1000px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover,
-.service-card:focus-visible {
-  outline: none;
-  transform: translateY(-12px) scale(1.07) rotateX(3deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.service-card:focus-visible {
-  box-shadow: 0 0 0 3px #190561;
-  border-radius: 1.5rem;
-}
+/* Optional custom styles */
 </style>

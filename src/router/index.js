@@ -12,6 +12,7 @@ import AboutUs2 from '../components/AboutUs2.vue';
 import VisionNew from '../components/VisionNew.vue';
 import TheLastComponent2 from '../components/TheLastComponent2.vue';
 import TenderOrder from '../components/TenderOrder.vue'
+import MedicalTour from '../components/MedicalTour.vue';
 
 
 const router = createRouter({
@@ -45,7 +46,7 @@ const router = createRouter({
     {
      path: '/medicalTourism',
      name: 'medicalTourism',
-     component: Tenders
+     component: MedicalTour
     },
     {
       path: '/eventService',
