@@ -1,7 +1,5 @@
-
-
 <template>
-  <div class="relative h-[500px] text-white overflow-hidden">
+  <div class="relative min-h-[500px] text-white overflow-visible">
     <!-- Background image -->
     <div class="absolute inset-0">
       <img
@@ -13,18 +11,20 @@
       <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
     </div>
 
-    <!-- Content -->
+    <!-- Centered Content -->
     <div
-      class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4"
+      class="relative z-10 flex flex-col justify-center items-center text-center px-4 h-[500px]"
     >
       <h1
-        class="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 mb-6 animate-fade-in-up"
+        class="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 mb-6 animate-fade-in-up leading-normal pb-2"
       >
-       Delivering Quality. Advancing Life
+        Delivering Quality. Advancing Life
       </h1>
-
-      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mb-10 animate-fade-in-up delay-200">
-      From critical healthcare solutions to reliable spare parts and diverse product distribution, we deliver with precision, passion, and purpose.
+      <p
+        class="text-lg md:text-xl text-gray-200 max-w-2xl mb-10 animate-fade-in-up delay-200"
+      >
+        From critical healthcare solutions to reliable spare parts and diverse
+        product distribution, we deliver with precision, passion, and purpose.
       </p>
 
       <a
@@ -52,6 +52,7 @@
 .animate-fade-in-up {
   animation: fade-in-up 1s ease forwards;
 }
+
 .delay-200 {
   animation-delay: 0.2s;
 }
