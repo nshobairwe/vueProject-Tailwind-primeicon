@@ -26,6 +26,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+<div>
   <div
     class="flex flex-col md:flex-row  items-center justify-center gap-12 my-12 py-10 px-6  shadow-lg max-w-6xl mx-auto mt-28 md:mt-32"
   >
@@ -109,8 +110,12 @@ onUnmounted(() => {
           </p>
         </div>
       </div>
+
     </div>
   </div>
+  
+</div>
+ 
 </template>
 
 <style scoped>

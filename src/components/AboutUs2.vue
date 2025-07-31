@@ -2,11 +2,11 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-
 const showMedical = ref(false)
 const { t } = useI18n()
 </script>
 <template>
+  
   <div class="px-5 mt-20 mx-auto max-w-screen-xl py-10 ">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
@@ -44,4 +44,5 @@ const { t } = useI18n()
       </div>
     </div>
   </div>
+
 </template>
