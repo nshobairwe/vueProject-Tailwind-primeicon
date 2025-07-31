@@ -11,6 +11,7 @@ import Tenders from '../components/Tenders.vue';
 import AboutUs2 from '../components/AboutUs2.vue';
 import VisionNew from '../components/VisionNew.vue';
 import TheLastComponent2 from '../components/TheLastComponent2.vue';
+import TenderOrder from '../components/TenderOrder.vue'
 
 
 const router = createRouter({
@@ -44,7 +45,7 @@ const router = createRouter({
     {
      path: '/medicalTourism',
      name: 'medicalTourism',
-     component: MedicalTourism
+     component: Tenders
     },
     {
       path: '/eventService',
@@ -54,7 +55,7 @@ const router = createRouter({
     {
       path: '/tenders',
       name: 'Tenders',
-      component: Tenders
+      component: TenderOrder
     },
     {
       path: '/contactUs',
