@@ -20,15 +20,13 @@
           class="w-full h-64 object-cover rounded-t-lg"
         />
         <div
-          class="p-6 bg-white text-center rounded-b-lg flex flex-col justify-between h-[350px]"
+          class="p-6 bg-white text-center rounded-b-lg flex flex-col justify-between min-h-[350px]"
         >
           <div>
             <h3 class="text-xl font-bold text-gray-800 mb-4">
               {{ t(card.titleKey) }}
             </h3>
-            <ul
-              class="list-disc list-inside text-gray-700 text-left mb-4 text-base space-y-1"
-            >
+            <ul class="list-disc list-inside text-gray-700 text-left mb-4 text-base space-y-1">
               <li v-for="(itemKey, i) in card.itemsKey" :key="i">
                 {{ t(itemKey) }}
               </li>
@@ -36,7 +34,7 @@
           </div>
           <a
             href="#"
-            class="mt-4 inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
+            class="mt-auto inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
           >
             Learn more
           </a>
@@ -46,9 +44,7 @@
 
     <!-- Key Capabilities Section -->
     <div class="mt-24 max-w-3xl mx-auto px-4">
-      <h3
-        class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left"
-      >
+      <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left">
         {{ t("services.key_capabilities_title") }}
       </h3>
       <ul class="list-disc list-outside pl-5 text-lg text-gray-800 leading-relaxed">
@@ -76,8 +72,8 @@ const cards = [
       "services.medical_lab.items.1",
       "services.medical_lab.items.2",
       "services.medical_lab.items.3",
-       "services.medical_lab.items.4",
-        "services.medical_lab.items.5",
+      "services.medical_lab.items.4",
+      "services.medical_lab.items.5",
     ],
   },
   {
