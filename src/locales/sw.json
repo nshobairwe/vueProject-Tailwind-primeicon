@@ -19,32 +19,13 @@
 
     "services": {
     "title": "Huduma",
-    "healthcare": {
-      "title": "Huduma za Afya",
+    "medical_lab": {
+      "title": "Ziara ya afya",
       "items": [
         "Huduma za uuguzi nyumbani na huduma kwa wazee",
         "Madaktari wa mtaa na msaada wa wagonjwa wa nje",
         "Programu za magonjwa sugu na urejeshaji",
         "Utalii wa Matibabu: India, Uturuki, UAE (visa, malazi na ufuatiliaji)"
-      ]
-    },
-    "medical_lab": {
-      "title": "Vifaa vya Matibabu na Maabara",
-      "items": [
-        "Dawa (za kawaida na za chapa)",
-        "Vifaa vya maabara na kemikali za maabara",
-        "Vifaa vya ICU, mifupa na upasuaji",
-        "Vifaa vya meno na uchunguzi"
-      ]
-    },
-    "general_goods": {
-      "title": "Bidhaa Za Jumla na Vifaa vya Viwanda",
-      "items": [
-        "Matairi na mabomba (kwa magari nyepesi na mazito)",
-        "Betri zisizo na matengenezo na betri za kawaida",
-        "Vifaa vya usafi, huduma za afya na taasisi",
-        "Samani za hospitali",
-        "Vifaa vya sehemu za magari (Toyota, Land Rover, Iveco, n.k.)"
       ]
     },
     "tender_fulfillment": {
@@ -53,7 +34,9 @@
         "Vifaa kwa wizara, NGOs, na halmashauri",
         "Huduma za magari na utoaji wa sehemu za ziada",
         "Maagizo maalum ya uagizaji",
-        "Ufungaji wa vifaa na huduma baada ya mauzo"
+        "Ufungaji wa vifaa na huduma baada ya mauzo",
+        "Vifaa vya Matibabu na Maabara",
+        "Bidhaa Za Jumla na Vifaa vya Viwanda"
       ]
     },
     "key_capabilities_title": "Uwezo Muhimu",

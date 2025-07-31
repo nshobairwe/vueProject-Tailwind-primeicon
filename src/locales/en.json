@@ -19,17 +19,8 @@
 
   "services": {
     "title": "Services",
-  "healthcare": {
-    "title": "Healthcare Services",
-    "items": [
-      "Home-based nursing and elderly care",
-      "Community doctors and outpatient support",
-      "Chronic illness and rehabilitation programs",
-      "Medical Tourism: India, Turkey, UAE (visa, accommodation, and follow-up)"
-    ]
-  },
   "medical_lab": {
-    "title": "Medical and Laboratory Equipment",
+    "title": "Medical Tourism",
     "items": [
       "Pharmaceuticals (generic and branded)",
       "Laboratory equipment and reagents",
@@ -37,23 +28,15 @@
       "Dental and diagnostic supplies"
     ]
   },
-  "general_goods": {
-    "title": "General Goods and Industrial Supplies",
-    "items": [
-      "Tyres and tubes (for light and heavy vehicles)",
-      "Maintenance-free and regular batteries",
-      "Cleaning, sanitary, and institutional supplies",
-      "Hospital furniture",
-      "Vehicle spare parts (Toyota, Land Rover, Iveco, etc.)"
-    ]
-  },
   "tender_fulfillment": {
-    "title": "Tender Fulfillment and Custom Orders",
+    "title": "Tenders and Orders",
     "items": [
       "Supplies for ministries, NGOs, and councils",
       "Vehicle servicing and spare parts delivery",
       "Custom import orders",
-      "Equipment installation and after-sales service"
+      "Equipment installation and after-sales service",
+      "Medical and Laboratory Equipment supply",
+      "General Goods and Industrial Supplies"
     ]
   },
   "key_capabilities_title": "Key Capabilities",

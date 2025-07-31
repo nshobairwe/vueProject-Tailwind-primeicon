@@ -92,32 +92,11 @@ const isActiveLink = (path) => route.path === path;
               <div
                 class="absolute left-0 mt-2 w-96 bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50"
               >
-                <ul class="grid grid-cols-2 gap-4 text-gray-800 text-sm py-4 px-4">
+                <ul class="grid grid-cols-2 gap-10 text-gray-800 text-sm py-4 px-4">
                   <li>
                     <RouterLink
-                      to="/services"
-                      class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
-                      >{{ t("services.healthcare.title") }}</RouterLink
-                    >
-                  </li>
-                  <li>
-                    <RouterLink
-                      to="/services"
-                      class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
-                      >{{ t("services.medical_lab.title") }}</RouterLink
-                    >
-                  </li>
-                  <li>
-                    <RouterLink
-                      to="/services"
-                      class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
-                      >{{ t("services.general_goods.title") }}</RouterLink
-                    >
-                  </li>
-                  <li>
-                    <RouterLink
-                      to="/services"
-                      class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
+                      to="/tenders"
+                      class="block px-2 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
                       >{{ t("services.tender_fulfillment.title") }}</RouterLink
                     >
                   </li>
@@ -126,13 +105,6 @@ const isActiveLink = (path) => route.path === path;
                       to="/medicalTourism"
                       class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
                       >{{ t("medical_tourism") }}</RouterLink
-                    >
-                  </li>
-                  <li>
-                    <RouterLink
-                      to="/tenders"
-                      class="block px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition"
-                      >{{ t("tenders") }}</RouterLink
                     >
                   </li>
                 </ul>
@@ -260,31 +232,7 @@ const isActiveLink = (path) => route.path === path;
             >
               <li>
                 <RouterLink
-                  to="/services"
-                  @click="closeMenu"
-                  class="block px-4 py-2 rounded hover:bg-blue-50"
-                  >{{ t("services.healthcare.title") }}</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink
-                  to="/services"
-                  @click="closeMenu"
-                  class="block px-4 py-2 rounded hover:bg-blue-50"
-                  >{{ t("services.medical_lab.title") }}</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink
-                  to="/services"
-                  @click="closeMenu"
-                  class="block px-4 py-2 rounded hover:bg-blue-50"
-                  >{{ t("services.general_goods.title") }}</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink
-                  to="/services"
+                  to="/tenders"
                   @click="closeMenu"
                   class="block px-4 py-2 rounded hover:bg-blue-50"
                   >{{ t("services.tender_fulfillment.title") }}</RouterLink
@@ -296,14 +244,6 @@ const isActiveLink = (path) => route.path === path;
                   @click="closeMenu"
                   class="block px-4 py-2 rounded hover:bg-blue-50"
                   >{{ t("medical_tourism") }}</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink
-                  to="/tenders"
-                  @click="closeMenu"
-                  class="block px-4 py-2 rounded hover:bg-blue-50"
-                  >{{ t("tenders") }}</RouterLink
                 >
               </li>
             </ul>
