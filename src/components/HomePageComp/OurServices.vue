@@ -33,12 +33,13 @@
               </li>
             </ul>
           </div>
-          <a
-            href="#"
-            class="mt-auto inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
-          >
-            Learn more
-          </a>
+          <RouterLink
+          :to="card.link"
+          class="mt-auto inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Learn more
+        </RouterLink>
+
         </div>
       </div>
     </div>
@@ -76,6 +77,7 @@ const cards = [
       "services.medical_lab.items.4",
       "services.medical_lab.items.5",
     ],
+    link: "/medicalTourism",
   },
   {
     titleKey: "services.tender_fulfillment.title",
@@ -87,8 +89,10 @@ const cards = [
       "services.tender_fulfillment.items.4",
       "services.tender_fulfillment.items.5",
     ],
+    link: "/tenders",
   },
 ];
+
 
 const imageUrls = [
   "https://plus.unsplash.com/premium_photo-1664303503818-a6fab2dcfd91?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

@@ -273,12 +273,14 @@ const isActiveLink = (path) => route.path === path;
               <option value="sw">Swahili</option>
             </select>
           </li>
-          <a
-        href="#"
+          <RouterLink
+        to="/services"
+        @click="closeMenu"
+        :class="isActiveLink('/services') ? 'text-blue-700 font-semibold' : ''"
         class="bg-yellow-400 text-gray-900 text-center hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
       >
         Get Started
-      </a>
+      </RouterLink>
         </ul>
       </div>
     </nav>

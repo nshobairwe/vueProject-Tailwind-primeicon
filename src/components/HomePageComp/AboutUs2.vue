@@ -25,10 +25,10 @@ const { t } = useI18n()
           </span>
           <br class="block sm:hidden" />
           Ask us on
-          <a
-            href="#"
+          <RouterLink
+            to="/contactUs"
             class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline"
-            >Message</a
+            >Message</RouterLink
           >
         </p>
       </div>

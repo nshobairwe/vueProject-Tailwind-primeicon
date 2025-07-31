@@ -1,5 +1,26 @@
 <script setup>
 import Logo from "../../assets/logo.jpg";
+const submitForm = async () => {
+  const payload = {
+    email: emailInput.value,
+    question: questionInput.value,
+  };
+
+  const response = await fetch("https://script.google.com/macros/s/AKfycbxkeXzsfSsiWZ_aoxp3g-KYAQYfu6FNiIr-Y5Gbf0ffWyH_Fe2hxgYT2f2MuQS7f-Oy/exec", {
+    method: "POST",
+    body: JSON.stringify(payload),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  const result = await response.json();
+  if (result.status === "success") {
+    alert("Submitted successfully!");
+    // Clear inputs here
+  } else {
+    alert("Error: " + result.message);
+  }
+};
+
 </script>
 
 <template>
@@ -7,22 +28,21 @@ import Logo from "../../assets/logo.jpg";
     <div class="px-6 sm:px-12 lg:px-20">
 
       <!-- Signup Section -->
-      <div class="grid grid-cols-1 gap-8 pb-12 border-b border-gray-700 text-center animate-fade-in-up">
-        <div>
-          <h2 class="font-manrope font-bold text-2xl mb-2">Sign up to our webpage</h2>
-          <p class="text-sm text-gray-400">Stay up to date with the latest update and announcement.</p>
-        </div>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <input
-            type="text"
-            class="bg-gray-800 text-white placeholder-gray-500 rounded-full px-5 py-3 w-full sm:max-w-md focus:outline-none focus:ring-2 focus:ring-violet-500"
-            placeholder="Your email here..."
-          />
-          <button class="py-3 px-7 rounded-full bg-violet-500 text-white font-semibold hover:bg-violet-700 transition w-full sm:w-auto max-w-xs">
-            Submit
-          </button>
-        </div>
-      </div>
+<div class="grid grid-cols-1 gap-8 pb-12 border-b border-gray-700 text-center animate-fade-in-up">
+    <h2 class="font-manrope font-bold text-2xl">Have a question?</h2>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-4xl mx-auto">
+    <textarea
+      rows="3"
+      class="bg-gray-800 text-white placeholder-gray-500 rounded-lg px-5 py-3 w-full sm:max-w-2xl focus:outline-none focus:ring-2 focus:ring-violet-500 resize-none"
+      placeholder="Send us your questions here..."
+    ></textarea>
+    <button @click="submitForm"
+      class="py-3 px-7 rounded-full bg-violet-500 text-white font-semibold hover:bg-violet-700 transition w-full sm:w-auto max-w-xs"
+    >
+      Submit
+    </button>
+  </div>
+</div>
 
       <!-- Links Section -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8 py-14 border-b border-gray-700 text-left animate-fade-in-up" style="animation-delay: 150ms">
