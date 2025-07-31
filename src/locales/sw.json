@@ -22,10 +22,12 @@
     "medical_lab": {
       "title": "Ziara ya afya",
       "items": [
-        "Huduma za uuguzi nyumbani na huduma kwa wazee",
-        "Madaktari wa mtaa na msaada wa wagonjwa wa nje",
-        "Programu za magonjwa sugu na urejeshaji",
-        "Utalii wa Matibabu: India, Uturuki, UAE (visa, malazi na ufuatiliaji)"
+        " Matibabu Yaliyoratibiwa",
+       "Rufaa za Hospitali",
+       "Oda Maalum za Uingizaji",
+       " Msaada wa Safari na Visa",
+       "Msaada wa Mkalimani",
+       "Huduma ya Kufuatilia"
       ]
     },
     "tender_fulfillment": {

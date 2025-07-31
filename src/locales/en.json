@@ -22,14 +22,16 @@
   "medical_lab": {
     "title": "Medical Tourism",
     "items": [
-      "Pharmaceuticals (generic and branded)",
-      "Laboratory equipment and reagents",
-      "ICU, orthopedic, and surgical tools",
-      "Dental and diagnostic supplies"
+      "Coordinated Treatment",
+      "Hospital Referrals",
+      "Custom import orders ",
+      "Travel & Visa Support ",
+      "Interpreter Support ",
+      "Follow-up Care"
     ]
   },
   "tender_fulfillment": {
-    "title": "Tenders and Orders",
+    "title": "Tender and Orders",
     "items": [
       "Supplies for ministries, NGOs, and councils",
       "Vehicle servicing and spare parts delivery",

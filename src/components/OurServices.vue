@@ -76,6 +76,8 @@ const cards = [
       "services.medical_lab.items.1",
       "services.medical_lab.items.2",
       "services.medical_lab.items.3",
+       "services.medical_lab.items.4",
+        "services.medical_lab.items.5",
     ],
   },
   {

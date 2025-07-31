@@ -3,7 +3,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 </script><template>
  
-    <div class="px-5 mt-20">
+    <div class="px-5 mt-20 mx-auto max-w-screen-xl py-10">
       <h2 class="text-3xl font-extrabold text-gray-900 max-w-7xl mx-auto">
         {{ t('Vision') }}
       </h2>

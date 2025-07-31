@@ -4,7 +4,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="w-full bg-gray-50">
+  <section class="px-5 mt-20 mx-auto max-w-screen-xl bg-gray-50">
     <div class="h-full sm:py-10 md:py-36 lg:py-36 px-4 md:px-24 lg:px-8 flex flex-col items-center justify-between lg:flex-row-reverse md:gap-10 gap-5">
       <!-- Text Box -->
       <div class="relative lg:w-1/2">

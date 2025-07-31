@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="text-gray-700 body-font">
+  <section class="text-gray-700 px-5 mt-20 mx-auto max-w-screen-xl body-font">
     <div class="flex justify-center mt-10 text-4xl font-regular">
       Why Us?
     </div>
