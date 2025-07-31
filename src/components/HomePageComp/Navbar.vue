@@ -22,7 +22,7 @@ const isActiveLink = (path) => route.path === path;
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 w-full z-50">
+  <header class="fixed top-0 left-0 w-full z-50 ">
     <!-- Top contact bar -->
     <div class="bg-blue-900 text-white text-sm py-2">
   <div class="flex justify-between items-center gap-x-5 px-5">
@@ -115,12 +115,12 @@ const isActiveLink = (path) => route.path === path;
 
         <!-- Right nav links -->
         <div class="hidden md:flex items-center gap-6 text-lg font-medium text-gray-800">
-          <a
-        href="#"
+          <RouterLink
+        to="/services"
         class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
       >
         Get Started
-      </a>
+      </RouterLink>
           <RouterLink
             to="/contactUs"
             :class="{ 'text-blue-700 font-semibold': isActiveLink('/contactUs') }"

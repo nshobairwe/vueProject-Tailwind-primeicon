@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-xl mx-auto px-5 mt-20">
+  <section class="px-5 mt-20 mx-auto max-w-screen-xl py-10 animate-fade-container">
     <h2 class="text-5xl font-extrabold text-blue-900 text-center mb-10 tracking-wide">
       {{ t("services.title") }}
     </h2>
@@ -9,7 +9,8 @@
       <div
         v-for="(card, index) in cards"
         :key="index"
-        class="rounded-lg bg-gradient-to-tr from-white to-gray-50 p-0.5 shadow-lg overflow-hidden"
+        class="rounded-lg bg-gradient-to-tr from-white to-gray-50 p-0.5 shadow-lg overflow-hidden animate-fade-in-up"
+        :style="{ animationDelay: `${index * 150}ms` }"
         tabindex="0"
         role="region"
         :aria-label="t(card.titleKey)"
@@ -43,7 +44,7 @@
     </div>
 
     <!-- Key Capabilities Section -->
-    <div class="mt-24 max-w-3xl mx-auto px-4">
+    <div class="mt-24 max-w-3xl mx-auto px-4 animate-fade-in-up" style="animation-delay: 600ms">
       <h3 class="text-3xl font-semibold text-blue-900 mb-6 tracking-wide text-left">
         {{ t("services.key_capabilities_title") }}
       </h3>
@@ -96,5 +97,22 @@ const imageUrls = [
 </script>
 
 <style scoped>
-/* Optional custom styles */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-container {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
 </style>

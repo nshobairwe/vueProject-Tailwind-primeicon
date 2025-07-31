@@ -3,11 +3,11 @@ import Logo from "../../assets/logo.jpg";
 </script>
 
 <template>
-  <section class="pt-16 pb-7 bg-gray-900 mt-20 text-white w-full">
+  <section class="pt-16 pb-7 bg-gray-900 mt-20 text-white w-full animate-fade-container">
     <div class="px-6 sm:px-12 lg:px-20">
 
       <!-- Signup Section -->
-      <div class="grid grid-cols-1 gap-8 pb-12 border-b border-gray-700 text-center">
+      <div class="grid grid-cols-1 gap-8 pb-12 border-b border-gray-700 text-center animate-fade-in-up">
         <div>
           <h2 class="font-manrope font-bold text-2xl mb-2">Sign up to our webpage</h2>
           <p class="text-sm text-gray-400">Stay up to date with the latest update and announcement.</p>
@@ -25,22 +25,22 @@ import Logo from "../../assets/logo.jpg";
       </div>
 
       <!-- Links Section -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8 py-14 border-b border-gray-700 text-left">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8 py-14 border-b border-gray-700 text-left animate-fade-in-up" style="animation-delay: 150ms">
         <!-- Contact -->
         <div>
           <h6 class="text-lg font-bold mb-5">{{ $t('contact.title') }}</h6>
-          <ul class="flex flex-col gap-4 text-gray-400  text-sm">
+          <ul class="flex flex-col gap-4 text-gray-400 text-sm">
             <li class="flex items-center gap-2">
-              <i class="pi pi-phone text-gray-400 "></i> +255 747 100 444
+              <i class="pi pi-phone text-gray-400"></i> +255 747 100 444
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-building text-gray-400 "></i> {{ $t('contact.company') }}
+              <i class="pi pi-building text-gray-400"></i> {{ $t('contact.company') }}
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-map-marker text-gray-400 "></i> {{ $t('contact.address') }}
+              <i class="pi pi-map-marker text-gray-400"></i> {{ $t('contact.address') }}
             </li>
             <li class="flex items-center gap-2">
-              <i class="pi pi-globe text-gray-400 "></i> {{ $t('contact.city') }}
+              <i class="pi pi-globe text-gray-400"></i> {{ $t('contact.city') }}
             </li>
           </ul>
         </div>
@@ -82,7 +82,7 @@ import Logo from "../../assets/logo.jpg";
       </div>
 
       <!-- Footer Bottom -->
-      <div class="pt-7 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+      <div class="pt-7 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-400 text-sm animate-fade-in-up" style="animation-delay: 300ms">
         <div class="flex items-center gap-2">
           <img :src="Logo" alt="Company Logo" class="h-10 object-contain" />
           © OpenSea 2025, All rights reserved.
@@ -91,3 +91,22 @@ import Logo from "../../assets/logo.jpg";
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-container {
+  animation: fade-in-up 0.6s ease-out both;
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+</style>
