@@ -29,17 +29,17 @@ const submitForm = async () => {
 
       <!-- Signup Section -->
 <div class="grid grid-cols-1 gap-8 pb-12 border-b border-gray-700 text-center animate-fade-in-up">
-    <h2 class="font-manrope font-bold text-2xl">Have a question?</h2>
+    <h2 class="font-manrope font-bold text-2xl">{{ $t("about.have_question") }}</h2>
   <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-4xl mx-auto">
     <textarea
       rows="3"
       class="bg-gray-800 text-white placeholder-gray-500 rounded-lg px-5 py-3 w-full sm:max-w-2xl focus:outline-none focus:ring-2 focus:ring-violet-500 resize-none"
-      placeholder="Send us your questions here..."
+      :placeholder=" $t('send_us_message')"
     ></textarea>
     <button @click="submitForm"
       class="py-3 px-7 rounded-full bg-violet-500 text-white font-semibold hover:bg-violet-700 transition w-full sm:w-auto max-w-xs"
     >
-      Submit
+      {{ $t("contact.submit") }}
     </button>
   </div>
 </div>
@@ -105,7 +105,7 @@ const submitForm = async () => {
       <div class="pt-7 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-400 text-sm animate-fade-in-up" style="animation-delay: 300ms">
         <div class="flex items-center gap-2">
           <img :src="Logo" alt="Company Logo" class="h-10 object-contain" />
-          © OpenSea 2025, All rights reserved.
+          {{  $t("All_right_reserved") }}
         </div>
       </div>
     </div>

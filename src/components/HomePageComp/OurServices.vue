@@ -37,7 +37,7 @@
           :to="card.link"
           class="mt-auto inline-block bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-base font-semibold shadow transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Learn more
+          {{ t('Get_Started') }}
         </RouterLink>
 
         </div>

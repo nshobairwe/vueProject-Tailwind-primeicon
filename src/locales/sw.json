@@ -8,6 +8,8 @@
   "medical_tourism": "Utalii wa Tiba",
   "tenders": "Zabuni",
   "Get_Started": "Anza Sasa",
+  "send_us_message": "Tutumie ujumbe...",
+  "All_right_reserved": " © 2025 OpenSea. Haki zote zimehifadhiwa",
 
   "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
   "event_services": "Huduma za Kuratibu Matukio",
@@ -125,7 +127,19 @@
   "delivery_title": "Ugavi na Huduma",
   "delivery_text": "Tunahudumia wateja kote Tanzania na tunatoa msaada wa ununuzi wa mipakani...",
   "cta_title": "Tushirikiane",
-  "cta_text": "Kama shirika lako linatafuta mshirika wa kuaminika kwa kutimiza zabuni, wasiliana nasi leo..."
+  "cta_text": "Kama shirika lako linatafuta mshirika wa kuaminika kwa kutimiza zabuni, wasiliana nasi leo...",
+
+  "hero": {
+    "title": "Kutoa Ubora. Kuendeleza Maisha",
+    "description": "Kutoka kwa suluhisho muhimu za huduma ya afya hadi vipuri vya kuaminika na usambazaji wa bidhaa mbalimbali, tunatoa kwa usahihi, shauku, na lengo.",
+    "button": "Jifunze Zaidi"
+  },
+
+   "about": {
+    "have_question": "Una swali?",
+    "ask_us_on": "Tuulize kupitia",
+    "message_link": "Ujumbe"
+  }
 
 
 }
