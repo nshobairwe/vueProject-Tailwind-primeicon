@@ -7,10 +7,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="px-5 mt-20 mx-auto max-w-screen-xl py-10">
+  <div class="bg-white dark:bg-gray-900 px-5 mt-20 mx-auto max-w-screen-xl py-10">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl animate-fade-in-up">
+        <h2 class="text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl animate-fade-in-up">
           {{ t('About Us') }}
         </h2>
         <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8 animate-fade-in-up delay-200">
