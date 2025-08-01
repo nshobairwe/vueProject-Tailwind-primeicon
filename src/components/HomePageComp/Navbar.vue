@@ -65,7 +65,7 @@ const isActiveLink = (path) => route.path === path;
               to="/aboutus"
               :class="{ 'text-blue-700 font-semibold': isActiveLink('/aboutus') }"
               class="hover:text-blue-700"
-              >{{ t("About Us") }}</RouterLink
+              >{{ t("About") }}</RouterLink
             >
             <RouterLink
               to="/vision"
@@ -119,7 +119,7 @@ const isActiveLink = (path) => route.path === path;
         to="/services"
         class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
       >
-        Get Started
+        {{ t('Get_Started')}}
       </RouterLink>
           <RouterLink
             to="/contactUs"
@@ -192,7 +192,7 @@ const isActiveLink = (path) => route.path === path;
               to="/aboutus"
               @click="closeMenu"
               :class="isActiveLink('/aboutus') ? 'text-blue-700 font-semibold' : ''"
-              >{{ t("About Us") }}</RouterLink
+              >{{ t("About") }}</RouterLink
             >
           </li>
           <li>
@@ -260,7 +260,7 @@ const isActiveLink = (path) => route.path === path;
               to="/contactUs"
               @click="closeMenu"
               :class="isActiveLink('/contactUs') ? 'text-blue-700 font-semibold' : ''"
-              >{{ t("Contact") }}</RouterLink
+              >{{ t("Contact_label") }}</RouterLink
             >
           </li>
           <li class="flex items-center gap-2">
@@ -279,7 +279,7 @@ const isActiveLink = (path) => route.path === path;
         :class="isActiveLink('/services') ? 'text-blue-700 font-semibold' : ''"
         class="bg-yellow-400 text-gray-900 text-center hover:bg-yellow-300 py-3 px-8 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
       >
-        Get Started
+         {{ t('Get_Started')}}
       </RouterLink>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 {
-  "home": "Nyumbani",
+  "Home": "Nyumbani",
   "About": "Kuhusu",
   "Vision": "Dira",
   "Contact_label": "Mawasiliano",
@@ -7,6 +7,7 @@
   "Phone": "Simu",
   "medical_tourism": "Utalii wa Tiba",
   "tenders": "Zabuni",
+  "Get_Started": "Anza Sasa",
 
   "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
   "event_services": "Huduma za Kuratibu Matukio",
