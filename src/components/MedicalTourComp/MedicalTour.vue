@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <section
@@ -20,24 +18,26 @@
           <!-- Left: Company Info -->
           <div class="w-full md:w-1/2 mb-12 md:mb-0 space-y-6">
             <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              {{ $t("medical_hero_title") }}
+              {{ t("medical_hero_title") }}
             </h1>
             <p class="text-xl mb-8 text-gray-300">
-              {{ $t("medical_hero_desc") }}
+              {{ t("medical_hero_desc") }}
             </p>
             <div
               class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
             >
-              <a
-                href="#"
+              <RouterLink
+                to="/medicalTService"
                 class="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition duration-300 text-center"
-                >Get Started</a
               >
-              <a
-                href="#"
+                {{ t("Get_Started") }}
+              </RouterLink>
+              <RouterLink
+                to="/medicalTQuestions"
                 class="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 text-center"
-                >Learn More</a
               >
+                {{ t("hero.button") }}
+              </RouterLink>
             </div>
           </div>
 
@@ -46,25 +46,25 @@
             class="w-full md:w-1/2 md:pl-12 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl"
           >
             <h2 class="text-2xl font-semibold mb-6">
-              {{ $t("why_choose_us_title") }}
+              {{ t("why_choose_us_title") }}
             </h2>
             <ul>
               <li
-                v-for="(reason, index) in reasons"
-                :key="index"
-                class="flex items-center mb-4 opacity-0 animate-fade-slide-up"
-                :style="{ animationDelay: (index * 0.2) + 's', animationFillMode: 'forwards' }"
-              >
-                <svg
-                  v-html="reason.icon"
-                  class="w-6 h-6 mr-3"
-                  :class="reason.color"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                ></svg>
-                <span>{{ reason.text }}</span>
-              </li>
+  v-for="(reason, index) in reasons"
+              :key="index"
+              class="flex items-center mb-4 opacity-0 animate-fade-slide-up"
+              :style="{ animationDelay: (index * 0.2) + 's', animationFillMode: 'forwards' }"
+            >
+              <svg
+                class="w-6 h-6 mr-3"
+                :class="reason.color"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                v-html="reason.icon"
+              ></svg>
+              <span>{{ reason.text }}</span>
+            </li>
             </ul>
           </div>
         </div>
@@ -89,6 +89,7 @@
     <TheLastComponent2 />
   </div>
 </template>
+
 <script setup>
 import { useI18n } from "vue-i18n";
 import MedicalTServices from "./MedicalTServices.vue";
@@ -97,7 +98,9 @@ import MedicalTQuestion from "./MedicalTQuestion.vue";
 
 const { t } = useI18n();
 
-const reasons = [
+import { computed } from 'vue'
+
+const reasons = computed(() => [
   {
     text: t("reason_1"),
     color: "text-yellow-400",
@@ -113,7 +116,8 @@ const reasons = [
     color: "text-purple-400",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-4 0h8" />`,
   },
-];
+])
+
 </script>
 
 <style scoped>

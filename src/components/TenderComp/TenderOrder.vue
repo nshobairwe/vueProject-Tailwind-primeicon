@@ -20,24 +20,24 @@ export default {
             <h1
               class="mb-3 pb-4 text-4xl font-bold text-green-700 md:text-6xl"
             >
-              Fast, Reliable and Secure
+              {{ $t('Fast_Reliable_Secure') }}
             </h1>
             <p class="mb-6 max-w-[528px] text-xl md:mb-10">
               {{ $t("tender_intro") }}
             </p>
             <div class="flex items-center gap-5">
-              <a
-                href="#"
+              <RouterLink
+                to="/contactUs"
                 class="inline-block rounded-full bg-[#c9fd02] px-6 py-4 text-center font-bold text-black transition hover:border-black hover:bg-white md:mr-6 lg:mr-8"
               >
-                Let's Talk
-              </a>
-              <a
-                href="#"
+                {{ $t('lets_talk') }}
+              </RouterLink>
+              <RouterLink
+                to="/services"
                 class="flex max-w-full flex-row rounded-full border border-solid border-[#636262] px-6 py-4 font-bold"
               >
-                <p>View Showreel</p>
-              </a>
+                <p>{{ $t('View_show') }}</p>
+              </RouterLink>
             </div>
           </div>
           <!-- Image Div -->

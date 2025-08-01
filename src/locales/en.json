@@ -9,6 +9,9 @@
   "Get_Started": "Get Started",
   "send_us_message": "Send us your questions here...",
   "All_right_reserved": "© 2025 OpenSea. All rights reserved.",
+  "Fast_Reliable_Secure": "Fast, Reliable and Secure",
+  "lets_talk": "Let's talk",
+  "View_show": "View Showreel",
  
 
   "about_us_description": "Open Sea Company Ltd is a fast-growing Tanzanian company specializing in healthcare services, medical and laboratory supplies, vehicle spare parts, and general goods distribution. Committed to quality and compassion, we serve public institutions, NGOs, and private clients nationwide.",
@@ -140,6 +143,18 @@
     "have_question": "Have a question?",
     "ask_us_on": "Ask us on",
     "message_link": "Message"
+  },
+
+  "faq": {
+    "title": "Explore Medical Referral Questions",
+    "still_have_questions": "Still have questions?",
+    "contact_support": "Contact our support",
+    "q1": "Where can cancer patients be referred?",
+    "a1": "Cancer patients can be referred to China. The treatment methods include:\n1. Chemotherapy\n2. Radiation therapy\n3. Targeted therapy\n4. Immunotherapy\n5. Cryotherapy\n6. Hormone therapy\n7. Bone marrow/stem cell transplant",
+    "q2": "Where can cardiac treatment patients be referred?",
+    "a2": "Cardiac treatment patients can be referred to Turkey. Procedures include:\n1. Angioplasty\n2. Stent placement\n3. Bypass surgery\n4. Thrombolysis\n5. Heart transplant\n6. Implantable device",
+    "q3": "Where can patients go for cosmetic or aesthetic surgery?",
+    "a3": "Patients can be referred to India and South Africa for cosmetic/aesthetic surgery:\n1. Rhinoplasty\n2. Blepharoplasty\n3. Facelift\n4. Botox and fillers\n5. Dental aesthetic treatment\n6. Brazilian butt lift\n7. Tummy tuck\n8. Liposuction\n9. Breast surgery"
   }
 
 }

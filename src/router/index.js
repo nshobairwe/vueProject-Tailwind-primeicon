@@ -6,6 +6,8 @@ import VisionNew from "../components/HomePageComp/VisionNew.vue";
 import TheLastComponent2 from "../components/HomePageComp/TheLastComponent2.vue";
 import TenderOrder from "../components/TenderComp/TenderOrder.vue";
 import MedicalTour from "../components/MedicalTourComp/MedicalTour.vue";
+import MedicalTServices from "../components/MedicalTourComp/MedicalTServices.vue";
+import MedicalTQuestion from "../components/MedicalTourComp/MedicalTQuestion.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +37,16 @@ const router = createRouter({
       path: "/medicalTourism",
       name: "medicalTourism",
       component: MedicalTour,
+    },
+    {
+      path: "/medicalTService",
+      name: "medicalTService",
+      component: MedicalTServices
+    },
+     {
+      path: "/medicalTQuestions",
+      name: "medicalTQuestions",
+      component: MedicalTQuestion
     },
     {
       path: "/tenders",

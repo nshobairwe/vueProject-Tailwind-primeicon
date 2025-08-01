@@ -9,7 +9,10 @@
   "tenders": "Zabuni",
   "Get_Started": "Anza Sasa",
   "send_us_message": "Tutumie ujumbe...",
-  "All_right_reserved": " © 2025 OpenSea. Haki zote zimehifadhiwa",
+  "All_right_reserved": "© 2025 OpenSea. Haki zote zimehifadhiwa",
+  "Fast_Reliable_Secure": "Haraka, Inayotegemewa na Salama",
+  "lets_talk": "Ongea nasi",
+  "View_show": "angalia",
 
   "about_us_description": "Open Sea Company Ltd ni kampuni inayokua kwa kasi nchini Tanzania inayobobea katika huduma za afya, vifaa vya maabara na tiba, sehemu za magari, na usambazaji wa bidhaa mbalimbali. Tumejizatiti kutoa huduma bora kwa moyo wa huruma kwa taasisi za umma, NGOs, na wateja binafsi kote nchini.",
   "event_services": "Huduma za Kuratibu Matukio",
@@ -139,6 +142,18 @@
     "have_question": "Una swali?",
     "ask_us_on": "Tuulize kupitia",
     "message_link": "Ujumbe"
+  },
+
+  "faq": {
+    "title": "Gundua Maswali Kuhusu Rufaa za Matibabu",
+    "still_have_questions": "Bado una maswali?",
+    "contact_support": "Wasiliana na huduma kwa wateja",
+    "q1": "Wagonjwa wa saratani wanaweza kurejelewa wapi?",
+    "a1": "Wagonjwa wa saratani wanaweza kurejelewa China. Njia za matibabu ni:\n1. Chemotherapy\n2. Mionzi\n3. Tiba ya malengo\n4. Tiba ya kinga\n5. Cryotherapy\n6. Tiba ya homoni\n7. Upandikizaji wa uboho/seli shina",
+    "q2": "Wagonjwa wa moyo wanaweza kurejelewa wapi?",
+    "a2": "Wagonjwa wa moyo wanaweza kurejelewa Uturuki. Tiba ni pamoja na:\n1. Angioplasty\n2. Uwekaji wa stenti\n3. Upasuaji wa bypass\n4. Thrombolysis\n5. Upandikizaji wa moyo\n6. Vifaa vya kupandikiza",
+    "q3": "Wagonjwa wanaotaka upasuaji wa urembo wanaweza kwenda wapi?",
+    "a3": "Wagonjwa wanaweza kurejelewa India na Afrika Kusini kwa upasuaji wa urembo:\n1. Rhinoplasty\n2. Blepharoplasty\n3. Facelift\n4. Botox na fillers\n5. Matibabu ya meno ya urembo\n6. Brazilian butt lift\n7. Tummy tuck\n8. Liposuction\n9. Upasuaji wa matiti"
   }
 
 
