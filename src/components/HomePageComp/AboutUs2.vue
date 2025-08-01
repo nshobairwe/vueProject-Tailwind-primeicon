@@ -5,8 +5,9 @@ import { useI18n } from 'vue-i18n'
 const showMedical = ref(false)
 const { t } = useI18n()
 </script>
+
 <template>
-  <div class="px-5 mt-20 mx-auto max-w-screen-xl py-10 animate-fade-container">
+  <div class="px-5 mt-20 mx-auto max-w-screen-xl py-10">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl animate-fade-in-up">
@@ -28,8 +29,9 @@ const { t } = useI18n()
           <RouterLink
             to="/contactUs"
             class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline"
-            >Message</RouterLink
           >
+            Message
+          </RouterLink>
         </p>
       </div>
 
@@ -37,12 +39,13 @@ const { t } = useI18n()
         <img
           class="w-full 2xl:origin-bottom 2xl:scale-110 rounded-xl shadow-lg"
           src="/src/assets/hero.jpg"
-          alt=""
+          alt="About image"
         />
       </div>
     </div>
   </div>
 </template>
+
 <style scoped>
 @keyframes fade-in-up {
   0% {
@@ -67,11 +70,5 @@ const { t } = useI18n()
 }
 .delay-600 {
   animation-delay: 0.6s;
-}
-
-/* Optional: stagger container to prevent flashing */
-.animate-fade-container {
-  opacity: 0;
-  animation: fade-in-up 0.2s ease forwards;
 }
 </style>
